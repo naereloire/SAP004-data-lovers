@@ -1,12 +1,79 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script src="main.js" type="module"></script>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <title>Pokelovers</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  
+  <header>
+    <nav class="links">
+      <div>
+        <a href="home.html">Home</a>
+        <a href="galeria.html">Curiosidades</a>
+        <a href="quem_somos.html">Estatísticas</a>
+      </div>
+    </nav>
+  
+    
+    <h1 class="title">Pokelovers</h1>
+
+<section class="filtros">
+  
+  <div id="selecao">
+      <input type="search" placeholder="Insira aqui a sua busca" id="search">
+      <button>Buscar</button>
+    
+      <select id="filtro">
+         <option value="">TIPO</option>
+         <option value="">A</option>
+         <option value="">F</option>
+         <option value="">G</option>
+       </select>
+     
+       <select id="fraqueza">
+        <option value="">FRAQUEZA</option>
+        <option value="">A</option>
+        <option value="">F</option>
+        <option value="">G</option>
+      </select>
+
+      <select id="raridade">
+        <option value="">RARIDADE</option>
+        <option value="">A</option>
+        <option value="">F</option>
+        <option value="">G</option>
+      </select>
+     
+      <select id="ordenação">
+        <option>A-Z</option>
+        <option>Z-A</option>
+      </select>
+ 
+    </div>
+ </section>
+</header> 
+  
+
+  <main>
+    <div class="cards">
+      <p>Os cards vão aparecer aqui</p>
+    </div>
+  </main>
+
+  <footer>
+    <h4>Feito por <a href="https://github.com/camilagerarde" title="Camila Cunha" target="_blank">Camila Cunha</a> e <a href="https://github.com/naereloire" title="Naere" target="_blank">Naere</a></h4>  
+  </footer> 
+
+
+  <script src="script.js"></script>
+</body>
+
+<!-- <div id="root"></div> -->
+<script src="main.js" type="module"></script>
+</body>
+
 </html>

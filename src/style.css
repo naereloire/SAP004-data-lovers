@@ -1,0 +1,27 @@
+.cards{
+    border:5px solid black;
+    font-size: 1.2em;
+    height: 18em;
+    margin: 1em;
+    padding: 3em;
+    width: 50%;
+    }
+    
+    .title {
+      border: 5px solid black;
+      color: red;
+      font-size: 50px;
+      text-align: center;
+      
+    }
+    
+    .links{
+    border:5px solid black;
+    display:flex;
+    flex-wrap: wrap;
+    
+    }
+    
+    .filtros{
+      border: 5px solid black;
+    }
