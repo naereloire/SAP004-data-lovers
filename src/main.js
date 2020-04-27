@@ -1,6 +1,15 @@
-import { example } from './data.js';
-// import data from './data/lol/lol.js';
-import data from './data/pokemon/pokemon.js';
-// import data from './data/rickandmorty/rickandmorty.js';
+import dataManipulation from './data.js'
 
-console.log(example, data);
+let arrayPokemon=dataManipulation.getData()
+let getDivCards=document.getElementById("local-cards")
+
+for(let pokemon of arrayPokemon){
+let createDivCard=document.createElement("div")
+createDivCard.className="card-style"
+createDivCard.innerHTML+=pokemon.name + "<br>" + pokemon.numero
+getDivCards.appendChild(createDivCard)
+let createImgPokemon=document.createElement("img")
+createDivCard.appendChild(createImgPokemon)
+createImgPokemon.srcset=pokemon.imagem
+
+}

@@ -5,72 +5,74 @@
   <meta charset="utf-8">
   <title>Pokelovers</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
 </head>
 
 <body>
-  
+ 
   <header>
-    <nav class="links">
-      <div>
-        <a href="home.html">Home</a>
-        <a href="galeria.html">Curiosidades</a>
-        <a href="quem_somos.html">Estatísticas</a>
-      </div>
-    </nav>
-  
-    
-    <h1 class="title">Pokelovers</h1>
+  <nav class="links">
+   <div>
+    <a href="home.html">Home</a>
+    <a href="galeria.html">Curiosidades</a>
+    <a href="quem_somos.html">Estatísticas</a>
+   </div>
+  </nav>
+  <h1 class="title">Pokelovers</h1>
+</header> 
 
-<section class="filtros">
+<section class="filters">
   
-  <div id="selecao">
+  <div id="selection">
       <input type="search" placeholder="Insira aqui a sua busca" id="search">
       <button>Buscar</button>
     
-      <select id="filtro">
+      <select id="filter"  class="fa">
          <option value="">TIPO</option>
-         <option value="">A</option>
-         <option value="">F</option>
-         <option value="">G</option>
+         <option value="fogo">  &#xf06d; Fogo</option>
+         <option value="agua">  &#xf773; Agua</option>
+         <option value="gelo">  &#xf2dc; Gelo</option>
+         <option value="planta"> &#xf1bb; Planta</option>
+         <option value="planta"> &#xf3a5; Pedra</option>
+
+
+
        </select>
      
-       <select id="fraqueza">
+       <select id="weakness">
         <option value="">FRAQUEZA</option>
         <option value="">A</option>
         <option value="">F</option>
         <option value="">G</option>
       </select>
 
-      <select id="raridade">
+      <select id="rarity">
         <option value="">RARIDADE</option>
         <option value="">A</option>
         <option value="">F</option>
         <option value="">G</option>
       </select>
      
-      <select id="ordenação">
+      <select id="ordination">
         <option>A-Z</option>
         <option>Z-A</option>
       </select>
  
     </div>
  </section>
-</header> 
+
   
 
   <main>
-    <div class="cards">
-      <p>Os cards vão aparecer aqui</p>
+    <div id="local-cards" class="cards">
+      <!-- <p>Os cards vão aparecer aqui</p> -->
     </div>
   </main>
 
-  <footer>
+  <!-- <footer>
     <h4>Feito por <a href="https://github.com/camilagerarde" title="Camila Cunha" target="_blank">Camila Cunha</a> e <a href="https://github.com/naereloire" title="Naere" target="_blank">Naere</a></h4>  
-  </footer> 
-
-
-  <script src="script.js"></script>
-</body>
+  </footer>  -->
 
 <!-- <div id="root"></div> -->
 <script src="main.js" type="module"></script>

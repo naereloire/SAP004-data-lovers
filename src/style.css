@@ -1,27 +1,42 @@
-.cards{
-    border:5px solid black;
-    font-size: 1.2em;
-    height: 18em;
-    margin: 1em;
-    padding: 3em;
-    width: 50%;
-    }
-    
-    .title {
-      border: 5px solid black;
-      color: red;
-      font-size: 50px;
-      text-align: center;
-      
-    }
-    
-    .links{
-    border:5px solid black;
-    display:flex;
-    flex-wrap: wrap;
-    
-    }
-    
-    .filtros{
-      border: 5px solid black;
-    }
+.cards {
+  /* border: 5px solid black; */
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1.2em;
+  height: 18em;
+  margin: 1em;
+  padding: 3em;
+  width: auto;
+}
+.card-style{
+ border: 2px dotted blueviolet; 
+ margin: 5px;
+ font-size: 1.2em;
+  height: auto;
+  margin: 1em;
+  padding: 3em;
+  width: 5%;
+  max-width:400px;
+}
+
+.title {
+  border: 5px solid black;
+  color: red;
+  font-size: 50px;
+  text-align: center;
+}
+
+.links {
+  border: 5px solid black;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.filters {
+  border: 5px solid black;
+}
+
+select,option {
+  font-family: 'Arial', 'Font Awesome 5 Free';
+  font-weight: 900;
+}
