@@ -2,10 +2,10 @@ import data from './data/pokemon/pokemon.js';
 
 console.log(data);
 
-const pokemon = data.pokemon[0].name;
-console.log(pokemon);
-const pokemonImg = data.pokemon[0].img;
-console.log(pokemonImg);
+const pokemonName = data.pokemon[0].name;
+document.getElementById("cards").innerHTML = `<h3>${pokemonName}</h3>`;
+console.log(pokemonName);
 
-const pokemonImg2 = data.pokemon[0].img;
-document.getElementById("cards").innerHTML = pokemonImg2;
+const pokemonImg = data.pokemon[0].img;
+document.getElementById("cards").innerHTML = `<img src=${pokemonImg} alt="imagem"></img>`;
+console.log(pokemonImg)
