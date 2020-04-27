@@ -1,12 +1,80 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script src="main.js" type="module"></script>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <title>Pokelovers</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header>
+    <nav class="links">
+      <div>
+        <a href="home.html">Home</a>
+        <a href="curiosidades.html">Curiosidades</a>
+        <a href="estatisticas.html">Estatísticas</a>
+      </div>
+    </nav>
+    <!-- <figure class="title"><img src="/src/fonte/generatedtext (2).png" alt="Logo Pokélovers" ></figure> --> 
+    
+    <figure class="title">
+      <img src="https://fontmeme.com/permalink/200425/a17a438c66030d08e0f591d139b1e7e0.png" alt="logo-de-pokemon">
+    </figure>
+
+    <section class="filters">
+      <div>
+        <input type="search" placeholder="Insira aqui a sua busca" class="search">
+        <button class="btSearch">Buscar</button>
+
+        <select class="type">
+          <option value="">TIPO</option>
+          <option value="">A</option>
+          <option value="">F</option>
+          <option value="">G</option>
+        </select>
+
+        <select class="weakness">
+          <option value="">FRAQUEZA</option>
+          <option value="">A</option>
+          <option value="">F</option>
+          <option value="">G</option>
+        </select>
+
+        <select class="rarity">
+          <option value="">RARIDADE</option>
+          <option value="">A</option>
+          <option value="">F</option>
+          <option value="">G</option>
+        </select>
+
+        <select class="ordination">
+          <option>A-Z</option>
+          <option>Z-A</option>
+        </select>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <div id="cards">
+      <p>Os cards vão aparecer aqui</p>
+      <figure>
+        <img src="/src/img/Pokemon (1).png" alt="" class="card">
+        <img src="/src/img/Pokemon (1).png" alt="" class="card">
+        <img src="/src/img/Pokemon (1).png" alt="" class="card">
+        <img src="/src/img/Pokemon (1).png" alt="" class="card">
+        <img src="/src/img/Pokemon (1).png" alt="" class="card">
+        <img src="/src/img/Pokemon (1).png" alt="" class="card">
+      </figure>
+    </div>
+  </main>
+
+  <footer>
+    <h4>Feito por <a href="https://github.com/camilagerarde" title="Camila Cunha" target="_blank">Camila Cunha</a> e <a
+        href="https://github.com/naereloire" title="Naere" target="_blank">Naere</a></h4>
+  </footer>
+  <script src="main.js" type="module"></script>
+</body>
+
 </html>

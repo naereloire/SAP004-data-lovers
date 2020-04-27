@@ -1,6 +1,8 @@
-import { example } from './data.js';
-// import data from './data/lol/lol.js';
 import data from './data/pokemon/pokemon.js';
-// import data from './data/rickandmorty/rickandmorty.js';
 
-console.log(example, data);
+console.log(data);
+
+const pokemon = data.pokemon[0].name;
+console.log(pokemon);
+const pokemonImg = data.pokemon[0].img;
+console.log(pokemonImg);

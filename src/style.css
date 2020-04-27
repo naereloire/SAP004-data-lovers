@@ -1,0 +1,50 @@
+body {
+  background-color: rgb(21, 0, 70);
+}
+
+#cards {
+  height: 30em;
+  text-align: center;
+  font-size: 2em;
+  color: white;
+}
+
+.filters {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.title {
+  /* color: #1f209e;
+  font-size: 80px;
+  text-align: center;
+  font-family: 'pokemon'; */
+  display: flex;
+  justify-content: center;
+}
+
+img {
+    max-height: 200px;
+    width: auto;
+    height: auto;
+  }
+
+.links {}
+
+.search,
+.btSearch,
+.rarity,
+.type,
+.weakness,
+.ordination {
+  border-radius: 6px;
+  background-color: rgb(43, 94, 223);
+  color: #fff;
+  font-size: 18px;
+  border: solid 1px grey;
+}
+
+input::placeholder {
+    color: #fff;
+}
