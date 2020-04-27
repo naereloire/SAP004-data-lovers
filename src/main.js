@@ -1,11 +1,14 @@
-import data from './data/pokemon/pokemon.js';
+import dataManipulation from './data.js'
 
-console.log(data);
+let arrayPokemon=dataManipulation.getData()
+let getDivCards=document.getElementById("local-cards")
 
-const pokemonName = data.pokemon[0].name;
-document.getElementById("cards").innerHTML = `<h3>${pokemonName}</h3>`;
-console.log(pokemonName);
-
-const pokemonImg = data.pokemon[0].img;
-document.getElementById("cards").innerHTML = `<img src=${pokemonImg} alt="imagem"></img>`;
-console.log(pokemonImg)
+for(let pokemon of arrayPokemon){
+let createDivCard=document.createElement("div")
+createDivCard.className="card-style"
+createDivCard.innerHTML+=pokemon.name + "<br>" + pokemon.numero
+getDivCards.appendChild(createDivCard)
+let createImgPokemon=document.createElement("img")
+createDivCard.appendChild(createImgPokemon)
+createImgPokemon.srcset=pokemon.imagem
+}
