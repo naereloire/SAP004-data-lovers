@@ -18,18 +18,19 @@
         <li><a href="quem_somos.html">Estatísticas</a></li>
       </ul>
     </nav>
+    <h1 class="title-style">Pokelovers</h1>
   </header>
   <main>
-    <h1 class="title-style">Pokelovers</h1>
+   
 
-    <section class="container">
+    <div class="container">
       <section class="filters">
 
         <div class="selection">
-          <input type="search" placeholder="Insira aqui a sua busca" id="search">
-          <button>Buscar</button>
+          <input class="input-area" type="search" placeholder="Insira aqui a sua busca" id="search">
+          <button class="options">Buscar</button>
 
-          <select id="filter" class="fa">
+          <select id="filter" class="fa options">
             <option value="">TIPO</option>
             <option value="fogo"> &#xf06d; Fogo</option>
             <option value="agua"> &#xf773; Agua</option>
@@ -41,28 +42,28 @@
 
           </select>
 
-          <select id="weakness">
+          <select id="weakness" class="options">
             <option value="">FRAQUEZA</option>
             <option value="">A</option>
             <option value="">F</option>
             <option value="">G</option>
           </select>
 
-          <select id="rarity">
+          <select id="rarity" class="options">
             <option value="">RARIDADE</option>
             <option value="">A</option>
             <option value="">F</option>
             <option value="">G</option>
           </select>
 
-          <select id="ordination">
+          <select id="ordination" class="options">
             <option>A-Z</option>
             <option>Z-A</option>
           </select>
 
         </div>
       </section>
-    </section>
+    </div>
 
     <div id="local-cards" class="cards"></div>
   </main>
