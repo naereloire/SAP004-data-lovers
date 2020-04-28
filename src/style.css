@@ -1,10 +1,8 @@
-
-.body-style{
+.body-style {
   background-color: #7C84AE;
 }
 
 .links-style {
-  /* border: 5px solid black; */
   background-color: #070F3A;
   display: flex;
   flex-wrap: wrap;
@@ -15,11 +13,12 @@
 }
 
 ul {
+  background-color: #333;
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
+  
 }
 
 li {
@@ -27,11 +26,11 @@ li {
 }
 
 li a {
-  display: block;
   color: white;
-  text-align: center;
+  display: block;
   padding: 14px 16px;
   text-decoration: none;
+  text-align: center;
 }
 
 li a:hover:not(.active) {
@@ -42,22 +41,20 @@ li a:hover:not(.active) {
   background-color: #6B4E90;
 }
 
-.cards {
-  /* border: 5px solid black; */
+.title {
   display: flex;
-  flex-wrap: wrap;
-  font-size: 1.2em;
-
+  font-size: 80px;
+  height: auto;
+  justify-content: center;
+  margin: 5px;
+  padding: 12px;
+  width: auto;
 }
 
-.card-style {
-  border: 2px dotted blueviolet;
-  font-size: 1.2em;
-  height: auto;
-  margin: 5px;
-  padding: 3em;
-  width: 4.5%;
-  max-width: 400px;
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .filters {
@@ -66,43 +63,24 @@ li a:hover:not(.active) {
   justify-content: center;
 }
 
-.title {
-  /* color: #1f209e;*/
-  font-size: 80px;
-  height: auto;
-  margin: 5px;
-  padding:12px;
-  width: auto;
-}
-
-
-.title-style {
-  /* border: 5px solid black; */
-  color: #CEC154;
-  font-size: 60px;
-  text-align: center;
-
-  font-family: 'pokemon';
-  display: flex;
-  justify-content: center;
-}
-
-
-.container{
-display: flex; 
-flex-direction: row; 
-justify-content: center; 
-
-
-}
-
 .selection {
   flex: 1;
 }
 
+.input-area {
+  background-color: #FFE8E4;
+  border-radius: 5px;
+  color: black;
+  display: inline-block;
+  font-family: 'Arial', 'Font Awesome 5 Free';
+  font-size: 12px;
+  font-weight: bold;
+  margin: 0 0;
+  padding: 12px 24px;
+  text-align: center;
+}
 
-
-.options{
+.options {
   background-color: #642B86;
   border-radius: 5px;
   color: #FFE8E4;
@@ -113,19 +91,20 @@ justify-content: center;
   margin: 0 0;
   padding: 12px 24px;
   text-align: center;
-
 }
-.input-area{
-  background-color:#FFE8E4;
-  border-radius: 5px;
-  color: black;
-  display: inline-block;
-  font-family: 'Arial', 'Font Awesome 5 Free';
-  font-size: 12px;
-  font-weight: bold;
-  margin: 0 0;
-  padding: 12px 24px;
-  text-align: center;
 
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1.2em;
+}
 
+.card-style {
+  border: 2px dotted blueviolet;
+  font-size: 1.2em;
+  height: auto;
+  margin: 5px;
+  padding: 3em;
+  width: 4.5%;
+  max-width: 400px;
 }
