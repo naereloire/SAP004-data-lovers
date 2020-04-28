@@ -1,74 +1,22 @@
-body {
+@font-face {
+  font-family: 'Font';
+  src: url('fonte/sunday_best/Sunday\ Best.ttf');
+}
+
+.body-style {
   background-color: #190546;
-}
-
-.cards {
-  /* border: 5px solid black; */
-  display: flex;
-  flex-wrap: wrap;
-  font-size: 1.2em;
-  margin: 1em;
-  padding: 3em;
-}
-
-.card-style {
-  background-color: #070F3A;
-  border: 2px dotted blueviolet;
-  color: #7C84AE;
-  font-size: 1.2em;
-  height: auto;
-  margin: 10px;
-  max-width: 400px;
-  padding: 3em;
-  width: 5%;
-}
-
-.filters {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
-.title {
-  display: flex;
-  justify-content: center;
-}
-
-img {
-  max-height: 200px;
-  width: auto;
-  height: auto;
-}
-
-.options {
-  border-radius: 6px;
-  background-color: #2b5edf;
-  color: #fff;
-  font-size: 18px;
-  border: solid 1px #808080;
-}
-
-input::placeholder {
-  color: #fff;
-}
-
-a:link,
-a:link:active,
-a:visited:active,
-a:visited {
-  color: #DCDCDC;
-  text-decoration: underline;
+  font-family: 'helvetica neue', helvetica, arial, sans-serif;
 }
 
 .links-style {
-  /* border: 5px solid black; */
-  background-color: #070F3A;
   display: flex;
   flex-wrap: wrap;
-  font-size: 30px;
+  font-size: 18px;
   margin: 0;
   padding: 0;
   overflow: hidden;
+  justify-content: center;
+  font-family: 'Font';
 }
 
 ul {
@@ -76,7 +24,7 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
+  background-color: rgb(48, 7, 94);
 }
 
 li {
@@ -87,14 +35,72 @@ li a {
   display: block;
   color: white;
   text-align: center;
-  padding: 14px 16px;
+  padding: 10px 10px;
   text-decoration: none;
+
 }
 
 li a:hover:not(.active) {
-  background-color: gray;
+  background-color: rgb(101, 84, 141);
 }
 
-.active {
-  background-color: #6B4E90;
+.title-style {
+  display: flex;
+  justify-content: center;
+}
+
+.title-img {
+  max-height: 200px;
+  width: auto;
+  height: auto;
+  margin: 30px;
+}
+
+.filters {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.options {
+  border-radius: 6px;
+  background-color: #2b5edf;
+  color: #fff;
+  font-size: 12px;
+  border: solid 1px #808080;
+  font-family: 'Font';
+  padding: 5px;
+}
+
+input::placeholder {
+  color: #fff;
+  font-family: 'Font';
+  padding: 3px;
+}
+
+.cards {
+  /* border: 5px solid black; */
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1.2em;
+  height: auto;
+  margin: 5px;
+  padding:12px;
+  width: auto;
+  justify-content: center;
+}
+
+.card-style {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(199, 221, 228);
+  border: 2px dotted blueviolet;
+  color: #7C84AE;
+  font-size: 1.2em;
+  height: auto;
+  margin: 10px;
+  max-width: 400px;
+  padding: 3em;
+  width: 5%;
+  align-items: center;
 }
