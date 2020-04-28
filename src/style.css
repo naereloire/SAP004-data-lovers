@@ -1,27 +1,110 @@
-.cards{
-    border:5px solid black;
-    font-size: 1.2em;
-    height: 18em;
-    margin: 1em;
-    padding: 3em;
-    width: 50%;
-    }
-    
-    .title {
-      border: 5px solid black;
-      color: red;
-      font-size: 50px;
-      text-align: center;
-      
-    }
-    
-    .links{
-    border:5px solid black;
-    display:flex;
-    flex-wrap: wrap;
-    
-    }
-    
-    .filtros{
-      border: 5px solid black;
-    }
+.body-style {
+  background-color: #7C84AE;
+}
+
+.links-style {
+  background-color: #070F3A;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 30px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+ul {
+  background-color: #333;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  
+}
+
+li {
+  float: left;
+}
+
+li a {
+  color: white;
+  display: block;
+  padding: 14px 16px;
+  text-decoration: none;
+  text-align: center;
+}
+
+li a:hover:not(.active) {
+  background-color: gray;
+}
+
+.active {
+  background-color: #6B4E90;
+}
+
+.title {
+  display: flex;
+  font-size: 80px;
+  height: auto;
+  justify-content: center;
+  margin: 5px;
+  padding: 12px;
+  width: auto;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.filters {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.selection {
+  flex: 1;
+}
+
+.input-area {
+  background-color: #FFE8E4;
+  border-radius: 5px;
+  color: black;
+  display: inline-block;
+  font-family: 'Arial', 'Font Awesome 5 Free';
+  font-size: 12px;
+  font-weight: bold;
+  margin: 0 0;
+  padding: 12px 24px;
+  text-align: center;
+}
+
+.options {
+  background-color: #642B86;
+  border-radius: 5px;
+  color: #FFE8E4;
+  display: inline-block;
+  font-family: 'Arial', 'Font Awesome 5 Free';
+  font-size: 12px;
+  font-weight: bold;
+  margin: 0 0;
+  padding: 12px 24px;
+  text-align: center;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1.2em;
+}
+
+.card-style {
+  border: 2px dotted black;
+  font-size: 1.2em;
+  height: auto;
+  margin: 5px;
+  padding: 3em;
+  width: 4.5%;
+  max-width: 400px;
+}
