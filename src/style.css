@@ -1,5 +1,9 @@
-.body-style {
-  background-color: #7C84AE;
+html {
+  font-family: 'helvetica neue', helvetica, arial, sans-serif;
+}
+
+body {
+  background-color: #190546;
 }
 
 .links-style {
