@@ -18,6 +18,6 @@ function getData() {
 
 const dataManipulation = {
   getData: getData
-}
+
 
 export default dataManipulation;
