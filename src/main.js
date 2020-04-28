@@ -11,4 +11,5 @@ getDivCards.appendChild(createDivCard)
 let createImgPokemon=document.createElement("img")
 createDivCard.appendChild(createImgPokemon)
 createImgPokemon.srcset=pokemon.imagem
+
 }
