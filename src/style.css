@@ -1,4 +1,5 @@
-.body-style {
+
+.body-style{
   background-color: #7C84AE;
 }
 
@@ -41,12 +42,12 @@ li a:hover:not(.active) {
   background-color: #6B4E90;
 }
 
-
 .cards {
   /* border: 5px solid black; */
   display: flex;
   flex-wrap: wrap;
   font-size: 1.2em;
+
 }
 
 .card-style {
@@ -66,64 +67,42 @@ li a:hover:not(.active) {
 }
 
 .title {
-  /* color: #1f209e;
+  /* color: #1f209e;*/
   font-size: 80px;
-=======
   height: auto;
   margin: 5px;
   padding:12px;
   width: auto;
 }
-.card-style{
- background-color: #070F3A;
- border: 2px dotted blueviolet; 
- color: #7C84AE;
- font-size: 1.2em;
- height: auto;
- margin: 10px;
- max-width:400px;
- padding: 3em;
- width: 5%;
-}
+
 
 .title-style {
   /* border: 5px solid black; */
   color: #CEC154;
   font-size: 60px;
   text-align: center;
+
   font-family: 'pokemon';
   display: flex;
   justify-content: center;
 }
 
 
+.container{
+display: flex; 
+flex-direction: row; 
+justify-content: center; 
 
-.container {
-  /* border:solid red; */
-  display: flex;
-  justify-content: center;
-}
 
-.filters {
-  /* border: 5px solid red; */
-  background-color: #070F3A;
-  border-radius: 5px;
-  color: #FFE8E4;
-  display: flex;
-  flex-wrap: wrap;
-  font-size: 12px;
-  font-weight: bold;
-  margin: 0 0;
-  padding: 24px;
-  text-align: center;
-  width: 50%;
 }
 
 .selection {
   flex: 1;
 }
 
-select, option, button {
+
+
+.options{
   background-color: #642B86;
   border-radius: 5px;
   color: #FFE8E4;
@@ -134,4 +113,19 @@ select, option, button {
   margin: 0 0;
   padding: 12px 24px;
   text-align: center;
+
+}
+.input-area{
+  background-color:#FFE8E4;
+  border-radius: 5px;
+  color: black;
+  display: inline-block;
+  font-family: 'Arial', 'Font Awesome 5 Free';
+  font-size: 12px;
+  font-weight: bold;
+  margin: 0 0;
+  padding: 12px 24px;
+  text-align: center;
+
+
 }

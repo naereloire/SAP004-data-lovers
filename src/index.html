@@ -9,10 +9,9 @@
     integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 </head>
 
-
 <body class="body-style">
- 
   <header>
+
   <nav class="links-style">
    <ul>
     <li><a class="active" href="home.html">Home</a></li>
@@ -25,47 +24,50 @@
     </figure> 
   </header> 
 <main>
- 
+  <div class="container">
+      <section class="filters">
 
-<section class="container filters"">
-  
-  <div class="selection">
-      <input type="search" placeholder="Insira aqui a sua busca" id="search">
-      <button>Buscar</button>
-    
-      <select id="filter"  class="options fa">
-         <option value="">TIPO</option>
-         <option value="fogo">  &#xf06d; Fogo</option>
-         <option value="agua">  &#xf773; Agua</option>
-         <option value="gelo">  &#xf2dc; Gelo</option>
-         <option value="planta"> &#xf1bb; Planta</option>
-         <option value="planta"> &#xf3a5; Pedra</option>
-       </select>
-     
-       <select id="weakness" class="options">
-        <option value="">FRAQUEZA</option>
-        <option value="">A</option>
-        <option value="">F</option>
-        <option value="">G</option>
-      </select>
+        <div class="selection">
+          <input class="input-area" type="search" placeholder="Insira aqui a sua busca" id="search">
+          <button class="options">Buscar</button>
 
-      <select id="rarity" class="options"
-        <option value="">RARIDADE</option>
-        <option value="">A</option>
-        <option value="">F</option>
-        <option value="">G</option>
-      </select>
+          <select id="filter" class="fa options">
+            <option value="">TIPO</option>
+            <option value="fogo"> &#xf06d; Fogo</option>
+            <option value="agua"> &#xf773; Agua</option>
+            <option value="gelo"> &#xf2dc; Gelo</option>
+            <option value="planta"> &#xf1bb; Planta</option>
+            <option value="planta"> &#xf3a5; Pedra</option>
 
-      <select id="ordination" class="options">
-        <option>A-Z</option>
-        <option>Z-A</option>
-      </select>
+
+
+          </select>
+
+          <select id="weakness" class="options">
+            <option value="">FRAQUEZA</option>
+            <option value="">A</option>
+            <option value="">F</option>
+            <option value="">G</option>
+          </select>
+
+          <select id="rarity" class="options">
+            <option value="">RARIDADE</option>
+            <option value="">A</option>
+            <option value="">F</option>
+            <option value="">G</option>
+          </select>
+
+          <select id="ordination" class="options">
+            <option>A-Z</option>
+            <option>Z-A</option>
+          </select>
+
+        </div>
+      </section>
+
     </div>
 
- </section>
- </section>
-
- <div id="local-cards" class="cards"></div>
+    <div id="local-cards" class="cards"></div>
   </main>
 
   <footer>
@@ -73,8 +75,8 @@
   </footer> 
 
 
-<script src="main.js" type="module"></script>
-  
+
+  <script src="main.js" type="module"></script>
 </body>
 
 </html>
