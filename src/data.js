@@ -15,7 +15,6 @@ function getData() {
   return newListCard
 }
 
-
 const dataManipulation = {
   getData: getData
 }
