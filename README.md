@@ -1,7 +1,7 @@
 ## Pokelovers
 Aplicação Pokelovers
 ```sh
-link da aplicação
+https://naereloire.github.io/SAP004-data-lovers/
 ```
 
 Pagina WEB para visualização de um conjunto de dados, que se adeque a necessidade do usuário. Deve ser possível ao usuário, filtrar os dados, ordená-los e fazer algum calculo agregado.
@@ -42,7 +42,7 @@ Nesse projeto o Wireframe foi definido, pensando na experiencia do usuario confo
 
 -https
 ```sh
-git clone https://github.com/naereloire/SAP004-cipher.git
+git clone 
 ```
 
 * Instale as dependências do projeto: 
