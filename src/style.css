@@ -100,7 +100,7 @@ li a:hover:not(.active) {
 }
 
 .card-style {
-  border: 2px dotted blueviolet;
+  border: 2px dotted black;
   font-size: 1.2em;
   height: auto;
   margin: 5px;
