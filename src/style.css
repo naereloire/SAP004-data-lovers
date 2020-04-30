@@ -1,24 +1,30 @@
+@font-face {
+  font-family: 'Font';
+  src: url('fonte/sunday_best/Sunday\ Best.ttf');
+}
+
 .body-style {
-  background-color: #7C84AE;
+  background-color: #190546;
+  font-family: 'helvetica neue', helvetica, arial, sans-serif;
 }
 
 .links-style {
-  background-color: #070F3A;
   display: flex;
   flex-wrap: wrap;
-  font-size: 30px;
+  font-size: 18px;
   margin: 0;
   padding: 0;
   overflow: hidden;
+  justify-content: center;
+  font-family: 'Font';
 }
 
 ul {
-  background-color: #333;
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  
+  background-color: rgb(48, 7, 94);
 }
 
 li {
@@ -26,35 +32,28 @@ li {
 }
 
 li a {
-  color: white;
   display: block;
-  padding: 14px 16px;
-  text-decoration: none;
+  color: white;
   text-align: center;
+  padding: 10px 10px;
+  text-decoration: none;
+
 }
 
 li a:hover:not(.active) {
-  background-color: gray;
+  background-color: rgb(101, 84, 141);
 }
 
-.active {
-  background-color: #6B4E90;
-}
-
-.title {
+.title-style {
   display: flex;
-  font-size: 80px;
-  height: auto;
   justify-content: center;
-  margin: 5px;
-  padding: 12px;
+}
+
+.title-img {
+  max-height: 200px;
   width: auto;
-}
-
-.container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+  height: auto;
+  margin: 30px;
 }
 
 .filters {
@@ -63,48 +62,45 @@ li a:hover:not(.active) {
   justify-content: center;
 }
 
-.selection {
-  flex: 1;
-}
-
-.input-area {
-  background-color: #FFE8E4;
-  border-radius: 5px;
-  color: black;
-  display: inline-block;
-  font-family: 'Arial', 'Font Awesome 5 Free';
-  font-size: 12px;
-  font-weight: bold;
-  margin: 0 0;
-  padding: 12px 24px;
-  text-align: center;
-}
-
 .options {
-  background-color: #642B86;
-  border-radius: 5px;
-  color: #FFE8E4;
-  display: inline-block;
-  font-family: 'Arial', 'Font Awesome 5 Free';
+  border-radius: 6px;
+  background-color: #2b5edf;
+  color: #fff;
   font-size: 12px;
-  font-weight: bold;
-  margin: 0 0;
-  padding: 12px 24px;
-  text-align: center;
+  border: solid 1px #808080;
+  font-family: 'Font';
+  padding: 5px;
+}
+
+input::placeholder {
+  color: #fff;
+  font-family: 'Font';
+  padding: 3px;
 }
 
 .cards {
+  /* border: 5px solid black; */
   display: flex;
   flex-wrap: wrap;
   font-size: 1.2em;
+  height: auto;
+  margin: 5px;
+  padding:12px;
+  width: auto;
+  justify-content: center;
 }
 
 .card-style {
-  border: 2px dotted black;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(199, 221, 228);
+  border: 2px dotted blueviolet;
+  color: #7C84AE;
   font-size: 1.2em;
   height: auto;
-  margin: 5px;
-  padding: 3em;
-  width: 4.5%;
+  margin: 10px;
   max-width: 400px;
+  padding: 3em;
+  width: 5%;
+  align-items: center;
 }

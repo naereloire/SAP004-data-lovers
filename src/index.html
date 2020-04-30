@@ -5,43 +5,42 @@
   <meta charset="utf-8">
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">  
   <title>Pokelovers</title>
+  <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico">
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
     integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 </head>
 
 <body class="body-style">
+
   <header>
+    <nav class="links-style">
+      <ul>
+        <li><a class="active" href="home.html">Home</a></li>
+        <li><a href="curiosidades.html">Curiosidades</a></li>
+        <li><a href="dicas.html">Dicas</a></li>
+        <li><a href="estatisticas.html">Estatísticas</a></li>
+      </ul>
+    </nav>
+    <figure class="title-style">
+      <img src="/img/logo.png" alt="logo-de-pokemon" class="title-img">
+    </figure>
+  </header>
 
-  <nav class="links-style">
-   <ul>
-    <li><a class="active" href="home.html">Home</a></li>
-    <li><a href="curiosidades.html">Curiosidades</a></li>
-    <li><a href="estatisticas.html">Estatísticas</a></li>
-  </ul>
-  </nav>
-    <figure class="title">
-      <img src="https://fontmeme.com/permalink/200425/a17a438c66030d08e0f591d139b1e7e0.png" alt="logo-de-pokemon">
-    </figure> 
-  </header> 
-<main>
-  <div class="container">
+  <main>
+    <div>
       <section class="filters">
+        <div>
+          <input type="search" class="options" placeholder="INSIRA SUA BUSCA" id="search">
+          <button class="options">BUSCAR</button>
 
-        <div class="selection">
-          <input class="input-area" type="search" placeholder="Insira aqui a sua busca" id="search">
-          <button class="options">Buscar</button>
-
-          <select id="filter" class="fa options">
+          <select id="filter" class="options">
             <option value="">TIPO</option>
             <option value="fogo"> &#xf06d; Fogo</option>
             <option value="agua"> &#xf773; Agua</option>
             <option value="gelo"> &#xf2dc; Gelo</option>
             <option value="planta"> &#xf1bb; Planta</option>
             <option value="planta"> &#xf3a5; Pedra</option>
-
-
-
           </select>
 
           <select id="weakness" class="options">
@@ -62,22 +61,21 @@
             <option>A-Z</option>
             <option>Z-A</option>
           </select>
-
         </div>
       </section>
-
     </div>
 
     <div id="local-cards" class="cards"></div>
   </main>
 
   <footer>
-    <h3>Criação<a href="https://github.com/camilagerarde" title="Camila Cunha" target="_blank">Camila Cunha</a> e <a href="https://github.com/naereloire" title="Naere" target="_blank">Naere</a></h3>  
-  </footer> 
-
-
+    <h3>Criação <a href="https://github.com/camilagerarde" title="Camila Cunha" target="_blank">Camila Cunha</a> e <a
+        href="https://github.com/naereloire" title="Naere" target="_blank">Naere</a>
+    </h3>
+  </footer>
 
   <script src="main.js" type="module"></script>
+
 </body>
 
 </html>
