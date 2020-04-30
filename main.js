@@ -1,7 +1,6 @@
 import data from './data/pokemon/pokemon.js';
 import {getData} from './data.js'
 
-
 let arrayPokemon=getData(data)
 let getDivCards=document.getElementById("local-cards")
 
@@ -13,7 +12,4 @@ getDivCards.appendChild(createDivCard)
 let createImgPokemon=document.createElement("img")
 createDivCard.appendChild(createImgPokemon)
 createImgPokemon.srcset=pokemon.imagem
-
-
- 
 }
