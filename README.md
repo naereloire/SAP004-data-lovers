@@ -14,7 +14,7 @@ Cálculo agregado se refere aos diversos cálculos que podem ser feitos com os d
 <img src="https://media.giphy.com/media/vnGlErQHuF9BK/giphy.gif" width="200" heigth="200"> 
 </p>
 
-## 1. Processo de decisões do desenho:
+## 1. Processo de decisões:
 * Definição de provável usuário. 
 * Definição de principal problema do usuário e solução.
 * Utilizada ferramenta [<code>***exemplo***</code>](link) para criar um esboço da interface da aplicação.
