@@ -12,36 +12,31 @@
   display: flex;
   flex-wrap: wrap;
   font-size: 18px;
-  margin: 0;
-  padding: 0;
   overflow: hidden;
   justify-content: center;
   font-family: 'Font';
 }
 
-ul {
+.ul-link {
+  background-color: #30075E;
   list-style-type: none;
-  margin: 0;
   padding: 0;
-  overflow: hidden;
-  background-color: rgb(48, 7, 94);
 }
 
-li {
+.ul-link li {
   float: left;
 }
 
-li a {
+.ul-link li a {
   display: block;
-  color: white;
+  color: #FFF;
   text-align: center;
   padding: 10px 10px;
   text-decoration: none;
-
 }
 
-li a:hover:not(.active) {
-  background-color: rgb(101, 84, 141);
+.ul-link li a:hover {
+  background-color: #65548D;
 }
 
 .title-style {
@@ -50,57 +45,54 @@ li a:hover:not(.active) {
 }
 
 .title-img {
-  max-height: 200px;
-  width: auto;
-  height: auto;
   margin: 30px;
 }
 
-.filters {
+.filters-style {
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
 
-.options {
+.options-style {
   border-radius: 6px;
   background-color: #2b5edf;
-  color: #fff;
   font-size: 12px;
   border: solid 1px #808080;
+  height: 40px ;
+}
+
+.options-style, input::placeholder {
+  color: #fff;
   font-family: 'Font';
   padding: 5px;
 }
 
-input::placeholder {
-  color: #fff;
-  font-family: 'Font';
-  padding: 3px;
-}
-
 .cards {
-  /* border: 5px solid black; */
   display: flex;
   flex-wrap: wrap;
   font-size: 1.2em;
-  height: auto;
   margin: 5px;
   padding:12px;
-  width: auto;
   justify-content: center;
 }
 
 .card-style {
   display: flex;
   flex-direction: column;
-  background-color: rgb(199, 221, 228);
-  border: 2px dotted blueviolet;
-  color: #7C84AE;
+  background-color: #C7DDE4;
+  border: 2px dotted #8a2be2;
+  color: #424242;
   font-size: 1.2em;
-  height: auto;
   margin: 10px;
   max-width: 400px;
   padding: 3em;
   width: 5%;
   align-items: center;
 }
+
+.footer-style h3, a {
+  color: #D4BFE3;
+  text-align: center;
+}
+
