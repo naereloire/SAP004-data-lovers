@@ -50,7 +50,7 @@ function sortPokemons(event) {
 getSelectOrder.addEventListener("change", sortPokemons)
 
 
-let getSelectFilter = document.getElementById("filter")
+let getSelectFilterType = document.getElementById("filter-type")
 
 function filterPokemons (event){
 let elementSelect=event.target
@@ -65,4 +65,8 @@ list=filterInfons(arrayPokemon,arrayParameters[0],arrayParameters[1])
 showPokemons(list)
 }
 
-getSelectFilter.addEventListener("change", filterPokemons)
+getSelectFilterType.addEventListener("change", filterPokemons)
+
+let getSelectWeaknessType = document.getElementById("filter-weakness")
+
+getSelectWeaknessType.addEventListener("change", filterPokemons)
