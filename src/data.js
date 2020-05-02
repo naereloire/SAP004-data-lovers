@@ -16,7 +16,7 @@ export function selectInfosToShow(data){
   return newListCard
   }
 
-  function alphaCrescent(objeto1,objeto2,option){
+  function sortCrescent(objeto1,objeto2,option){
     
     if (objeto1[option]<objeto2[option]){
       return -1
@@ -27,7 +27,7 @@ export function selectInfosToShow(data){
     return 0
   }
 
-  function alphaDecreasing(objeto1,objeto2,option){
+  function sortDecreasing(objeto1,objeto2,option){
     if (objeto1[option]<objeto2[option]){
       return 1
     }
@@ -43,10 +43,10 @@ export function selectInfosToShow(data){
     let listPokemon= data
     let sortedList=[]
     if (order=="increasing"){
-      sortedList=listPokemon.sort(function(a,b){return alphaCrescent(a,b,option)} )
+      sortedList=listPokemon.sort(function(a,b){return sortCrescent(a,b,option)} )
     }
     if (order=="decreasing"){
-      sortedList=listPokemon.sort(function(a,b){return alphaDecreasing(a,b,option)} )
+      sortedList=listPokemon.sort(function(a,b){return sortDecreasing(a,b,option)} )
     }
     return sortedList
 
