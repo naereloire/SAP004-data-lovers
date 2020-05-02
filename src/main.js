@@ -35,8 +35,8 @@ let getSelectOrder = document.getElementById("ordination")
 
 function sortPokemons(event) {
     // debugger;
-    let elementoSelect = event.target
-    let selectedOption = elementoSelect.options[elementoSelect.selectedIndex].value
+    let elementSelect = event.target
+    let selectedOption = elementSelect.options[elementSelect.selectedIndex].value
     let list = []
     if(selectedOption==""){list=arrayPokemon}
     
