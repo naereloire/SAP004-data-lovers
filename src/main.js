@@ -15,9 +15,9 @@ function showPokemons(arrayPokemon) {
         
         createDivCard.className = "card-style"
         
-        createDivCard.innerHTML += pokemon.name + "<br>" + 
+        createDivCard.innerHTML += "Nome:"+ pokemon.name + "<br>" + "Nº:"+
         
-        pokemon.number + "<br>" + pokemon.probability
+        pokemon.number + "<br>" + "Spawn:"+pokemon.probability
         
         getDivCards.appendChild(createDivCard)
         
