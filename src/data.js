@@ -53,17 +53,20 @@ export function ordenation(data, option, order) {
 }
 
 function compareCategory(objeto, option, category) {
-  if (Array.isArray(objeto[option])){
+ 
+  if (Array.isArray(objeto[option])) {
     for (let element of objeto[option]) {
       if (element == category) {
         return true
       }
-      else {
-        return objeto[option] == category
-      }
     }
+  }
+  else {
+    return objeto[option] == category
 
   }
+
+
 
 
 }
@@ -71,7 +74,7 @@ function compareCategory(objeto, option, category) {
 export function filterInfons(data, option, category) {
   let listPokemon = data
   let filteredList = []
-  filteredList=listPokemon.filter(function(x){return compareCategory(x,option,category)})
+  filteredList = listPokemon.filter(function (x) { return compareCategory(x, option, category) })
   return filteredList
 }
 
