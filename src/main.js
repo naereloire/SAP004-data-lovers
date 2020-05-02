@@ -12,12 +12,20 @@ function showPokemons(arrayPokemon) {
 
     for (let pokemon of arrayPokemon) {
         let createDivCard = document.createElement("div")
+        
         createDivCard.className = "card-style"
-        createDivCard.innerHTML += pokemon.name + "<br>" + pokemon.numero
+        
+        createDivCard.innerHTML += pokemon.name + "<br>" + 
+        
+        pokemon.number + "<br>" + pokemon.probability
+        
         getDivCards.appendChild(createDivCard)
+        
         let createImgPokemon = document.createElement("img")
+        
         createDivCard.appendChild(createImgPokemon)
-        createImgPokemon.srcset = pokemon.imagem
+        
+        createImgPokemon.srcset = pokemon.image
     }
 }
 showPokemons(arrayPokemon)
@@ -30,25 +38,29 @@ function sortPokemons(event) {
     let elementoSelect = event.target
     let selectedOption = elementoSelect.options[elementoSelect.selectedIndex].value
     let list = []
-    if (selectedOption == "a-z") {
-        list = ordenation(arrayPokemon, "name", "increasing")
-    }
-    if (selectedOption == "z-a") {
-        list = ordenation(arrayPokemon, "name", "decreasing")
-    }
+    if(selectedOption==""){list=arrayPokemon}
+    
+    else{
+    let arrayParameters=selectedOption.split("-")
+    list=ordenation(arrayPokemon,arrayParameters[0],arrayParameters[1])
 
-    if (selectedOption=="num-cresc") {
-        list = ordenation(arrayPokemon,"num","increasing")
     }
-    if (selectedOption=="num-decresc") {
-        list = ordenation(arrayPokemon,"num","decreasing")
-    }
-    debugger;
+    // refatorado com método split
+    // if (selectedOption == "a-z") {
+    //     list = ordenation(arrayPokemon, "name", "increasing")
+    // }
+    // if (selectedOption == "z-a") {
+    //     list = ordenation(arrayPokemon, "name", "decreasing")
+    // }
+
+    // if (selectedOption=="num-cresc") {
+    //     list = ordenation(arrayPokemon,"num","increasing")
+    // }
+    // if (selectedOption=="num-decresc") {
+    //     list = ordenation(arrayPokemon,"num","decreasing")
+    // }
+    // debugger;
     showPokemons(list)
 }
-
-
-
 getSelectOrder.addEventListener("change", sortPokemons)
 
-// refatorar com método split

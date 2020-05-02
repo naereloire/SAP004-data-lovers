@@ -4,9 +4,11 @@ export function selectInfosToShow(data){
   for (let pokemon of listPokemon){
     let infosCard={
       
-      numero:pokemon.num,
+      number:pokemon.num,
       name:pokemon.name,
-      imagem:pokemon.img}
+      image:pokemon.img,
+      probability:pokemon.spawn_chance
+    }
     
     newListCard.push(infosCard)
   }
