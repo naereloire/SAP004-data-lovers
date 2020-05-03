@@ -65,10 +65,6 @@ function compareCategory(objeto, option, category) {
     return objeto[option] == category
 
   }
-
-
-
-
 }
 
 export function filterInfons(data, option, category) {

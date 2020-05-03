@@ -74,6 +74,7 @@ input::placeholder {
 }
 
 .cards {
+  color: #fff;
   display: flex;
   flex-wrap: wrap;
   font-size: 1.2em;

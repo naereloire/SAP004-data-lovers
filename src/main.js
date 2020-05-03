@@ -9,8 +9,12 @@ function showPokemons(arrayPokemon) {
 
     let getDivCards = document.getElementById("local-cards")
     getDivCards.innerHTML = ""
-
-    for (let pokemon of arrayPokemon) {
+    
+    if (arrayPokemon.length==0){
+        getDivCards.innerHTML = "<br>Resultado não encontrado</br>"
+        }
+    else {  
+        for (let pokemon of arrayPokemon) {
         let createDivCard = document.createElement("div")
         
         createDivCard.className = "card-style"
@@ -26,7 +30,7 @@ function showPokemons(arrayPokemon) {
         createDivCard.appendChild(createImgPokemon)
         
         createImgPokemon.srcset = pokemon.image
-    }
+    }}
 }
 showPokemons(arrayPokemon)
 
@@ -70,3 +74,14 @@ getSelectFilterType.addEventListener("change", filterPokemons)
 let getSelectWeaknessType = document.getElementById("filter-weakness")
 
 getSelectWeaknessType.addEventListener("change", filterPokemons)
+
+let getInputSearch=document.getElementById("search")
+
+function inputEnter(event){
+  
+if(event.key=="Enter" || event.type=="click"){  
+let searchResult=filterInfons(arrayPokemon,"name",getInputSearch.value)
+showPokemons(searchResult)
+}
+}
+getInputSearch.addEventListener("keypress",inputEnter)
