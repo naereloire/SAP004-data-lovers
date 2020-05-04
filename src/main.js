@@ -16,9 +16,9 @@ function showPokemon(arrayPokemon) {
             <img class="img-poke" src ="${pokemon.imagem}" alt ="imagem ${pokemon.nome}"/>
             <div class="div-poke">
             <p class="subtitle-poke"><strong>Tipo:</strong></p>
-            <p class="itens-poke" >${pokemon.tipos}</p>
+            <p class="items-poke" >${pokemon.tipos}</p>
             <p class="subtitle-poke"><strong>Fraquezas:</strong></p>
-            <p class="itens-poke" >${pokemon.fraquezas}</p>
+            <p class="items-poke" >${pokemon.fraquezas}</p>
             </div>
           </div>`;
   }
