@@ -53,7 +53,7 @@ export function ordenation(data, option, order) {
 }
 
 function compareSearchedValue(objeto, option, searchedValue) {
-  debugger;
+  // debugger;
   if (Array.isArray(objeto[option])) {
     for (let element of objeto[option]) {
       if (element == searchedValue) {
@@ -62,7 +62,7 @@ function compareSearchedValue(objeto, option, searchedValue) {
     }
   }
   else {
-    return objeto[option] == searchedValue
+    return objeto[option].toLocaleLowerCase() == searchedValue.toLocaleLowerCase()
 
   }
 }
