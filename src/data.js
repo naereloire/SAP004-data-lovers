@@ -9,15 +9,12 @@ export function selectInfosToShow(data) {
       image: pokemon.img,
       probability: pokemon.spawn_chance
     }
-
     newListCard.push(infosCard)
   }
-
   return newListCard
 }
 
 function sortCrescent(objeto1, objeto2, option) {
-
   if (objeto1[option] < objeto2[option]) {
     return -1
   }
@@ -37,46 +34,42 @@ function sortDecreasing(objeto1, objeto2, option) {
   return 0
 }
 
-
-
 export function ordenation(data, option, order) {
   let listPokemon = data
   let sortedList = []
   if (order == "increasing") {
-    sortedList = listPokemon.sort(function (a, b) { return sortCrescent(a, b, option) })
+    sortedList = listPokemon.sort(function (a, b) {
+      return sortCrescent(a, b, option)
+    })
   }
   if (order == "decreasing") {
-    sortedList = listPokemon.sort(function (a, b) { return sortDecreasing(a, b, option) })
+    sortedList = listPokemon.sort(function (a, b) {
+      return sortDecreasing(a, b, option)
+    })
   }
   return sortedList
-
 }
 
 function compareCategory(objeto, option, category) {
- 
   if (Array.isArray(objeto[option])) {
     for (let element of objeto[option]) {
       if (element == category) {
         return true
       }
     }
-  }
-  else {
+  } else {
     return objeto[option] == category
-
   }
-
-
-
-
 }
 
 export function filterInfons(data, option, category) {
   let listPokemon = data
   let filteredList = []
-  filteredList = listPokemon.filter(function (x) { return compareCategory(x, option, category) })
+  filteredList = listPokemon.filter(function (x) {
+    return compareCategory(x, option, category)
+  })
   return filteredList
 }
 
-  // mostrar + e
-  // esplelhar cards
+// mostrar + e
+// esplelhar cards
