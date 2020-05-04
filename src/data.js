@@ -52,25 +52,25 @@ export function ordenation(data, option, order) {
 
 }
 
-function compareCategory(objeto, option, category) {
- 
+function compareSearchedValue(objeto, option, searchedValue) {
+  debugger;
   if (Array.isArray(objeto[option])) {
     for (let element of objeto[option]) {
-      if (element == category) {
+      if (element == searchedValue) {
         return true
       }
     }
   }
   else {
-    return objeto[option] == category
+    return objeto[option] == searchedValue
 
   }
 }
 
-export function filterInfons(data, option, category) {
+export function filterInfons(data, option, searchedValue) {
   let listPokemon = data
   let filteredList = []
-  filteredList = listPokemon.filter(function (x) { return compareCategory(x, option, category) })
+  filteredList = listPokemon.filter(function (x) { return compareSearchedValue(x, option, searchedValue) })
   return filteredList
 }
 

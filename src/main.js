@@ -88,4 +88,4 @@ function searchByName(event) {
 }
 getInputSearch.addEventListener("keypress",searchByName)
 
-getButtonSearch.addEventListener("click",inputEnter)
+getButtonSearch.addEventListener("click",searchByName)
