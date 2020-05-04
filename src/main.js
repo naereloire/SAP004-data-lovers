@@ -1,28 +1,31 @@
 import data from './data/pokemon/pokemon.js';
 import {selectInfosToShow, ordenation, filterInfons} from './data.js'
 
-let arrayPokemon = data.pokemon;
-showPokemons(arrayPokemon);
+let arrayPokemon = data.pokemon
+showPokemons(arrayPokemon)
 
 function showPokemons(arrayPokemon) {
-  let showPokemons = document.getElementById("local-cards");
-  let card = " "
-  showPokemons.innerHTML = ""
-
-  for (let pokemon of arrayPokemon) {
-    card += `
-          <div class="card-style">
-            <h2 class = "title-poke">${pokemon.name}</h2>
-            <img class="img-poke" src ="${pokemon.img}" alt ="imagem ${pokemon.name}"/>
-            <div class="div-poke">
-            <p class="subtitle-poke"><strong>Tipo:</strong></p>
-            <p class="itens-poke" >${pokemon.type.join(", ")}</p>
-            <p class="subtitle-poke"><strong>Fraquezas:</strong></p>
-            <p class="itens-poke" >${pokemon.weaknesses.join(", ")}</p>
-            </div>
-          </div>`;
-  }
-  showPokemons.innerHTML = card;
+    arrayPokemon = selectInfosToShow(arrayPokemon)
+    let showPokemons = document.getElementById("local-cards");
+    let card = "";
+    showPokemons.innerHTML = "";
+  
+    for (let pokemon of arrayPokemon) {
+      card += `
+            <div class="card-style">
+              <h2 class = "title-poke">${pokemon.name} ${pokemon.number}</h2>
+              <img class="img-poke" src ="${pokemon.image}" alt ="imagem ${pokemon.name}"/>
+              <div class="div-poke">
+              <p class="subtitle-poke"><strong>Tipo:</strong></p>
+              <p class="items-poke" >${pokemon.types}</p>
+              <p class="subtitle-poke"><strong>Fraquezas:</strong></p>
+              <p class="items-poke" >${pokemon.weaknesses}</p>
+              <p class="subtitle-poke"><strong>Spawn:</strong></p>
+              <p class="items-poke" > ${pokemon.probability}</p>
+              </div>
+            </div>`;
+    }
+    showPokemons.innerHTML = card;
 }
 
 

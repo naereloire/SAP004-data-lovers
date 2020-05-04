@@ -91,6 +91,24 @@ input::placeholder {
   width: 10%;
 }
 
+.title-poke {
+  color: #000614;
+  font-size: 25px;
+  text-align: center;
+}
+
+.title-poke h3{
+  text-align: left;
+}
+
+.img-poke {
+  max-height: 120px;
+}
+
+.div-poke {
+  margin: 15px;
+}
+
 .subtitle-poke,
 .items-poke {
   font-size: 17px;
@@ -101,20 +119,6 @@ input::placeholder {
 
 .items-poke {
   margin: 0 0 7px 0;
-}
-
-.title-poke {
-  color: #000614;
-  font-size: 25px;
-  text-align: center;
-}
-
-.img-poke {
-  max-height: 120px;
-}
-
-.div-poke {
-  margin: 15px;
 }
 
 .footer-style h3,
