@@ -1,14 +1,14 @@
   export function selectInfosToShow(data) {
-    let listPokemon = data;
+    let listPokemon = data.pokemon;
     let newListCard = [];
     for (let pokemon of listPokemon) {
       let infosCard = {
         number: pokemon.num,
         name: pokemon.name,
         image: pokemon.img,
-        probability: pokemon.spawn_chance
         types: pokemon.type.join(", "),
-        weaknesses: pokemon.weaknesses.join(", ")
+        weaknesses: pokemon.weaknesses.join(", "),
+        probability: pokemon.spawn_chance
       }
       newListCard.push(infosCard)
     }
