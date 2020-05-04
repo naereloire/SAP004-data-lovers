@@ -1,5 +1,5 @@
   export function selectInfosToShow(data) {
-    let listPokemon = data.pokemon;
+    let listPokemon = data;
     let newListCard = [];
     for (let pokemon of listPokemon) {
       let infosCard = {
