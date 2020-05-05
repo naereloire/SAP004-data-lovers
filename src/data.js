@@ -82,12 +82,6 @@ export function ordenation(data, option, order) {
  * @param {Object} objeto intem(pokemon)da lista de pokemons que tera suas propriedades verificadas.
  * @param {string} option Uma propriedade(ex:name)do objeto reperesentada por uma string.
  * @param {string} searchedValue uma string representando o valor da buscado. 
- * Condição 1- "if" verifica se o objeto é um array 
- * (ex:propriedade "type" contém um array para pokemons com mais de um tipo) se for true inicia
- * um laço for of para acessar a lista e procurar o valor buscado, se o elemento buscado
- * for igual ao searchedValue(valor buscado) 
- * @returns true se o obejto não for um array 
- * realiza uma comparação direta entre a propriedade e o searchedValue.
  * @returns comparação entre o objeto e o searchedValue convertendo para LowerCase.
  */
 function compareSearchedValue(objeto, option, searchedValue) {
@@ -118,5 +112,4 @@ export function filterInfons(data, option, searchedValue) {
   return filteredList
 }
 
-  // mostrar + e
-  // esplelhar cards
+  
