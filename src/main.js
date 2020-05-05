@@ -28,7 +28,7 @@ function showPokemons(arrayPokemon) {
               <p class="items-poke" >${pokemon.types}</p>
               <p class="subtitle-poke"><strong>Fraquezas:</strong></p>
               <p class="items-poke" >${pokemon.weaknesses}</p>
-              <p class="subtitle-poke"><strong>Spawn:</strong></p>
+              <p class="subtitle-poke"><strong>Chance de aparecer:</strong></p>
               <p class="items-poke" > ${pokemon.probability}</p>
               </div>
             </div>`;
