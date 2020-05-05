@@ -10,11 +10,14 @@ let arrayPokemon = data.pokemon
 showPokemons(arrayPokemon)
 
 function showPokemons(arrayPokemon) {
-    arrayPokemon = selectInfosToShow(arrayPokemon);
-    let showPokemons = document.getElementById("local-cards");
-    let card = "";
-    showPokemons.innerHTML = "";
-  
+  arrayPokemon = selectInfosToShow(arrayPokemon)
+  let showPokemons = document.getElementById("local-cards");
+  let card = "";
+  showPokemons.innerHTML = "";
+
+  if (arrayPokemon.length === 0) {
+    card += "<br>Resultado não encontrado</br>";
+  } else {
     for (let pokemon of arrayPokemon) {
       card += `
             <div class="card-style">
@@ -30,7 +33,8 @@ function showPokemons(arrayPokemon) {
               </div>
             </div>`;
     }
-    showPokemons.innerHTML = card;
+  }
+  showPokemons.innerHTML = card;
 }
 
 let getSelectOrder = document.getElementById("ordination")
