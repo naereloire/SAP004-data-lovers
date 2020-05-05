@@ -44,6 +44,7 @@ function sortPokemons(event) {
   }
   showPokemons(list)
 }
+
 getSelectOrder.addEventListener("change", sortPokemons)
 
 
