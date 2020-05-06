@@ -1,7 +1,8 @@
 import data from './data/pokemon/pokemon.js';
 import { selectInfosToShow, ordenation, filterInfons } from './data.js'
 
-let arrayPokemon = data.pokemon
+const arrayPokemon = data.pokemon
+let arrayAuxiliar = arrayPokemon
 
 /**
  * Função para mostrar os dados na tela. 
@@ -41,18 +42,31 @@ let getSelectOrder = document.getElementById("ordination")
 
 /**
  * Função para ordenar os dados e mostrar na tela.
- * @param {EventListener} event de mudança no select que aplica a ordenção utilizando.
+ * @param {EventListener} event de mudança no select que aplica a ordenção.
  */
 function sortPokemons(event) {
-    let elementSelect = event.target
-    let selectedOption = elementSelect.options[elementSelect.selectedIndex].value
-    let list = []
-    if (selectedOption == "") { list = arrayPokemon }
-    else {
-        let arrayParameters = selectedOption.split("-")
-        list = ordenation(arrayPokemon, arrayParameters[0], arrayParameters[1])
+  let elementSelect = event.target
+  let selectedOption = elementSelect.options[elementSelect.selectedIndex].value
+  let list = []
+  if (selectedOption == "") { list = arrayPokemon }
+  else {
+    let arrayParameters = selectedOption.split("-")
+
+    let filterType = document.getElementById("filter-type")
+    let valueFiltertype= filterType.options[filterType.selectedIndex].value
+
+    let filterWkenesses = document.getElementById("filter-weakness")
+    let valueFilterWkenesses= filterWkenesses.options[filterWkenesses.selectedIndex].value
+
+    if (valueFiltertype == "" || valueFilterWkenesses == "") {
+
+      list = ordenation(arrayPokemon, arrayParameters[0], arrayParameters[1])
     }
-    showPokemons(list)
+    else {
+      list = ordenation(arrayAuxiliar, arrayParameters[0], arrayParameters[1])
+    }
+  }
+  showPokemons(list)
 }
 getSelectOrder.addEventListener("change", sortPokemons)
 
@@ -63,15 +77,59 @@ let getSelectFilterType = document.getElementById("filter-type")
  * @param {EventListener} event de mudança no select que aplica a filtragem utilizando.
  */
 function filterPokemons(event) {
-    let elementSelect = event.target
-    let selectedOption = elementSelect.options[elementSelect.selectedIndex].value
-    let list = []
-    if (selectedOption == "") { list = arrayPokemon }
-    else {
-        let arrayParameters = selectedOption.split("-")
-        list = filterInfons(arrayPokemon, arrayParameters[0], arrayParameters[1])
+  let elementSelect = event.target
+  let selectedOption = elementSelect.options[elementSelect.selectedIndex].value
+  let list = []
+
+  let filterType = document.getElementById("filter-type")
+  let valueFiltertype= filterType.options[filterType.selectedIndex].value
+
+  let filterWkenesses = document.getElementById("filter-weakness")
+  let valueFilterWkenesses= filterWkenesses.options[filterWkenesses.selectedIndex].value
+
+  if (selectedOption == "") { 
+    arrayAuxiliar = arrayPokemon 
+    let arrayParameters
+    
+   
+
+    if (event.target == filterType) {
+    
+      if (valueFilterWkenesses==""){list = filterInfons(arrayPokemon, arrayParameters[0], arrayParameters[1])}
+
+      else{  arrayParameters = valueFilterWkenesses.split("-")
+      list = filterInfons(arrayAuxiliar, arrayParameters[0], arrayParameters[1])}
     }
-    showPokemons(list)
+
+    else {
+      if (valueFiltertype==""){list = filterInfons(arrayPokemon, arrayParameters[0], arrayParameters[1])}
+
+      else{  arrayParameters = valueFiltertype.split("-")
+      list = filterInfons(arrayAuxiliar, arrayParameters[0], arrayParameters[1])}
+
+    }
+  
+  }
+  else {
+    let arrayParameters = selectedOption.split("-")
+
+    if (event.target == filterType) {
+     debugger;
+      if (valueFilterWkenesses==""){list = filterInfons(arrayPokemon, arrayParameters[0], arrayParameters[1])}
+
+      else{ list = filterInfons(arrayAuxiliar, arrayParameters[0], arrayParameters[1])}
+    }
+
+    else {
+      if (valueFiltertype==""){list = filterInfons(arrayPokemon, arrayParameters[0], arrayParameters[1])}
+
+      else{ list = filterInfons(arrayAuxiliar, arrayParameters[0], arrayParameters[1])}
+
+    }
+
+  }
+  showPokemons(list)
+  arrayAuxiliar = list
 }
 
 getSelectFilterType.addEventListener("change", filterPokemons)
@@ -87,10 +145,10 @@ let getButtonSearch = document.getElementById("button-search")
  * @param {EventListener} event evento de enter ou click.
  */
 function searchByName(event) {
-    if (event.key == "Enter" || event.type == "click") {
-        let searchResult = filterInfons(arrayPokemon, "name", getInputSearch.value)
-        showPokemons(searchResult)
-    }
+  if (event.key == "Enter" || event.type == "click") {
+    let searchResult = filterInfons(arrayPokemon, "name", getInputSearch.value)
+    showPokemons(searchResult)
+  }
 }
 
 getInputSearch.addEventListener("keypress", searchByName)
