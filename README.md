@@ -26,7 +26,7 @@ Utilizamos o banco de dados do anime **Pokémon**.
 Como início da nossa definição de usuário criamos personas, que representam nossos possíveis usuários e suas necessidades, para assim compreender e planejar as soluções que deveríamos oferecer em nossa aplicação.
 
 <p align="center">
-<img src="./src/img/personas.png" width="300"/>
+<img src="./src/img/persona.png" width="700"/>
 </p>
 
 Também fizemos uma pesquisa de preferências, para a definição dos dados e informações disponíveis ao usuário de acordo com suas reais necessidades.
@@ -42,7 +42,7 @@ Define-se wireframe como um esqueleto, um protótipo ou uma versão bastante pri
 Nesse projeto o Wireframe foi definido, pensando na experiência do usuário conforme esboço abaixo, realizado na ferramenta [Figma](https://www.figma.com/).
 
 <p align="center">
-<img src="./src/img/prototipo.png" width="300"/>
+<img src="./src/img/prototipo.png" width="600"/>
 </p>
 
 
