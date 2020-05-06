@@ -5,22 +5,23 @@
  * no objeto anterior.
  */
 export function selectInfosToShow(data) {
-  let listPokemon = data
-  let newListCard = []
-  for (let pokemon of listPokemon) {
-    let infosCard = {
-
-      number: pokemon.num,
-      name: pokemon.name,
-      image: pokemon.img,
-      probability: pokemon.spawn_chance
+    let listPokemon = data;
+    let newListCard = [];
+    for (let pokemon of listPokemon) {
+      let infosCard = {
+        number: pokemon.num,
+        name: pokemon.name,
+        image: pokemon.img,
+        types: pokemon.type.join(", "),
+        weaknesses: pokemon.weaknesses.join(", "),
+        probability: pokemon.spawn_chance
+      }
+      newListCard.push(infosCard)
     }
-
-    newListCard.push(infosCard)
+    return newListCard
   }
 
-  return newListCard
-}
+
 /**
  * Função que compara dois elementos para definir a ordem de posicionamento do maior para o menor
  * @param {Object} objeto1 Primeiro objeto a ser comparado (um intem da lista (um pokemon))
@@ -29,7 +30,6 @@ export function selectInfosToShow(data) {
  * @returns retorna a posição do elemento: -1 = para atŕas; 1 = para frente e 0 = mantém a posição.
  */
 function sortCrescent(objeto1, objeto2, option) {
-
   if (objeto1[option] < objeto2[option]) {
     return -1
   }
@@ -74,7 +74,6 @@ export function ordenation(data, option, order) {
     sortedList = listPokemon.sort(function (a, b) { return sortDecreasing(a, b, option) })
   }
   return sortedList
-
 }
 
 /**
@@ -94,7 +93,6 @@ function compareSearchedValue(objeto, option, searchedValue) {
   }
   else {
     return objeto[option].toLocaleLowerCase() == searchedValue.toLocaleLowerCase()
-
   }
 }
 
@@ -111,5 +109,3 @@ export function filterInfons(data, option, searchedValue) {
   filteredList = listPokemon.filter(function (x) { return compareSearchedValue(x, option, searchedValue) })
   return filteredList
 }
-
-  
