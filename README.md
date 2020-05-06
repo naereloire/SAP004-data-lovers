@@ -9,7 +9,7 @@ https://naereloire.github.io/SAP004-data-lovers/
 O projeto **Pokelovers**, se trata de uma página WEB com visualização de um conjunto de dados, que se adequa a necessidade do usuário. 
 Nela é possível ao usuário, pesquisar dados, filtra-los, ordená-los e fazer algum calculo agregado.
 
-`Cálculo agregado se refere aos diversos cálculos que podem ser feitos com os dados para mostrar a informação mais relevante para os usuários (médias, valores máximos e mínimos, etc).`
+> Cálculo agregado se refere aos diversos cálculos que podem ser feitos com os dados para mostrar a informação mais relevante para os usuários (médias, valores máximos e mínimos, etc).
 
 Utilizamos o banco de dados do anime **Pokémon**.
 
@@ -25,7 +25,9 @@ Utilizamos o banco de dados do anime **Pokémon**.
 #### 1.1 Identificação do usuário:
 Como início da nossa definição de usuário criamos personas, que representam nossos possíveis usuários e suas necessidades, para assim compreender e planejar as soluções que deveríamos oferecer em nossa aplicação.
 
-![personas](/src/img/personas.png)
+<p align="center">
+<img src="./src/img/personas.png" width="300"/>
+</p>
 
 Também fizemos uma pesquisa de preferências, para a definição dos dados e informações disponíveis ao usuário de acordo com suas reais necessidades.
 
@@ -39,7 +41,10 @@ Com estes dados então definimos nossas Histórias de usuário e o protótipo pa
 Define-se wireframe como um esqueleto, um protótipo ou uma versão bastante primitiva do visual de um projeto.
 Nesse projeto o Wireframe foi definido, pensando na experiência do usuário conforme esboço abaixo, realizado na ferramenta [Figma](https://www.figma.com/).
 
-![protótipo](/src/img/prototipo.png)
+<p align="center">
+<img src="./src/img/prototipo.png" width="300"/>
+</p>
+
 
 #### 1.2 Organização:
 
@@ -69,12 +74,12 @@ Foi utilizado também _Node.js, Git e GitHub_.
 
 [GIF GATINHO DIGITANDO]
 
-:warning: Para executar os comandos você precisará de um UNIX Shell, que é um programa que interpreta linhas de comando e também deve ter o git instalado. 
+>:warning: Para executar os comandos você precisará de um UNIX Shell, que é um programa que interpreta linhas de comando e também deve ter o git instalado. 
 Se você usa um sistema operacional como GNU/Linux ou MacOS, você já tem um _shell_ (terminal) instalado (e provavelmente o `git` também). 
 Se você usa Windows pode baixar a versão completa do [Cmder](https://cmder.net/) que inclue o [Git bash](https://git-scm.com/download/win), embora seja recomendado que você teste GNU/Linux. 
 Se tem Windows 10 ou superior pode usar o [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10).
 
-Será necessária também a instalação do [Node.js](https://nodejs.org/) que contém o [npm](https://docs.npmjs.com/)
+>Será necessária também a instalação do [Node.js](https://nodejs.org/) que contém o [npm](https://docs.npmjs.com/)
 ****
 
 * [Clone](https://help.github.com/articles/cloning-a-repository/) o projeto na sua máquina executando o seguinte comando no seu terminal:
