@@ -11,10 +11,10 @@
 .links-style {
   display: flex;
   flex-wrap: wrap;
-  font-size: 18px;
-  overflow: hidden;
-  justify-content: center;
   font-family: 'Font';
+  font-size: 18px;
+  justify-content: center;
+  overflow: hidden;
 }
 
 .ul-link {
@@ -28,10 +28,10 @@
 }
 
 .ul-link li a {
-  display: block;
   color: #FFF;
-  text-align: center;
+  display: block;
   padding: 10px 10px;
+  text-align: center;
   text-decoration: none;
 }
 
@@ -55,10 +55,10 @@
 }
 
 .options-style {
-  border-radius: 6px;
   background-color: #2b5edf;
-  font-size: 12px;
   border: solid 1px #808080;
+  border-radius: 6px;
+  font-size: 12px;
   height: 40px;
 
 }
@@ -78,23 +78,52 @@ input::placeholder {
   display: flex;
   flex-wrap: wrap;
   font-size: 1.2em;
-  margin: 5px;
-  padding: 12px;
   justify-content: center;
+  margin: 10px;
+  padding: 12px;
 }
 
 .card-style {
+  align-items: center;
+  background-color: #C7DDE4;
+  border: 3px outset #113fb4;
+  box-shadow: 4px 4px #111111;
+  color: #000d2e;
   display: flex;
   flex-direction: column;
-  background-color: #C7DDE4;
-  border: 2px dotted #8a2be2;
-  color: #424242;
-  font-size: 1.2em;
   margin: 10px;
-  max-width: 400px;
-  padding: 3em;
-  width: 5%;
-  align-items: center;
+  padding: 0 2em;
+  width: 10%;
+}
+
+.title-poke {
+  color: #000614;
+  font-size: 25px;
+  text-align: center;
+}
+
+.title-poke h3{
+  text-align: left;
+}
+
+.img-poke {
+  max-height: 120px;
+}
+
+.div-poke {
+  margin: 15px;
+}
+
+.subtitle-poke,
+.items-poke {
+  font-size: 17px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.items-poke {
+  margin: 0 0 7px 0;
 }
 
 .footer-style h3,
