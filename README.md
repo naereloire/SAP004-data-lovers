@@ -17,6 +17,7 @@ Utilizamos o banco de dados do anime **Pokémon**.
 <img src="https://media.giphy.com/media/vnGlErQHuF9BK/giphy.gif" width="200" heigth="200"> 
 </p>
 
+
 ### 1. Processo de decisões do projeto:
 * Definição de provável usuário. 
 * Definição de principal problema do usuário e solução.
@@ -72,7 +73,9 @@ Foi utilizado também _Node.js, Git e GitHub_.
 
 ### 3. Montagem do ambiente de desenvolvimento - Instalação e execução.
 
-[GIF GATINHO DIGITANDO]
+<p align="center">
+<img src="https://media.giphy.com/media/LmNwrBhejkK9EFP504/giphy.gif" width="200" heigth="200"> 
+</p>
 
 >:warning: Para executar os comandos você precisará de um UNIX Shell, que é um programa que interpreta linhas de comando e também deve ter o git instalado. 
 Se você usa um sistema operacional como GNU/Linux ou MacOS, você já tem um _shell_ (terminal) instalado (e provavelmente o `git` também). 
