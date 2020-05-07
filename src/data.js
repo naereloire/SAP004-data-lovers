@@ -5,21 +5,24 @@
  * no objeto anterior.
  */
 export function selectInfosToShow(data) {
-    let listPokemon = data;
-    let newListCard = [];
-    for (let pokemon of listPokemon) {
-      let infosCard = {
-        number: pokemon.num,
-        name: pokemon.name,
-        image: pokemon.img,
-        types: pokemon.type.join(", "),
-        weaknesses: pokemon.weaknesses.join(", "),
-        probability: pokemon.spawn_chance
-      }
-      newListCard.push(infosCard)
-    }
-    return newListCard
+  if (!Array.isArray(data) || data.length===0){
+    throw new TypeError("parâmetro invalido")
   }
+  let listPokemon = data;
+  let newListCard = [];
+  for (let pokemon of listPokemon) {
+    let infosCard = {
+      number: pokemon.num,
+      name: pokemon.name,
+      image: pokemon.img,
+      types: pokemon.type.join(", "),
+      weaknesses: pokemon.weaknesses.join(", "),
+      probability: pokemon.spawn_chance
+    }
+    newListCard.push(infosCard)
+  }
+  return newListCard
+}
 
 
 /**
@@ -67,12 +70,12 @@ function sortDecreasing(objeto1, objeto2, option) {
 export function ordenation(data, option, order) {
   let listPokemon = data
   let sortedList = []
-  if (order == "increasing") {
+  if (order === "increasing") {
     sortedList = listPokemon.sort(function (a, b) {
       return sortCrescent(a, b, option)
     })
   }
-  if (order == "decreasing") {
+  if (order === "decreasing") {
     sortedList = listPokemon.sort(function (a, b) {
       return sortDecreasing(a, b, option)
     })
@@ -90,14 +93,13 @@ export function ordenation(data, option, order) {
 function compareSearchedValue(objeto, option, searchedValue) {
   if (Array.isArray(objeto[option])) {
     for (let element of objeto[option]) {
-      if (element == searchedValue) {
+      if (element === searchedValue) {
         return true
       }
     }
   }
   else {
-    debugger;
-    return objeto[option].toLowerCase() == searchedValue.toLowerCase()
+    return objeto[option].toLowerCase() === searchedValue.toLowerCase()
   }
 }
 

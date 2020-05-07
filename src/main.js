@@ -67,7 +67,7 @@ let getSelectFilterType = document.getElementById("filter-type")
  * Função para filtrar os dados e mostrar na tela.
  * @param {EventListener} event de mudança no select que aplica a filtragem utilizando.
  */
-function filterPokemons(event) {
+function filterPokemons() {
   let list = []
   let filterType = document.getElementById("filter-type")
   let valueFiltertype = filterType.options[filterType.selectedIndex].value
