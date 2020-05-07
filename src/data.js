@@ -96,7 +96,8 @@ function compareSearchedValue(objeto, option, searchedValue) {
     }
   }
   else {
-    return objeto[option].toLocaleLowerCase() == searchedValue.toLocaleLowerCase()
+    debugger;
+    return objeto[option].toLowerCase() == searchedValue.toLowerCase()
   }
 }
 
