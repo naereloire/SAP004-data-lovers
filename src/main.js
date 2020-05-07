@@ -1,7 +1,8 @@
 import data from './data/pokemon/pokemon.js';
 import { selectInfosToShow, ordenation, filterInfons } from './data.js'
 
-let arrayPokemon = data.pokemon
+const arrayPokemon = data.pokemon
+let arrayAuxiliar = arrayPokemon
 
 /**
  * Função para mostrar os dados na tela. 
@@ -41,20 +42,24 @@ let getSelectOrder = document.getElementById("ordination")
 
 /**
  * Função para ordenar os dados e mostrar na tela.
- * @param {EventListener} event de mudança no select que aplica a ordenção utilizando.
+ * @param {EventListener} event de mudança no select que aplica a ordenção.
  */
 function sortPokemons(event) {
-    let elementSelect = event.target
-    let selectedOption = elementSelect.options[elementSelect.selectedIndex].value
-    let list = []
-    if (selectedOption == "") { list = arrayPokemon }
-    else {
-        let arrayParameters = selectedOption.split("-")
-        list = ordenation(arrayPokemon, arrayParameters[0], arrayParameters[1])
-    }
-    showPokemons(list)
+  let elementSelect = event.target
+  let selectedOption = elementSelect.options[elementSelect.selectedIndex].value
+  let list = []
+  let arrayParameters = selectedOption.split("-")
+
+  if (selectedOption == "") {
+    list = arrayAuxiliar
+  }
+  else {
+    list = ordenation(arrayAuxiliar, arrayParameters[0], arrayParameters[1])
+  }
+  showPokemons(list)
 }
 getSelectOrder.addEventListener("change", sortPokemons)
+
 
 let getSelectFilterType = document.getElementById("filter-type")
 
@@ -63,16 +68,41 @@ let getSelectFilterType = document.getElementById("filter-type")
  * @param {EventListener} event de mudança no select que aplica a filtragem utilizando.
  */
 function filterPokemons(event) {
-    let elementSelect = event.target
-    let selectedOption = elementSelect.options[elementSelect.selectedIndex].value
-    let list = []
-    if (selectedOption == "") { list = arrayPokemon }
-    else {
-        let arrayParameters = selectedOption.split("-")
-        list = filterInfons(arrayPokemon, arrayParameters[0], arrayParameters[1])
+  let list = []
+  let filterType = document.getElementById("filter-type")
+  let valueFiltertype = filterType.options[filterType.selectedIndex].value
+
+  let filterWkenesses = document.getElementById("filter-weakness")
+  let valueFilterWkenesses = filterWkenesses.options[filterWkenesses.selectedIndex].value
+  let list_type = arrayPokemon
+  let list_weak = arrayPokemon
+  let arrayParameters
+
+
+  if (valueFiltertype == "" && valueFilterWkenesses == "") {
+    list = arrayPokemon
+  }
+  else {
+    if (valueFilterWkenesses !== "") {
+      arrayParameters = valueFilterWkenesses.split("-")
+      list_type = filterInfons(list_type, arrayParameters[0], arrayParameters[1])
     }
-    showPokemons(list)
+    if (valueFiltertype !== "") {
+      arrayParameters = valueFiltertype.split("-")
+      list_weak = filterInfons(list_weak, arrayParameters[0], arrayParameters[1])
+    }
+    list = list_type.filter(function (x) { return list_weak.includes(x) });
+  }
+
+
+  arrayAuxiliar = list
+
+  let newEvent = document.createEvent('Event');
+  newEvent.initEvent('sortList', true, true);
+  getSelectOrder.dispatchEvent(newEvent);
+
 }
+getSelectOrder.addEventListener("sortList", sortPokemons)
 
 getSelectFilterType.addEventListener("change", filterPokemons)
 
@@ -87,10 +117,10 @@ let getButtonSearch = document.getElementById("button-search")
  * @param {EventListener} event evento de enter ou click.
  */
 function searchByName(event) {
-    if (event.key == "Enter" || event.type == "click") {
-        let searchResult = filterInfons(arrayPokemon, "name", getInputSearch.value)
-        showPokemons(searchResult)
-    }
+  if (event.key == "Enter" || event.type == "click") {
+    let searchResult = filterInfons(arrayPokemon, "name", getInputSearch.value)
+    showPokemons(searchResult)
+  }
 }
 
 getInputSearch.addEventListener("keypress", searchByName)
