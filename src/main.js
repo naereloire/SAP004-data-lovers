@@ -94,7 +94,7 @@ function filterPokemons(event) {
     list = list_type.filter(function (x) { return list_weak.includes(x) });
   }
 
-  // showPokemons(list)
+
   arrayAuxiliar = list
 
   let newEvent = document.createEvent('Event');
