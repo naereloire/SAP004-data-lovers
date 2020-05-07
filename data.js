@@ -68,10 +68,14 @@ export function ordenation(data, option, order) {
   let listPokemon = data
   let sortedList = []
   if (order == "increasing") {
-    sortedList = listPokemon.sort(function (a, b) { return sortCrescent(a, b, option) })
+    sortedList = listPokemon.sort(function (a, b) {
+      return sortCrescent(a, b, option)
+    })
   }
   if (order == "decreasing") {
-    sortedList = listPokemon.sort(function (a, b) { return sortDecreasing(a, b, option) })
+    sortedList = listPokemon.sort(function (a, b) {
+      return sortDecreasing(a, b, option)
+    })
   }
   return sortedList
 }
@@ -92,7 +96,8 @@ function compareSearchedValue(objeto, option, searchedValue) {
     }
   }
   else {
-    return objeto[option].toLocaleLowerCase() == searchedValue.toLocaleLowerCase()
+    debugger;
+    return objeto[option].toLowerCase() == searchedValue.toLowerCase()
   }
 }
 
