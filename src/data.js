@@ -5,7 +5,7 @@
  * no objeto anterior.
  */
 export function selectInfosToShow(data) {
-  if (!Array.isArray(data) || data.length===0){
+  if (!Array.isArray(data) || data.length === 0) {
     throw new TypeError("parâmetro invalido")
   }
   let listPokemon = data;
@@ -34,7 +34,7 @@ export function selectInfosToShow(data) {
  */
 
 function sortCrescent(objeto1, objeto2, option) {
-  
+
   if (objeto1[option] < objeto2[option]) {
     return -1
   }
@@ -52,6 +52,14 @@ function sortCrescent(objeto1, objeto2, option) {
  * @returns uma lista ordenada.
  */
 export function ordenation(data, option, order) {
+  if (
+    !Array.isArray(data) || data.length === 0,
+    typeof option != "string" || option.length === 0,
+    typeof order != "string" || order.length === 0
+  ) {
+    throw new TypeError("parâmetro invalido")
+  }
+
   let listPokemon = data
   let sortedList = []
   if (order === "increasing") {
@@ -95,6 +103,13 @@ function compareSearchedValue(objeto, option, searchedValue) {
  * @returns Uma lista contendo os objetos filtrados.
  */
 export function filterInfons(data, option, searchedValue) {
+  if (
+    !Array.isArray(data) || data.length === 0,
+    typeof option != "string" || option.length === 0,
+    typeof searchedValue != "string" || searchedValue.length === 0
+  ) {
+    throw new TypeError("parâmetro invalido")
+  }
   let listPokemon = data
   let filteredList = []
   filteredList = listPokemon.filter(function (x) { return compareSearchedValue(x, option, searchedValue) })
