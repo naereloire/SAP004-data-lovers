@@ -32,7 +32,9 @@ export function selectInfosToShow(data) {
  * @param {String} option  Uma propriedade do objeto reperesentada por uma string. Ex: no select tipo "type-Grass"
  * @returns retorna a posição do elemento: -1 = para atŕas; 1 = para frente e 0 = mantém a posição.
  */
+
 function sortCrescent(objeto1, objeto2, option) {
+  
   if (objeto1[option] < objeto2[option]) {
     return -1
   }
@@ -41,24 +43,6 @@ function sortCrescent(objeto1, objeto2, option) {
   }
   return 0
 }
-
-/**
- * Função que compara dois elementos para definir a ordem de posicionamento do menor para o maior
- * @param {Object} objeto1 Primeiro objeto a ser comparado (um intem da lista (um pokemon))
- * @param {Object} objeto2 Segundo  objeto a ser comparado (um intem da lista (um pokemon))
- * @param {String} option  Uma propriedade do objeto reperesentada por uma string. Ex: no select tipo "type-Grass"
- * @returns retorna a posição do elemento: -1 = para atŕas; 1 = para frente e 0 = mantém a posição.
- */
-function sortDecreasing(objeto1, objeto2, option) {
-  if (objeto1[option] < objeto2[option]) {
-    return 1
-  }
-  if (objeto1[option] > objeto2[option]) {
-    return -1
-  }
-  return 0
-}
-
 
 /**
  * Função recebe lista de pokemons e ordena de acordo com o parametro.
@@ -77,8 +61,8 @@ export function ordenation(data, option, order) {
   }
   if (order === "decreasing") {
     sortedList = listPokemon.sort(function (a, b) {
-      return sortDecreasing(a, b, option)
-    })
+      return sortCrescent(a, b, option)
+    }).reverse()
   }
   return sortedList
 }
