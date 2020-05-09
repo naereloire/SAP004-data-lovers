@@ -1,7 +1,7 @@
 /**
  * Função para selecionar informações doa array pokemon que serão mostradas.
- * @param {Array.<Object>} data array contendo lista de obejots(151 pokemons)
- * @returns {Array.<Object>} Retorna uma variavel newListCard, contendo uma lista com informações selecionadas 
+ * @param {Array.<Object>} data Array contendo lista de obejots(151 pokemons).
+ * @returns {Array.<Object>} Retorna uma variavel newListCard, contendo uma lista com informações selecionadas.
  * no objeto anterior.
  */
 export function selectInfosToShow(data) {
@@ -26,11 +26,11 @@ export function selectInfosToShow(data) {
 
 
 /**
- * Função que compara dois elementos para definir a ordem de posicionamento do maior para o menor
- * @param {Object} objeto1 Primeiro objeto a ser comparado (um intem da lista (um pokemon))
- * @param {Object} objeto2 Segundo  objeto a ser comparado (um intem da lista (um pokemon))
- * @param {String} option  Uma propriedade do objeto reperesentada por uma string. Ex: no select tipo "type-Grass"
- * @returns retorna a posição do elemento: -1 = para atŕas; 1 = para frente e 0 = mantém a posição.
+ * Função que compara dois elementos para definir a ordem de posicionamento do maior para o menor.
+ * @param {Object} objeto1 Primeiro objeto a ser comparado (um intem da lista (um pokemon)).
+ * @param {Object} objeto2 Segundo  objeto a ser comparado (um intem da lista (um pokemon)).
+ * @param {String} option  Uma propriedade do objeto reperesentada por uma string. Ex: no select tipo "type-Grass".
+ * @returns Retorna a posição do elemento: -1 = para atŕas; 1 = para frente e 0 = mantém a posição.
  */
 
 function sortCrescent(objeto1, objeto2, option) {
@@ -46,7 +46,7 @@ function sortCrescent(objeto1, objeto2, option) {
 
 /**
  * Função recebe lista de pokemons e ordena de acordo com o parametro.
- * @param {Array.<Object>} data array contendo lista de obejots(151 pokemons).
+ * @param {Array.<Object>} data Array contendo lista de obejots(151 pokemons).
  * @param {string} option Uma propriedade do objeto reperesentada por uma string. Ex: no select ordenar "name-increasing".
  * @param {string} order  Uma string ("increasing"/"decreasing")que indica se a ordenação srá crescente ou decrescente.
  * @returns uma lista ordenada.
@@ -77,10 +77,10 @@ export function ordenation(data, option, order) {
 
 /**
  * Função que compara searchedValue com a propriedade buscada.
- * @param {Object} objeto intem(pokemon)da lista de pokemons que tera suas propriedades verificadas.
+ * @param {Object} objeto Intém(pokemon)da lista de pokemons que tera suas propriedades verificadas.
  * @param {string} option Uma propriedade(ex:name)do objeto reperesentada por uma string.
- * @param {string} searchedValue uma string representando o valor da buscado. 
- * @returns comparação entre o objeto e o searchedValue convertendo para LowerCase.
+ * @param {string} searchedValue Uma string representando o valor da buscado. 
+ * @returns Comparação entre o objeto e o searchedValue convertendo para LowerCase.
  */
 function compareSearchedValue(objeto, option, searchedValue) {
   if (Array.isArray(objeto[option])) {
@@ -97,9 +97,9 @@ function compareSearchedValue(objeto, option, searchedValue) {
 
 /**
  * Função aplica a seleção no array de acordo com o SearchedValue.
- * @param {*} data array contendo lista de obejots(151 pokemons)
- * @param {*} option Uma propriedade(ex:num)do objeto reperesentada por uma string.
- * @param {*} searchedValue uma string representando o valor da buscado. 
+ * @param {Array.<Object>} data Array contendo lista de obejots(151 pokemons).
+ * @param {string} option Uma propriedade(ex:num)do objeto reperesentada por uma string.
+ * @param {string} searchedValue uma string representando o valor da buscado. 
  * @returns Uma lista contendo os objetos filtrados.
  */
 export function filterInfons(data, option, searchedValue) {
@@ -114,4 +114,38 @@ export function filterInfons(data, option, searchedValue) {
   let filteredList = []
   filteredList = listPokemon.filter(function (x) { return compareSearchedValue(x, option, searchedValue) })
   return filteredList
+}
+
+
+/**
+ * Função realiza o calculo do futuro CP após evolução.
+ * @param {Array.<Object>} data Array contendo lista de obejots(151 pokemons).
+ * @param {number} currentCp Cp atual do pokemon representado por um numero.
+ * @param {string} namePokemon Nome do pokemon buscado que terá o futuro CP calculado.
+ * @returns Um objeto contendo valor max/min e medio do futuro cp.
+ */
+export function computeCp(data, currentCp, namePokemon) {
+  let pokemonSearched = filterInfons(data, "name", namePokemon)
+  pokemonSearched = pokemonSearched[0]
+  let computeResult 
+  let percentMax = 1.1
+  let percentMin = 0.9
+
+  if (pokemonSearched.multipliers.length === 1) {
+    computeResult = {
+      maxCp: currentCp * pokemonSearched.multipliers[0] * percentMax,
+      minCp: currentCp * pokemonSearched.multipliers[0] * percentMin,
+      mediaCp: currentCp * pokemonSearched.multipliers[0]
+    }
+
+  }
+  if (pokemonSearched.multipliers.length === 2){
+    computeResult = {
+      maxCp: currentCp * pokemonSearched.multipliers[1],
+      minCp: currentCp * pokemonSearched.multipliers[0],
+      mediaCp: currentCp * ((pokemonSearched.multipliers[0] + pokemonSearched.multipliers[1]) /2)
+    }
+
+  }
+   return computeResult
 }

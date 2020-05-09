@@ -1,4 +1,4 @@
-import { selectInfosToShow, ordenation, filterInfons, computeStats} from '../src/data.js';
+import { selectInfosToShow, ordenation, filterInfons, computeCp } from '../src/data.js';
 
 const dataInput = [{
   "id": 1,
@@ -68,24 +68,25 @@ describe('selectInfosToShow', () => {
 const arrayInput = [{
   name: "Arnold",
   number: "001",
-  caracteristica:["alto","pardo"],
+  caracteristica: ["alto", "pardo"],
 },
-{ name: "Zoe",
+{
+  name: "Zoe",
   number: "155",
-  caracteristica:["baixo","caucasiano"],
+  caracteristica: ["baixo", "caucasiano"],
 
 },
-{ 
+{
   name: "George",
   number: "030",
-  caracteristica:["alto",],
- 
+  caracteristica: ["alto",],
+
 },
-{ 
+{
   name: "George",
   number: "044",
-  caracteristica:["baixo","negro"],
- 
+  caracteristica: ["baixo", "negro"],
+
 },
 
 ]
@@ -93,24 +94,24 @@ const arrayInput = [{
 const arrayExpected = [{
   name: "Arnold",
   number: "001",
-  caracteristica:["alto","pardo"],
+  caracteristica: ["alto", "pardo"],
 },
-{ 
- name: "George",
- number: "030",
- caracteristica:["alto",],
+{
+  name: "George",
+  number: "030",
+  caracteristica: ["alto",],
 },
-{ 
+{
   name: "George",
   number: "044",
-  caracteristica:["baixo","negro"],
- 
+  caracteristica: ["baixo", "negro"],
+
 },
 {
   name: "Zoe",
   number: "155",
-  caracteristica:["baixo","caucasiano"],
-  
+  caracteristica: ["baixo", "caucasiano"],
+
 },
 
 ]
@@ -124,13 +125,13 @@ describe('ordenation', () => {
   it('should throw TypeError when invoked with wrong argument types', () => {
     expect(() => ordenation()).toThrow(TypeError);
     expect(() => ordenation([])).toThrow(TypeError);
-    expect(() => ordenation(arrayInput,0,0)).toThrow(TypeError);
-    expect(() => ordenation(arrayInput,"","")).toThrow(TypeError); 
+    expect(() => ordenation(arrayInput, 0, 0)).toThrow(TypeError);
+    expect(() => ordenation(arrayInput, "", "")).toThrow(TypeError);
   })
 
   it('returns `ordered array`', () => {
-    expect(ordenation(arrayInput,"name","increasing")).toStrictEqual(arrayExpected);
-    expect(ordenation(arrayInput,"name","decreasing")).toStrictEqual(arrayExpected.reverse());
+    expect(ordenation(arrayInput, "name", "increasing")).toStrictEqual(arrayExpected);
+    expect(ordenation(arrayInput, "name", "decreasing")).toStrictEqual(arrayExpected.reverse());
 
   });
 });
@@ -140,7 +141,7 @@ describe('ordenation', () => {
 const arrayFilteredExpected = [{
   name: "Arnold",
   number: "001",
-  caracteristica:["alto","pardo"],
+  caracteristica: ["alto", "pardo"],
 }]
 
 describe('filterInfos', () => {
@@ -151,33 +152,65 @@ describe('filterInfos', () => {
   it('should throw TypeError when invoked with wrong argument types', () => {
     expect(() => filterInfons()).toThrow(TypeError);
     expect(() => filterInfons([])).toThrow(TypeError);
-    expect(() => filterInfons(arrayInput,0,0)).toThrow(TypeError);
-    expect(() => filterInfons(arrayInput,"","")).toThrow(TypeError); 
+    expect(() => filterInfons(arrayInput, 0, 0)).toThrow(TypeError);
+    expect(() => filterInfons(arrayInput, "", "")).toThrow(TypeError);
   })
 
   it('returns `filtered array found`', () => {
-    expect(filterInfons(arrayInput,"name","Arnold")).toStrictEqual(arrayFilteredExpected);
+    expect(filterInfons(arrayInput, "name", "Arnold")).toStrictEqual(arrayFilteredExpected);
   });
 
   it('returns `not found`', () => {
-    expect(filterInfons(arrayInput,"name","abcd")).toStrictEqual([]);
+    expect(filterInfons(arrayInput, "name", "abcd")).toStrictEqual([]);
 
   });
 
   it('returns `not found`', () => {
-    expect(filterInfons(arrayInput,"caracteristica","pardo")).toStrictEqual(arrayFilteredExpected);
+    expect(filterInfons(arrayInput, "caracteristica", "pardo")).toStrictEqual(arrayFilteredExpected);
 
   });
 
 });
 
-describe('computeStats', () => {
-  it('is a function', () => {
-    expect(typeof computeStats).toBe('function');
-  });
 
-  it('returns `exemplo`', () => {
-    expect(filterInfons(data,"parametro","parametro")).toStrictEqual(data);
+const computeArrayInput = [{
+  name: "Bulbasaur",
+  multipliers: [2],
+},
+{
+  name: "Eevee",
+  multipliers: [3, 4]
+}
+]
 
-  });
-// 
+const atualCp = 100
+
+const computeBulbaExpec = {
+  maxCp: atualCp * 2 * (1.1),
+  minCp: atualCp * 2 * (0.9),
+  mediaCp: atualCp * 2
+}
+
+const computeEevetExpec = {
+  maxCp: atualCp * 4,
+  minCp: atualCp * 3,
+  mediaCp: atualCp * ((3+4) /2)
+}
+
+
+
+  describe('computeCp', () => {
+    it('is a function', () => {
+      expect(typeof computeCp).toBe('function');
+    });
+
+    it('returns `pokemon min e max CP`', () => {
+      expect(computeCp(computeArrayInput,atualCp,"Bulbasaur")).toStrictEqual(computeBulbaExpec);
+      expect(computeCp(computeArrayInput,atualCp,"Eevee")).toStrictEqual(computeEevetExpec);
+
+    });
+  })
+
+
+
+  // pokemon buscado, cp atual * ,multiplicador do poekemon buscado(data) 
