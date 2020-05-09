@@ -127,6 +127,7 @@ describe('ordenation', () => {
     expect(() => ordenation([])).toThrow(TypeError);
     expect(() => ordenation(arrayInput, 0, 0)).toThrow(TypeError);
     expect(() => ordenation(arrayInput, "", "")).toThrow(TypeError);
+    expect(() => selectInfosToShow({}, !"", !"" )).toThrow(TypeError);
   })
 
   it('returns `ordered array`', () => {
@@ -194,22 +195,30 @@ const computeBulbaExpec = {
 const computeEevetExpec = {
   maxCp: atualCp * 4,
   minCp: atualCp * 3,
-  mediaCp: atualCp * ((3+4) /2)
+  mediaCp: atualCp * ((3 + 4) / 2)
 }
 
 
 
-  describe('computeCp', () => {
-    it('is a function', () => {
-      expect(typeof computeCp).toBe('function');
-    });
+describe('computeCp', () => {
+  it('is a function', () => {
+    expect(typeof computeCp).toBe('function');
+  });
 
-    it('returns `pokemon min e max CP`', () => {
-      expect(computeCp(computeArrayInput,atualCp,"Bulbasaur")).toStrictEqual(computeBulbaExpec);
-      expect(computeCp(computeArrayInput,atualCp,"Eevee")).toStrictEqual(computeEevetExpec);
-
-    });
+  it('should throw TypeError when invoked with wrong argument types', () => {
+    expect(() => computeCp()).toThrow(TypeError);
+    expect(() => computeCp([])).toThrow(TypeError);
+    expect(() => computeCp(computeArrayInput, 0, 0)).toThrow(TypeError);
+    expect(() => computeCp(computeArrayInput, "", 0)).toThrow(TypeError);
+    expect(() => selectInfosToShow({}, !"", 0 )).toThrow(TypeError);
   })
+
+  it('returns `pokemon min e max CP`', () => {
+    expect(computeCp(computeArrayInput, atualCp, "Bulbasaur")).toStrictEqual(computeBulbaExpec);
+    expect(computeCp(computeArrayInput, atualCp, "Eevee")).toStrictEqual(computeEevetExpec);
+
+  });
+})
 
 
 
