@@ -8,17 +8,20 @@ let arrayAuxiliar = arrayPokemon
  * Função para mostrar os dados na tela. 
  * @param {Array.<Object>} arrayPokemon array contendo lista de obejots(151 pokemons)
  */
-showPokemons(arrayPokemon)
+
 
 function showPokemons(arrayPokemon) {
-  arrayPokemon = selectInfosToShow(arrayPokemon)
+  // debugger;
+  
   let showPokemons = document.getElementById("local-cards");
   let card = "";
   showPokemons.innerHTML = "";
 
   if (arrayPokemon.length === 0) {
+    
     card += "<br>Resultado não encontrado</br>";
   } else {
+    arrayPokemon = selectInfosToShow(arrayPokemon)
     for (let pokemon of arrayPokemon) {
       card += `
             <div class="card-style">
@@ -37,6 +40,8 @@ function showPokemons(arrayPokemon) {
   }
   showPokemons.innerHTML = card;
 }
+
+showPokemons(arrayPokemon)
 
 let getSelectOrder = document.getElementById("ordination")
 

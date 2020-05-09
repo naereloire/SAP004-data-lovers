@@ -104,9 +104,9 @@ function compareSearchedValue(objeto, option, searchedValue) {
  */
 export function filterInfons(data, option, searchedValue) {
   if (
-    !Array.isArray(data) || data.length === 0,
-    typeof option != "string" || option.length === 0,
-    typeof searchedValue != "string" || searchedValue.length === 0
+    !Array.isArray(data) || data.length === 0 ||
+    typeof option != "string" || option.length === 0 ||
+    typeof searchedValue != "string"
   ) {
     throw new TypeError("parâmetro invalido")
   }

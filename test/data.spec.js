@@ -1,4 +1,4 @@
-import { selectInfosToShow, ordenation, filterInfons} from '../src/data.js';
+import { selectInfosToShow, ordenation, filterInfons, computeStats} from '../src/data.js';
 
 const dataInput = [{
   "id": 1,
@@ -68,32 +68,51 @@ describe('selectInfosToShow', () => {
 const arrayInput = [{
   name: "Arnold",
   number: "001",
+  caracteristica:["alto","pardo"],
 },
 { name: "Zoe",
   number: "155",
+  caracteristica:["baixo","caucasiano"],
 
 },
 { 
   name: "George",
   number: "030",
+  caracteristica:["alto",],
  
-}
+},
+{ 
+  name: "George",
+  number: "044",
+  caracteristica:["baixo","negro"],
+ 
+},
 
 ]
 
 const arrayExpected = [{
   name: "Arnold",
   number: "001",
+  caracteristica:["alto","pardo"],
 },
 { 
  name: "George",
  number: "030",
+ caracteristica:["alto",],
+},
+{ 
+  name: "George",
+  number: "044",
+  caracteristica:["baixo","negro"],
+ 
 },
 {
   name: "Zoe",
   number: "155",
+  caracteristica:["baixo","caucasiano"],
   
 },
+
 ]
 
 
@@ -121,6 +140,7 @@ describe('ordenation', () => {
 const arrayFilteredExpected = [{
   name: "Arnold",
   number: "001",
+  caracteristica:["alto","pardo"],
 }]
 
 describe('filterInfos', () => {
@@ -143,4 +163,21 @@ describe('filterInfos', () => {
     expect(filterInfons(arrayInput,"name","abcd")).toStrictEqual([]);
 
   });
+
+  it('returns `not found`', () => {
+    expect(filterInfons(arrayInput,"caracteristica","pardo")).toStrictEqual(arrayFilteredExpected);
+
+  });
+
 });
+
+describe('computeStats', () => {
+  it('is a function', () => {
+    expect(typeof computeStats).toBe('function');
+  });
+
+  it('returns `exemplo`', () => {
+    expect(filterInfons(data,"parametro","parametro")).toStrictEqual(data);
+
+  });
+// 
