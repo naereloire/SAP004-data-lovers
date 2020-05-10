@@ -127,7 +127,7 @@ describe('ordenation', () => {
     expect(() => ordenation([])).toThrow(TypeError);
     expect(() => ordenation(arrayInput, 0, 0)).toThrow(TypeError);
     expect(() => ordenation(arrayInput, "", "")).toThrow(TypeError);
-    expect(() => selectInfosToShow({}, !"", !"" )).toThrow(TypeError);
+    expect(() => selectInfosToShow({}, !"", !"")).toThrow(TypeError);
   })
 
   it('returns `ordered array`', () => {
@@ -161,15 +161,17 @@ describe('filterInfos', () => {
     expect(filterInfons(arrayInput, "name", "Arnold")).toStrictEqual(arrayFilteredExpected);
   });
 
+  it('returns `filtered array found`', () => {
+    expect(filterInfons(arrayInput, "caracteristica", "pardo")).toStrictEqual(arrayFilteredExpected);
+
+  });
+
   it('returns `not found`', () => {
     expect(filterInfons(arrayInput, "name", "abcd")).toStrictEqual([]);
 
   });
 
-  it('returns `not found`', () => {
-    expect(filterInfons(arrayInput, "caracteristica", "pardo")).toStrictEqual(arrayFilteredExpected);
 
-  });
 
 });
 
@@ -210,7 +212,7 @@ describe('computeCp', () => {
     expect(() => computeCp([])).toThrow(TypeError);
     expect(() => computeCp(computeArrayInput, 0, 0)).toThrow(TypeError);
     expect(() => computeCp(computeArrayInput, "", 0)).toThrow(TypeError);
-    expect(() => selectInfosToShow({}, !"", 0 )).toThrow(TypeError);
+    expect(() => selectInfosToShow({}, !"", 0)).toThrow(TypeError);
   })
 
   it('returns `pokemon min e max CP`', () => {
