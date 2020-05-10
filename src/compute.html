@@ -29,10 +29,24 @@
     <main>
         <div>
             <section class="filters-style">
-                <div>
-                    <input type="search" class="options-style" placeholder="INSIRA O NOME PARA BUSCA" id="search">
-                    <button id="button-search" class="options-style"> &#xf002;</button>
-                 </div>
+                <div id="div-data-list">
+                    <input type="text" list="pokemon-list" class="options-style" placeholder="INSIRA O NOME PARA BUSCA">
+                    <datalist id="pokemon-list"></datalist> 
+                <!-- </div> -->
+                
+                <!-- <div id="div-input-cp"> -->
+                <input type="search" class="options-style" placeholder="INSIRA O CP ATUAL" id="search-cp">
+                <button id="button-search-cp" class="options-style"> &#xf002;</button>
+              </div>
+
+              <div class="cards">POKEMON IMG</div>
+              
+              <div class="cards">TABELA COM RESULTADOS</div>
+
+
+
+
+
             </section>
         </div>
 
@@ -44,7 +58,7 @@
         </h3>
     </footer>
 
-    <script src="compute.main.js" type="module"></script>
+    <script src="compute.js" type="module"></script>
 </body>
 
 
