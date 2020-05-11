@@ -127,7 +127,7 @@ export function filterInfons(data, option, searchedValue) {
 export function computeCp(data, currentCp, namePokemon) {
   let pokemonSearched = filterInfons(data, "name", namePokemon)
   pokemonSearched = pokemonSearched[0]
-  let computeResult 
+  let computeResult
   let percentMax = 1.1
   let percentMin = 0.9
 
@@ -139,13 +139,13 @@ export function computeCp(data, currentCp, namePokemon) {
     }
 
   }
-  if (pokemonSearched.multipliers.length === 2){
+  if (pokemonSearched.multipliers.length === 2) {
     computeResult = {
       maxCp: currentCp * pokemonSearched.multipliers[1],
       minCp: currentCp * pokemonSearched.multipliers[0],
-      mediaCp: currentCp * ((pokemonSearched.multipliers[0] + pokemonSearched.multipliers[1]) /2)
+      mediaCp: currentCp * ((pokemonSearched.multipliers[0] + pokemonSearched.multipliers[1]) / 2)
     }
 
   }
-   return computeResult
+  return computeResult
 }
