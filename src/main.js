@@ -11,8 +11,6 @@ let arrayAuxiliar = arrayPokemon
 
 
 function showPokemons(arrayPokemon) {
-  // debugger;
-  
   let showPokemons = document.getElementById("local-cards");
   let card = "";
   showPokemons.innerHTML = "";
