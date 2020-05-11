@@ -5,21 +5,24 @@
  * no objeto anterior.
  */
 export function selectInfosToShow(data) {
-    let listPokemon = data;
-    let newListCard = [];
-    for (let pokemon of listPokemon) {
-      let infosCard = {
-        number: pokemon.num,
-        name: pokemon.name,
-        image: pokemon.img,
-        types: pokemon.type.join(", "),
-        weaknesses: pokemon.weaknesses.join(", "),
-        probability: pokemon.spawn_chance
-      }
-      newListCard.push(infosCard)
-    }
-    return newListCard
+  if (!Array.isArray(data) || data.length === 0) {
+    throw new TypeError("parâmetro invalido")
   }
+  let listPokemon = data;
+  let newListCard = [];
+  for (let pokemon of listPokemon) {
+    let infosCard = {
+      number: pokemon.num,
+      name: pokemon.name,
+      image: pokemon.img,
+      types: pokemon.type.join(", "),
+      weaknesses: pokemon.weaknesses.join(", "),
+      probability: pokemon.spawn_chance
+    }
+    newListCard.push(infosCard)
+  }
+  return newListCard
+}
 
 
 /**
@@ -29,7 +32,9 @@ export function selectInfosToShow(data) {
  * @param {String} option  Uma propriedade do objeto reperesentada por uma string. Ex: no select tipo "type-Grass"
  * @returns retorna a posição do elemento: -1 = para atŕas; 1 = para frente e 0 = mantém a posição.
  */
+
 function sortCrescent(objeto1, objeto2, option) {
+
   if (objeto1[option] < objeto2[option]) {
     return -1
   }
@@ -38,24 +43,6 @@ function sortCrescent(objeto1, objeto2, option) {
   }
   return 0
 }
-
-/**
- * Função que compara dois elementos para definir a ordem de posicionamento do menor para o maior
- * @param {Object} objeto1 Primeiro objeto a ser comparado (um intem da lista (um pokemon))
- * @param {Object} objeto2 Segundo  objeto a ser comparado (um intem da lista (um pokemon))
- * @param {String} option  Uma propriedade do objeto reperesentada por uma string. Ex: no select tipo "type-Grass"
- * @returns retorna a posição do elemento: -1 = para atŕas; 1 = para frente e 0 = mantém a posição.
- */
-function sortDecreasing(objeto1, objeto2, option) {
-  if (objeto1[option] < objeto2[option]) {
-    return 1
-  }
-  if (objeto1[option] > objeto2[option]) {
-    return -1
-  }
-  return 0
-}
-
 
 /**
  * Função recebe lista de pokemons e ordena de acordo com o parametro.
@@ -65,17 +52,25 @@ function sortDecreasing(objeto1, objeto2, option) {
  * @returns uma lista ordenada.
  */
 export function ordenation(data, option, order) {
+  if (
+    !Array.isArray(data) || data.length === 0,
+    typeof option != "string" || option.length === 0,
+    typeof order != "string" || order.length === 0
+  ) {
+    throw new TypeError("parâmetro invalido")
+  }
+
   let listPokemon = data
   let sortedList = []
-  if (order == "increasing") {
+  if (order === "increasing") {
     sortedList = listPokemon.sort(function (a, b) {
       return sortCrescent(a, b, option)
     })
   }
-  if (order == "decreasing") {
+  if (order === "decreasing") {
     sortedList = listPokemon.sort(function (a, b) {
-      return sortDecreasing(a, b, option)
-    })
+      return sortCrescent(a, b, option)
+    }).reverse()
   }
   return sortedList
 }
@@ -90,14 +85,13 @@ export function ordenation(data, option, order) {
 function compareSearchedValue(objeto, option, searchedValue) {
   if (Array.isArray(objeto[option])) {
     for (let element of objeto[option]) {
-      if (element == searchedValue) {
+      if (element === searchedValue) {
         return true
       }
     }
   }
   else {
-    debugger;
-    return objeto[option].toLowerCase() == searchedValue.toLowerCase()
+    return objeto[option].toLowerCase() === searchedValue.toLowerCase()
   }
 }
 
@@ -109,6 +103,13 @@ function compareSearchedValue(objeto, option, searchedValue) {
  * @returns Uma lista contendo os objetos filtrados.
  */
 export function filterInfons(data, option, searchedValue) {
+  if (
+    !Array.isArray(data) || data.length === 0 ||
+    typeof option != "string" || option.length === 0 ||
+    typeof searchedValue != "string"
+  ) {
+    throw new TypeError("parâmetro invalido")
+  }
   let listPokemon = data
   let filteredList = []
   filteredList = listPokemon.filter(function (x) { return compareSearchedValue(x, option, searchedValue) })
