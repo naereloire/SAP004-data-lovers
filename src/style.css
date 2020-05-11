@@ -60,7 +60,11 @@
   border-radius: 6px;
   font-size: 12px;
   height: 40px;
+  margin-right: 5px;
+}
 
+.options-style:hover {
+  background-color: #184ed8;
 }
 
 .options-style,
@@ -69,8 +73,10 @@ input::placeholder {
   font-family: 'FontAwesome', 'Font';
   padding: 5px;
   font-weight: 900;
-  
-  
+}
+
+.search{
+  margin-right: 0px;
 }
 
 .cards {
@@ -81,6 +87,7 @@ input::placeholder {
   justify-content: center;
   margin: 10px;
   padding: 12px;
+  width: 100%;
 }
 
 .card-style {
