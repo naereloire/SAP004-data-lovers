@@ -1,6 +1,6 @@
 /**
  * Função para selecionar informações doa array pokemon que serão mostradas.
- * @param {Array.<Object>} data Array contendo lista de obejots(151 pokemons).
+ * @param {Array.<Object>} data Array contendo lista de objetos(151 pokemons).
  * @returns {Array.<Object>} Retorna uma variavel newListCard, contendo uma lista com informações selecionadas.
  * no objeto anterior.
  */
@@ -46,7 +46,7 @@ function sortCrescent(objeto1, objeto2, option) {
 
 /**
  * Função recebe lista de pokemons e ordena de acordo com o parametro.
- * @param {Array.<Object>} data Array contendo lista de obejots(151 pokemons).
+ * @param {Array.<Object>} data Array contendo lista de objetos(151 pokemons).
  * @param {string} option Uma propriedade do objeto reperesentada por uma string. Ex: no select ordenar "name-increasing".
  * @param {string} order  Uma string ("increasing"/"decreasing")que indica se a ordenação srá crescente ou decrescente.
  * @returns uma lista ordenada.
@@ -97,9 +97,9 @@ function compareSearchedValue(objeto, option, searchedValue) {
 
 /**
  * Função aplica a seleção no array de acordo com o SearchedValue.
- * @param {Array.<Object>} data Array contendo lista de obejots(151 pokemons).
+ * @param {Array.<Object>} data Array contendo lista de objetos(151 pokemons).
  * @param {string} option Uma propriedade(ex:num)do objeto reperesentada por uma string.
- * @param {string} searchedValue uma string representando o valor da buscado. 
+ * @param {string} searchedValue uma string representando qualquer valor da buscado no array.
  * @returns Uma lista contendo os objetos filtrados.
  */
 export function filterInfons(data, option, searchedValue) {
@@ -119,7 +119,7 @@ export function filterInfons(data, option, searchedValue) {
 
 /**
  * Função realiza o calculo do futuro CP após evolução.
- * @param {Array.<Object>} data Array contendo lista de obejots(151 pokemons).
+ * @param {Array.<Object>} data Array contendo lista de objetos(151 pokemons).
  * @param {number} currentCp Cp atual do pokemon representado por um numero.
  * @param {string} namePokemon Nome do pokemon buscado que terá o futuro CP calculado.
  * @returns Um objeto contendo valor max/min e medio do futuro cp.

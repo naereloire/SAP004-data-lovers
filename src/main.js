@@ -74,20 +74,16 @@ let getSelectWeaknessType = document.getElementById("filter-weakness")
  */
 function filterPokemons() {
   let list = []
-  let filterType = document.getElementById("filter-type")
-  let valueFiltertype = filterType.options[filterType.selectedIndex].value
+  
+  let valueFiltertype = getSelectFilterType.options[getSelectFilterType.selectedIndex].value
 
-  let filterWkenesses = document.getElementById("filter-weakness")
-  let valueFilterWkenesses = filterWkenesses.options[filterWkenesses.selectedIndex].value
+  let valueFilterWkenesses = getSelectWeaknessType.options[getSelectWeaknessType.selectedIndex].value
+  
   let list_type = arrayPokemon
   let list_weak = arrayPokemon
+  
   let arrayParameters
 
-
-  if (valueFiltertype === "" && valueFilterWkenesses === "") {
-    list = arrayPokemon
-  }
-  else {
     if (valueFilterWkenesses !== "") {
       arrayParameters = valueFilterWkenesses.split("-")
       list_type = filterInfons(list_type, arrayParameters[0], arrayParameters[1])
@@ -97,16 +93,14 @@ function filterPokemons() {
       list_weak = filterInfons(list_weak, arrayParameters[0], arrayParameters[1])
     }
     list = list_type.filter(function (x) { return list_weak.includes(x) });
-  }
-
+  
+  
    arrayAuxiliar = list
-
   let newEvent = document.createEvent('Event');
-  newEvent.initEvent('sortList', true, true);
+  newEvent.initEvent('change', true, true);
   getSelectOrder.dispatchEvent(newEvent);
-
 }
-getSelectOrder.addEventListener("sortList", sortPokemons)
+
 getSelectFilterType.addEventListener("change", filterPokemons)
 getSelectWeaknessType.addEventListener("change", filterPokemons)
 
