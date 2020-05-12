@@ -26,7 +26,7 @@ export function selectInfosToShow(data) {
 
 
 /**
- * Função que compara dois elementos para definir a ordem de posicionamento do maior para o menor.
+ * Função que compara dois elementos para definir a ordem de posicionamento do menor para o maior.
  * @param {Object} objeto1 Primeiro objeto a ser comparado (um intem da lista (um pokemon)).
  * @param {Object} objeto2 Segundo  objeto a ser comparado (um intem da lista (um pokemon)).
  * @param {String} option  Uma propriedade do objeto reperesentada por uma string. Ex: no select tipo "type-Grass".
