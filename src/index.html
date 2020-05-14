@@ -17,7 +17,6 @@
     <nav class="links-style">
       <ul class="ul-link">
         <li><a class="active" href="index.html">Home</a></li>
-        <li><a href="curiosidades.html">Curiosidades</a></li>
         <li><a href="dicas.html">Dicas</a></li>
         <li><a href="compute.html">Calcule o CP</a></li>
       </ul>
@@ -27,14 +26,15 @@
     </figure>
   </header>
 
-  <main>
-    <div>
-      <section class="filters-style">
-        <div>
-          <input type="search" class="options-style search" placeholder="INSIRA O NOME PARA BUSCA" id="search">
-          <button id="button-search" class="options-style"> &#xf002;</button>
 
-          <select id="filter-type" class="options-style">
+  <main class="main-container">
+    <div >
+      <section class="filters-style">
+        <div class="search"> 
+        <input type="search" class="options-style" placeholder="INSIRA O NOME PARA BUSCA" id="search">
+          <button id="button-search" class="options-style search"> &#xf002;</button>
+        </div>
+           <select id="filter-type" class="options-style">
             <option value="">TIPO</option>
             <option value="type-Grass">&#xf06c; Planta</option>
             <option value="type-Poison">&#xf714; Venenoso</option>
@@ -83,15 +83,14 @@
             <option value="spawn_chance-increasing">Chances de Aparecer &#xf063;</option>
             <option value="spawn_chance-decreasing">Chances de Aparecer &#xf062;</option>
           </select>
-        </div>
-      </section>
+        </section>
     </div>
 
     <div id="local-cards" class="cards"></div>
   </main>
 
   <footer class="footer-style">
-    <h3>Criação <a href="https://github.com/camilagerarde" title="Camila Cunha" target="_blank">Camila Cunha</a> e <a
+    <h3>Desenvolvimento <a href="https://github.com/camilagerarde" title="Camila Cunha" target="_blank">Camila Cunha</a> e <a
         href="https://github.com/naereloire" title="Naere" target="_blank">Naere</a>
     </h3>
   </footer>
