@@ -1,3 +1,5 @@
+
+
 @font-face {
   font-family: 'Font';
   src: url('fonte/sunday_best/Sunday\ Best.ttf');
@@ -12,7 +14,7 @@
   display: flex;
   flex-wrap: wrap;
   font-family: 'Font';
-  font-size: 18px;
+  font-size: 1.125em;
   justify-content: center;
   overflow: hidden;
 }
@@ -20,7 +22,7 @@
 .ul-link {
   background-color: #30075E;
   list-style-type: none;
-  padding: 0;
+  padding: 0; 
 }
 
 .ul-link li {
@@ -45,7 +47,7 @@
 }
 
 .title-img {
-  margin: 30px;
+  margin: 2,5%;
 }
 
 .filters-style {
@@ -58,9 +60,9 @@
   background-color: #2b5edf;
   border: solid 1px #808080;
   border-radius: 6px;
-  font-size: 12px;
+  font-size:0.75em;
   height: 40px;
-  margin-right: 5px;
+  margin-left: 5px;
 }
 
 .options-style:hover {
@@ -71,12 +73,12 @@
 input::placeholder {
   color: #fff;
   font-family: 'FontAwesome', 'Font';
-  padding: 5px;
+  padding: 0.41%;
   font-weight: 900;
 }
 
 .search{
-  margin-right: 0px;
+  margin-left: 0px;
 }
 
 .cards {
@@ -86,7 +88,7 @@ input::placeholder {
   font-size: 1.2em;
   justify-content: center;
   margin: 10px;
-  padding: 12px;
+  padding: 1%;
   width: 100%;
 }
 
@@ -105,7 +107,7 @@ input::placeholder {
 
 .title-poke {
   color: #000614;
-  font-size: 25px;
+  font-size: 1,5625em;
   text-align: center;
 }
 
@@ -123,7 +125,7 @@ input::placeholder {
 
 .subtitle-poke,
 .items-poke {
-  font-size: 17px;
+  font-size: 1,0625em;
   margin: 0;
   padding: 0;
   text-align: center;
@@ -138,3 +140,47 @@ a {
   color: #D4BFE3;
   text-align: center;
 }
+
+@media only screen and (max-width: 560px) { 
+
+.title-style{
+  font-size: 1em;
+}
+
+.title-img {
+  margin: 5,36%;
+  height: 21%;
+  width: 85%;
+}
+
+.main-container{
+  font-size: 1em;
+  width: 100%;
+  
+
+}
+.card-style{
+  width:40%;
+}
+.filters-style {
+  display: flex;
+  flex-direction:column;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 60%;
+  margin: 0 20%;
+}
+.search{
+  display:flex;
+  
+}
+.search button{
+  width: 60%;
+  justify-content: center;
+
+}
+
+}
+
+
+/* @media only screen and (max-width:768px) {}
