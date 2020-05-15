@@ -135,7 +135,7 @@ export function computeCp(data, currentCp, namePokemon) {
     computeResult = {
       maxCp: "Não possui",
       minCp: "Não possui",
-      mediaCp: "Como este Pokémon <br>não possui próxima evolução, <br>ele não gera cálculo de CP.<br>"
+      mediaCp: "Como este Pokémon <br>não possui evolução, <br>ele não gera cálculo de CP.<br>"
     }
   } else {
     if (pokemonSearched.multipliers.length === 1) {
