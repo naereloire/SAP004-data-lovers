@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" type="image/x-icon" href="./img/favicon.ico">
   <link rel="stylesheet" href="compute.css">
   <title>Pokelovers</title>
@@ -26,14 +27,17 @@
 
   <main>
     <div>
-      <section class="filters-style">
+      <section>
         <div id="div-data-list">
-          <form>
+          <form class="filters-style">
             <input type="text" list="pokemon-list" class="options-style" id="search-name" placeholder="INSIRA O NOME">
             <datalist id="pokemon-list"></datalist>
             <input type="number" min="0" class="options-style" placeholder="INSIRA O CP ATUAL" id="search-cp">
-            <button id="button-search" class="options-style">Enviar</button>
-            <button type="reset" class="reset">Limpar</button>
+            <div class="buttons">
+              <button id="button-search" class="input">Enviar</button>
+              <button type="reset" class="reset">Limpar</button>
+            </div>
+            
           </form>
         </div>
       </section>
