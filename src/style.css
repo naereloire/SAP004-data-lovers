@@ -17,6 +17,10 @@
   overflow: hidden;
 }
 
+.links-style [aria-current] {
+	border-bottom: 0.125em solid #f3d033;
+}
+
 .ul-link {
   background-color: #30075E;
   list-style-type: none;
@@ -55,28 +59,54 @@
 }
 
 .options-style {
-  background-color: #2b5edf;
-  border: solid 1px #808080;
-  border-radius: 6px;
-  font-size: 0.75em;
-  height: 40px;
-  margin-left: 5px;
+  margin-left: 8px;
 }
 
-.options-style:hover {
-  background-color: #184ed8;
+.input {
+  height:40px;
+  width: 85%;
+}
+ 
+.button {
+  border-radius:0 6px 6px 0;
+  width: 15%;
 }
 
 .options-style,
-input::placeholder {
+.search-style,
+.input,
+.button {
+  background-color:#2b5edf;
+  height:40px;
   color: #fff;
   font-family: 'FontAwesome', 'Font';
   font-weight: 900;
-  padding: 0.41%;
 }
 
-.search {
-  margin-left: 0px;
+.options-style,
+.search-style {
+  border: solid 1px #808080;
+  border-radius: 6px;
+}
+
+.input,
+.button {
+  border:none;
+  float:left;
+}
+
+.search-style
+input::placeholder {
+  color: #fff;
+  font-family:'Font';
+  font-weight: 900;
+  padding: 0.41%;
+} 
+
+.button:hover,
+.input:hover,
+.options-style:hover {
+  background-color: #184ed8;
 }
 
 .cards {
@@ -157,26 +187,33 @@ a {
     width: 100%;
   }
 
-  .card-style {
-    width: 40%;
-  }
-
   .filters-style {
-    display: flex;
+    align-items: center;
     flex-direction: column;
     flex-wrap: wrap;
-    justify-content: center;
-    margin: 0 15%;
+  }
+
+  .options-style {
+    margin: 0.5%;
+    text-align: center;
     width: 70%;
   }
 
-  .search {
+  .search-style {
     display: flex;
+    width: 70%;
   }
 
-  .search button {
-    justify-content: center;
-    width: 60%;
+  .input{ 
+    width: 85%;
+  }
+
+  .button {
+    width: 15%;
+  }
+
+  .card-style {
+    width: 40%;
   }
 }
 
@@ -197,26 +234,30 @@ a {
   }
 
   .filters-style {
+    align-items: center;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    justify-content: center;
-    margin: 0 20%;
+  }
+  
+  .options-style {
+    margin: 0.5%;
+    text-align: center;
     width: 70%;
   }
 
-  .search {
+  .search-style {
     display: flex;
-    justify-content: center;
-    width: 100%;
+    margin: 0.5%;
+    width: 70%;
   }
 
-  input {
-    width: 90%;
+  .input{ 
+    width: 85%;
   }
 
-  button {
-    width: 10%;
+  .button {
+    width: 15%;
   }
 
   .links-style {
