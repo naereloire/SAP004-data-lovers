@@ -189,7 +189,7 @@ const computeEevetExpec = {
 const computeButterExpec = {
   maxCp: "Não possui",
   minCp: "Não possui",
-  mediaCp: "Como este Pokémon não possui evolução, ele não gera cálculo de CP."
+  mediaCp: "Como este Pokémon <br>não possui evolução, <br>ele não gera cálculo de CP.<br>"
 }
 
 describe('computeCp', () => {
