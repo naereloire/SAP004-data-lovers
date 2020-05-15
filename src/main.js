@@ -1,5 +1,5 @@
 import data from './data/pokemon/pokemon.js';
-import { selectInfosToShow, ordenation, filterInfons } from './data.js'
+import {selectInfosToShow, ordenation, filterInfons} from './data.js'
 
 const arrayPokemon = data.pokemon
 let arrayAuxiliar = arrayPokemon
@@ -8,15 +8,12 @@ let arrayAuxiliar = arrayPokemon
  * Função para mostrar os dados na tela. 
  * @param {Array.<Object>} arrayPokemon array contendo lista de obejots(151 pokemons)
  */
-
-
 function showPokemons(arrayPokemon) {
   let showPokemons = document.getElementById("local-cards");
   let card = "";
   showPokemons.innerHTML = "";
 
   if (arrayPokemon.length === 0) {
-    
     card += "<br>Resultado não encontrado</br>";
   } else {
     arrayPokemon = selectInfosToShow(arrayPokemon)
@@ -55,15 +52,13 @@ function sortPokemons(event) {
 
   if (selectedOption === "") {
     list = arrayAuxiliar
-  }
-  else {
+  } else {
     list = ordenation(arrayAuxiliar, arrayParameters[0], arrayParameters[1])
   }
   showPokemons(list)
 }
 
 getSelectOrder.addEventListener("change", sortPokemons)
-
 
 
 let getSelectFilterType = document.getElementById("filter-type")
@@ -74,28 +69,25 @@ let getSelectWeaknessType = document.getElementById("filter-weakness")
  */
 function filterPokemons() {
   let list = []
-  
   let valueFiltertype = getSelectFilterType.options[getSelectFilterType.selectedIndex].value
-
   let valueFilterWkenesses = getSelectWeaknessType.options[getSelectWeaknessType.selectedIndex].value
-  
   let list_type = arrayPokemon
   let list_weak = arrayPokemon
-  
   let arrayParameters
 
-    if (valueFilterWkenesses !== "") {
-      arrayParameters = valueFilterWkenesses.split("-")
-      list_type = filterInfons(list_type, arrayParameters[0], arrayParameters[1])
-    }
-    if (valueFiltertype !== "") {
-      arrayParameters = valueFiltertype.split("-")
-      list_weak = filterInfons(list_weak, arrayParameters[0], arrayParameters[1])
-    }
-    list = list_type.filter(function (x) { return list_weak.includes(x) });
-  
-  
-   arrayAuxiliar = list
+  if (valueFilterWkenesses !== "") {
+    arrayParameters = valueFilterWkenesses.split("-")
+    list_type = filterInfons(list_type, arrayParameters[0], arrayParameters[1])
+  }
+  if (valueFiltertype !== "") {
+    arrayParameters = valueFiltertype.split("-")
+    list_weak = filterInfons(list_weak, arrayParameters[0], arrayParameters[1])
+  }
+  list = list_type.filter(function (x) {
+    return list_weak.includes(x)
+  });
+
+  arrayAuxiliar = list
   let newEvent = document.createEvent('Event');
   newEvent.initEvent('change', true, true);
   getSelectOrder.dispatchEvent(newEvent);

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
- 
+
 <head>
   <meta charset="utf-8">
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="style.css" />
   <script src="https://kit.fontawesome.com/2ab419e357.js" crossorigin="anonymous"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
   <title>Pokelovers</title>
 </head>
 
@@ -26,72 +26,72 @@
     </figure>
   </header>
 
-
   <main class="main-container">
-    <div >
+    <div>
       <section class="filters-style">
-        <div class="search"> 
-        <input type="search" class="options-style" placeholder="INSIRA O NOME PARA BUSCA" id="search">
+        <div class="search">
+          <input type="search" class="options-style" placeholder="INSIRA O NOME PARA BUSCA" id="search">
           <button id="button-search" class="options-style"> &#xf002;</button>
         </div>
-           <select id="filter-type" class="options-style">
-            <option value="">TIPO</option>
-            <option value="type-Grass">&#xf06c; Planta</option>
-            <option value="type-Poison">&#xf714; Venenoso</option>
-            <option value="type-Fire">&#xf06d; Fogo</option>
-            <option value="type-Flying">&#xf4ba; Voador</option>
-            <option value="type-Water"> &#xf043; Agua</option>
-            <option value="type-Bug">&#xf188; Inseto</option>
-            <option value="type-Normal">&#xf111; Normal</option>
-            <option value="type-Electric">&#xf0e7; Elétrico</option>
-            <option value="type-Ground">&#xf5ca; Terra</option>
-            <option value="type-Fighting">&#xf6de; Lutador</option>
-            <option value="type-Psychic">&#xf06e; Psíquico</option>
-            <option value="type-Rock">&#xf3a5; Pedra</option>
-            <option value="type-Ice"> &#xf2dc; Gelo</option>
-            <option value="type-Ghost"> &#xf6e2; Fantasma</option>
-            <option value="type-Dragon"> &#xf6d5; Dragão</option>
-          </select>
+        <select id="filter-type" class="options-style">
+          <option value="">TIPO</option>
+          <option value="type-Grass">&#xf06c; Planta</option>
+          <option value="type-Poison">&#xf714; Venenoso</option>
+          <option value="type-Fire">&#xf06d; Fogo</option>
+          <option value="type-Flying">&#xf4ba; Voador</option>
+          <option value="type-Water"> &#xf043; Agua</option>
+          <option value="type-Bug">&#xf188; Inseto</option>
+          <option value="type-Normal">&#xf111; Normal</option>
+          <option value="type-Electric">&#xf0e7; Elétrico</option>
+          <option value="type-Ground">&#xf5ca; Terra</option>
+          <option value="type-Fighting">&#xf6de; Lutador</option>
+          <option value="type-Psychic">&#xf06e; Psíquico</option>
+          <option value="type-Rock">&#xf3a5; Pedra</option>
+          <option value="type-Ice"> &#xf2dc; Gelo</option>
+          <option value="type-Ghost"> &#xf6e2; Fantasma</option>
+          <option value="type-Dragon"> &#xf6d5; Dragão</option>
+        </select>
 
-          <select id="filter-weakness" class="options-style">
-            <option value="">FRAQUEZA</option>
-            <option value="weaknesses-Grass">&#xf06c; Planta</option>
-            <option value="weaknesses-Poison">&#xf714; Venenoso</option>
-            <option value="weaknesses-Fire">&#xf06d; Fogo</option>
-            <option value="weaknesses-Flying">&#xf4ba; Voador</option>
-            <option value="weaknesses-Water"> &#xf043; Agua</option>
-            <option value="weaknesses-Bug">&#xf188; Inseto</option>
-            <option value="weaknesses-Electric">&#xf0e7; Elétrico</option>
-            <option value="weaknesses-Ground">&#xf5ca; Terra</option>
-            <option value="weaknesses-Fighting">&#xf6de; Lutador</option>
-            <option value="weaknesses-Psychic">&#xf06e; Psíquico</option>
-            <option value="weaknesses-Rock">&#xf3a5; Pedra</option>
-            <option value="weaknesses-Ice"> &#xf2dc; Gelo</option>
-            <option value="weaknesses-Ghost"> &#xf6e2; Fantasma</option>
-            <option value="weaknesses-Dragon"> &#xf6d5; Dragão</option>
-            <option value="weaknesses-Fairy"> &#xf005; Fada</option>
-            <option value="weaknesses-Dark"> &#xf186; Sombras</option>
-            <option value="weaknesses-Steel"> &#xf56a; Metal</option>
-          </select>
+        <select id="filter-weakness" class="options-style">
+          <option value="">FRAQUEZA</option>
+          <option value="weaknesses-Grass">&#xf06c; Planta</option>
+          <option value="weaknesses-Poison">&#xf714; Venenoso</option>
+          <option value="weaknesses-Fire">&#xf06d; Fogo</option>
+          <option value="weaknesses-Flying">&#xf4ba; Voador</option>
+          <option value="weaknesses-Water"> &#xf043; Agua</option>
+          <option value="weaknesses-Bug">&#xf188; Inseto</option>
+          <option value="weaknesses-Electric">&#xf0e7; Elétrico</option>
+          <option value="weaknesses-Ground">&#xf5ca; Terra</option>
+          <option value="weaknesses-Fighting">&#xf6de; Lutador</option>
+          <option value="weaknesses-Psychic">&#xf06e; Psíquico</option>
+          <option value="weaknesses-Rock">&#xf3a5; Pedra</option>
+          <option value="weaknesses-Ice"> &#xf2dc; Gelo</option>
+          <option value="weaknesses-Ghost"> &#xf6e2; Fantasma</option>
+          <option value="weaknesses-Dragon"> &#xf6d5; Dragão</option>
+          <option value="weaknesses-Fairy"> &#xf005; Fada</option>
+          <option value="weaknesses-Dark"> &#xf186; Sombras</option>
+          <option value="weaknesses-Steel"> &#xf56a; Metal</option>
+        </select>
 
-          <select id="ordination" class="options-style">
-            <option value="">ORDENAR</option>
-            <option value="name-increasing">A-Z &#xf063;</option>
-            <option value="name-decreasing">Z-A &#xf062;</option>
-            <option value="num-increasing">Nº Pokedex &#xf063;</option>
-            <option value="num-decreasing">Nº Pokedex &#xf062;</option>
-            <option value="spawn_chance-increasing">Chances de Aparecer &#xf063;</option>
-            <option value="spawn_chance-decreasing">Chances de Aparecer &#xf062;</option>
-          </select>
-        </section>
+        <select id="ordination" class="options-style">
+          <option value="">ORDENAR</option>
+          <option value="name-increasing">A-Z &#xf063;</option>
+          <option value="name-decreasing">Z-A &#xf062;</option>
+          <option value="num-increasing">Nº Pokedex &#xf063;</option>
+          <option value="num-decreasing">Nº Pokedex &#xf062;</option>
+          <option value="spawn_chance-increasing">Chances de Aparecer &#xf063;</option>
+          <option value="spawn_chance-decreasing">Chances de Aparecer &#xf062;</option>
+        </select>
+      </section>
     </div>
 
     <div id="local-cards" class="cards"></div>
+    
   </main>
 
   <footer class="footer-style">
-    <h3>Desenvolvimento <a href="https://github.com/camilagerarde" title="Camila Cunha" target="_blank">Camila Cunha</a> e <a
-        href="https://github.com/naereloire" title="Naere" target="_blank">Naere Loire</a>
+    <h3>Desenvolvimento <a href="https://github.com/camilagerarde" title="Camila Cunha" target="_blank">Camila Cunha</a>
+      e <a href="https://github.com/naereloire" title="Naere Loire" target="_blank">Naere Loire</a>
     </h3>
   </footer>
 
