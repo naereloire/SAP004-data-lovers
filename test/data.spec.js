@@ -183,23 +183,32 @@ const computeArrayInput = [{
 {
   name: "Eevee",
   multipliers: [3, 4]
+},
+{
+  name: "Butterfree",
+  multipliers: null
 }
 ]
 
 const atualCp = 100
 
 const computeBulbaExpec = {
-  maxCp: atualCp * 2 * (1.1),
-  minCp: atualCp * 2 * (0.9),
-  mediaCp: atualCp * 2
+  maxCp: (atualCp * 2 * (1.1)).toFixed(2),
+  minCp: (atualCp * 2 * (0.9)).toFixed(2),
+  mediaCp: (atualCp * 2).toFixed(2)
 }
 
 const computeEevetExpec = {
-  maxCp: atualCp * 4,
-  minCp: atualCp * 3,
-  mediaCp: atualCp * ((3 + 4) / 2)
+  maxCp: (atualCp * 4).toFixed(2),
+  minCp: (atualCp * 3).toFixed(2),
+  mediaCp: (atualCp * ((3 + 4) / 2)).toFixed(2)
 }
 
+const computeButterExpec = {
+  maxCp: "Não possui",
+  minCp: "Não possui",
+  mediaCp: "Pokémon não possui próxima evolução"
+}
 
 
 describe('computeCp', () => {
@@ -218,7 +227,7 @@ describe('computeCp', () => {
   it('returns `pokemon min e max CP`', () => {
     expect(computeCp(computeArrayInput, atualCp, "Bulbasaur")).toStrictEqual(computeBulbaExpec);
     expect(computeCp(computeArrayInput, atualCp, "Eevee")).toStrictEqual(computeEevetExpec);
-
+    expect(computeCp(computeArrayInput, atualCp, "Butterfree")).toStrictEqual(computeButterExpec);
   });
 })
 
