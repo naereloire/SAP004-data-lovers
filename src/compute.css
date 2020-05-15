@@ -17,6 +17,10 @@
   overflow: hidden;
 }
 
+.links-style [aria-current] {
+	border-bottom: 0.125em solid #f3d033;
+}
+
 .ul-link {
   background-color: #30075E;
   list-style-type: none;
