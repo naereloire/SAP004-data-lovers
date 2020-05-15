@@ -1,0 +1,119 @@
+@font-face {
+  font-family: "Font";
+  src: url('fonte/sunday_best/Sunday\ Best.ttf');
+}
+
+.body-style {
+  background-color: #190546;
+  font-family: 'helvetica neue', helvetica, arial, sans-serif;
+}
+
+.links-style {
+  display: flex;
+  flex-wrap: wrap;
+  font-family: "Font";
+  font-size: 18px;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.ul-link {
+  background-color: #30075E;
+  list-style-type: none;
+  padding: 0;
+}
+
+.ul-link li {
+  float: left;
+}
+
+.ul-link li a {
+  color: #FFF;
+  display: block;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.ul-link li a:hover {
+  background-color: #65548D;
+}
+
+.title-style {
+  display: flex;
+  justify-content: center;
+}
+
+.title-img {
+  margin: 30px;
+}
+
+.filters-style {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.reset,
+.options-style {
+  background-color: #2b5edf;
+  border: 1px solid #808080;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 900;
+  height: 40px;
+  margin-right: 5px;
+  padding: 0 0.5em;
+}
+
+.reset {
+  color: #111;
+  background-color: #f3d033;
+  font-family: "Font";
+  margin-left: 10px;
+}
+
+.reset:hover {
+  background-color: #f3a033;
+}
+
+.options-style:hover {
+  background-color: #184ed8;
+}
+
+.options-style,
+input::placeholder {
+  color: #fff;
+  font-family: "Font";
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1.2em;
+  justify-content: center;
+  margin: 10px;
+  padding: 12px;
+}
+
+.card-style {
+  align-items: center;
+  background-color: #ced7f0;
+  border: 1px solid #190546;
+  box-shadow: 4px 4px #111111;
+  color: #000d2e;
+  display: flex;
+  flex-direction: column;
+  height: 10em;
+  justify-content: center;
+  padding: 2em;
+  text-align: center;
+  width: auto;
+}
+
+.footer-style h3,
+a {
+  color: #D4BFE3;
+  text-align: center;
+}
