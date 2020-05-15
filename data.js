@@ -125,27 +125,33 @@ export function filterInfons(data, option, searchedValue) {
  * @returns Um objeto contendo valor max/min e medio do futuro cp.
  */
 export function computeCp(data, currentCp, namePokemon) {
-  let pokemonSearched = filterInfons(data, "name", namePokemon)
-  pokemonSearched = pokemonSearched[0]
-  let computeResult
-  let percentMax = 1.1
-  let percentMin = 0.9
+  let pokemonSearched = filterInfons(data, "name", namePokemon);
+  pokemonSearched = pokemonSearched[0];
+  let computeResult;
+  let percentMax = 1.1;
+  let percentMin = 0.9;
 
-  if (pokemonSearched.multipliers.length === 1) {
+  if (pokemonSearched.multipliers === null) {
     computeResult = {
-      maxCp: currentCp * pokemonSearched.multipliers[0] * percentMax,
-      minCp: currentCp * pokemonSearched.multipliers[0] * percentMin,
-      mediaCp: currentCp * pokemonSearched.multipliers[0]
+      maxCp: "Não possui",
+      minCp: "Não possui",
+      mediaCp: "Como este Pokémon <br>não possui evolução, <br>ele não gera cálculo de CP.<br>"
     }
-
-  }
-  if (pokemonSearched.multipliers.length === 2) {
-    computeResult = {
-      maxCp: currentCp * pokemonSearched.multipliers[1],
-      minCp: currentCp * pokemonSearched.multipliers[0],
-      mediaCp: currentCp * ((pokemonSearched.multipliers[0] + pokemonSearched.multipliers[1]) / 2)
+  } else {
+    if (pokemonSearched.multipliers.length === 1) {
+      computeResult = {
+        maxCp: (currentCp * pokemonSearched.multipliers[0] * percentMax).toFixed(2),
+        minCp: (currentCp * pokemonSearched.multipliers[0] * percentMin).toFixed(2),
+        mediaCp: (currentCp * pokemonSearched.multipliers[0]).toFixed(2)
+      }
     }
-
+    if (pokemonSearched.multipliers.length === 2) {
+      computeResult = {
+        maxCp: (currentCp * pokemonSearched.multipliers[1]).toFixed(2),
+        minCp: (currentCp * pokemonSearched.multipliers[0]).toFixed(2),
+        mediaCp: (currentCp * ((pokemonSearched.multipliers[0] + pokemonSearched.multipliers[1]) / 2)).toFixed(2)
+      }
+    }
   }
   return computeResult
 }
