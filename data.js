@@ -24,7 +24,6 @@ export function selectInfosToShow(data) {
   return newListCard
 }
 
-
 /**
  * Função que compara dois elementos para definir a ordem de posicionamento do menor para o maior.
  * @param {Object} objeto1 Primeiro objeto a ser comparado (um intem da lista (um pokemon)).
@@ -34,7 +33,6 @@ export function selectInfosToShow(data) {
  */
 
 function sortCrescent(objeto1, objeto2, option) {
-
   if (objeto1[option] < objeto2[option]) {
     return -1
   }
@@ -89,8 +87,7 @@ function compareSearchedValue(objeto, option, searchedValue) {
         return true
       }
     }
-  }
-  else {
+  } else {
     return objeto[option].toLowerCase() === searchedValue.toLowerCase()
   }
 }
@@ -112,10 +109,11 @@ export function filterInfons(data, option, searchedValue) {
   }
   let listPokemon = data
   let filteredList = []
-  filteredList = listPokemon.filter(function (x) { return compareSearchedValue(x, option, searchedValue) })
+  filteredList = listPokemon.filter(function (x) {
+    return compareSearchedValue(x, option, searchedValue)
+  })
   return filteredList
 }
-
 
 /**
  * Função realiza o calculo do futuro CP após evolução.
