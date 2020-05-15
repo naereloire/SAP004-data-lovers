@@ -63,19 +63,23 @@
 }
 
 .input {
-  height:40px;
   width: 85%;
+  background-color: transparent;
 }
  
 .button {
+  background-color: #184ed8;
   border-radius:0 6px 6px 0;
+  color: #fff;
+  font-family: 'FontAwesome', 'Font';
+  font-weight: 900;
+  height:40px;
   width: 15%;
 }
 
 .options-style,
 .search-style,
-.input,
-.button {
+.input {
   background-color:#2b5edf;
   height:40px;
   color: #fff;
@@ -106,7 +110,7 @@ input::placeholder {
 .button:hover,
 .input:hover,
 .options-style:hover {
-  background-color: #184ed8;
+  background-color: #1d45aa;
 }
 
 .cards {
