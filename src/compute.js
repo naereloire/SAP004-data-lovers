@@ -18,6 +18,7 @@ document.getElementById("button-search").addEventListener("click", calculateAndS
  */
 function calculateAndShow(event) {
   event.preventDefault();
+
   let showPokemon = document.getElementById("cards");
   let inputName = document.getElementById("search-name").value;
   let inputCp = document.getElementById("search-cp").value;
@@ -26,7 +27,8 @@ function calculateAndShow(event) {
   let card = "";
   showPokemon.innerHTML = "";
   pokemon = pokemon[0];
-  if (inputName !== "" && inputCp !== ""){
+
+  if (inputName !== "" && inputCp !== "") {
     card += `
           <div class="card-style">
             <h1>${pokemon.name}</h1>
