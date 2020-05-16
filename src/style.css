@@ -63,6 +63,7 @@
 }
 
 .input {
+
   height: 40px;
   width: 85%;
 
@@ -102,6 +103,7 @@
 
 .button:hover, .input:hover, .options-style:hover {
   background-color: #184ed8;
+
 }
 
 .box-container {
