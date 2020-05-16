@@ -133,7 +133,7 @@
 
 .card-style, .card-back {
   align-items: center;
-  backface-visibility:hidden ;
+  backface-visibility: hidden;
   background-color: #C7DDE4;
   border: 3px outset #113fb4;
   box-shadow: 4px 4px #111111;
@@ -142,16 +142,15 @@
   flex-direction: column;
   height: 100%;
   position: absolute;
-  -webkit-backface-visibility:hidden;
+  -webkit-backface-visibility: hidden;
   width: 100%;
 }
 
-.box-container:hover .box-cards{
-transform: rotateY(180deg);
-
+.box-container:hover .box-cards {
+  transform: rotateY(180deg);
 }
 
-.card-back{
+.card-back {
   transform: rotateY(180deg);
 }
 
@@ -189,7 +188,30 @@ transform: rotateY(180deg);
   text-align: center;
 }
 
-@media only screen and (max-width: 560px) {
+@media only screen and (max-width:359px) {
+  .ul-link {
+    font-size: 0.800em;
+    width: 90%;
+  }
+  .title-img {
+    width: 130%;
+  }
+  .filters-style {
+    flex-wrap: wrap;
+  }
+  .options-style {
+    width: 97%;
+  }
+  .search-style {
+    margin-left: 8px;
+  }
+  .box-container {
+    height: 390px;
+    width: 250px;
+  }
+}
+
+@media only screen and (min-width:360px) and (max-width:560px) {
   .title-style {
     font-size: 1em;
   }
@@ -208,21 +230,22 @@ transform: rotateY(180deg);
     flex-wrap: wrap;
   }
   .options-style {
-    margin: 0.5%;
+    font-size: 0.700em;
     text-align: center;
     width: 70%;
   }
   .search-style {
     display: flex;
     width: 70%;
+    margin-left: 8px;
   }
   .input {
+    font-size: 0.700em;
     width: 85%;
   }
   .button {
     width: 15%;
   }
-  
 }
 
 @media only screen and (min-width:561px) and (max-width:768px) {
@@ -234,7 +257,6 @@ transform: rotateY(180deg);
     margin: 5, 36%;
     width: 70%;
   }
-  
   .filters-style {
     align-items: center;
     display: flex;
@@ -242,13 +264,12 @@ transform: rotateY(180deg);
     flex-wrap: wrap;
   }
   .options-style {
-    margin: 0.5%;
     text-align: center;
     width: 70%;
   }
   .search-style {
     display: flex;
-    margin: 0.5%;
+    margin-left: 8px;
     width: 70%;
   }
   .input {
