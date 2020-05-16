@@ -19,7 +19,9 @@ function showPokemons(arrayPokemon) {
     arrayPokemon = selectInfosToShow(arrayPokemon)
     for (let pokemon of arrayPokemon) {
       card += `
-            <div class="card-style">
+      <div class="box-container">
+            <div class="box-cards">
+              <div class="card-style">
               <h2 class = "title-poke">${pokemon.name} ${pokemon.number}</h2>
               <img class="img-poke" src ="${pokemon.image}" alt ="imagem ${pokemon.name}"/>
               <div class="div-poke">
@@ -30,7 +32,24 @@ function showPokemons(arrayPokemon) {
               <p class="subtitle-poke"><strong>Chance de aparecer:</strong></p>
               <p class="items-poke" > ${pokemon.probability}</p>
               </div>
-            </div>`;
+            </div>
+            <div class="card-back"> 
+            <h2 class = "title-poke">${pokemon.name} ${pokemon.number}</h2>
+            <p class="subtitle-poke"><strong>Peso:</strong></p>
+            <p class="items-poke" >${pokemon.height}</p>
+            <p class="subtitle-poke"><strong>Altura:</strong></p>
+            <p class="items-poke" >${pokemon.weight}</p>
+            <p class="subtitle-poke"><strong>Doce:</strong></p>
+            <p class="items-poke" >${pokemon.candy}</p>
+            <p class="subtitle-poke"><strong>Doces para Evoluir:</strong></p>
+            <p class="items-poke" >${pokemon.candy_count}</p>
+            <p class="subtitle-poke"><strong>Ovo:</strong></p>
+            <p class="items-poke" >${pokemon.egg}</p>
+
+            </div>
+           </div>
+      </div>`;
+           
     }
   }
   showPokemons.innerHTML = card;

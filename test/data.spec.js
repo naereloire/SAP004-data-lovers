@@ -41,6 +41,11 @@ const dataExpected = [{
   "types": "Grass, Poison",
   "weaknesses": "Fire, Ice, Flying, Psychic",
   "probability": 0.69,
+  "height": "0.71 m",
+  "weight": "6.9 kg",
+  "candy": "Bulbasaur Candy",
+  "candy_count": 25,
+  "egg": "2 km",
 }]
 
 describe('selectInfosToShow', () => {
