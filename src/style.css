@@ -141,8 +141,6 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-  /* margin: 10px; */
-  /* padding: 0 2em; */
   position: absolute;
   -webkit-backface-visibility:hidden;
   width: 100%;
@@ -224,9 +222,7 @@ transform: rotateY(180deg);
   .button {
     width: 15%;
   }
-  .card-style {
-    width: 40%;
-  }
+  
 }
 
 @media only screen and (min-width:561px) and (max-width:768px) {
@@ -238,9 +234,7 @@ transform: rotateY(180deg);
     margin: 5, 36%;
     width: 70%;
   }
-  .card-style {
-    width: 31%;
-  }
+  
   .filters-style {
     align-items: center;
     display: flex;
