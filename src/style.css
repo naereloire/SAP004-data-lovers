@@ -63,37 +63,46 @@
 }
 
 .input {
-
+  background-color: transparent;
   height: 40px;
   width: 85%;
-
+}
 
 .button {
-
+  background-color: #153585;
   border-radius: 0 6px 6px 0;
+  color:#fff;
+  font-family: 'FontAwesome','Font';
+  font-weight: 900;
+  height: 40px;
   width: 15%;
 }
 
-.options-style, .search-style, .input, .button {
-
-
+.options-style, 
+.search-style, 
+.input, .button {
+  background-color: #2b5edf;
+  height: 40px;
   color: #fff;
   font-family: 'FontAwesome', 'Font';
   font-weight: 900;
-  height: 40px;
+ 
 }
 
-.options-style, .search-style {
+.options-style, 
+.search-style {
   border-radius: 6px;
   border: solid 1px #808080;
 }
 
-.input, .button {
+.input, 
+.button {
   border: none;
   float: left;
 }
 
-.search-style input::placeholder {
+.search-style 
+input::placeholder {
   color: #fff;
   font-family: 'Font';
   font-weight: 900;
@@ -101,8 +110,10 @@
 }
 
 
-.button:hover, .input:hover, .options-style:hover {
-  background-color: #184ed8;
+.button:hover, 
+.input:hover, 
+.options-style:hover {
+  background-color: #1d45aa;
 
 }
 
