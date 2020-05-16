@@ -17,7 +17,12 @@ export function selectInfosToShow(data) {
       image: pokemon.img,
       types: pokemon.type.join(", "),
       weaknesses: pokemon.weaknesses.join(", "),
-      probability: pokemon.spawn_chance
+      probability: pokemon.spawn_chance,
+      height:pokemon.height,
+      weight:pokemon.weight,
+      candy:pokemon.candy,
+      candy_count:pokemon.candy_count,
+      egg:pokemon.egg,
     }
     newListCard.push(infosCard)
   }
