@@ -63,17 +63,20 @@
 }
 
 .input {
+
   height: 40px;
   width: 85%;
+=
 }
 
 .button {
+
   border-radius: 0 6px 6px 0;
   width: 15%;
 }
 
 .options-style, .search-style, .input, .button {
-  background-color: #2b5edf;
+
   color: #fff;
   font-family: 'FontAwesome', 'Font';
   font-weight: 900;
@@ -97,8 +100,10 @@
   padding: 0.41%;
 }
 
+
 .button:hover, .input:hover, .options-style:hover {
   background-color: #184ed8;
+
 }
 
 .box-container {
