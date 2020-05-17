@@ -1,5 +1,5 @@
 import data from './data/pokemon/pokemon.js';
-import { selectInfosToShow, ordenation, filterInfons,} from './data.js'
+import { selectInfosToShow, ordenation, filterInfons, getNextEvolution, } from './data.js'
 
 const arrayPokemon = data.pokemon
 let arrayAuxiliar = arrayPokemon
@@ -44,18 +44,60 @@ function showPokemons(arrayPokemon) {
           <p class="items-poke" >${pokemon.candy_count}</p>
           <p class="subtitle-poke"><strong>Ovo:</strong></p>
           <p class="items-poke" >${pokemon.egg}</p>
+          <button id="button-modal-${pokemon.name}" value="${pokemon.name}"><strong>Evoluções</strong></button>
         </div>
       </div>
     </div>`;
-
     }
   }
   showPokemons.innerHTML = card;
+  if (arrayPokemon.length != 0) {
+    for (let pokemon of arrayPokemon) {
+      document.getElementById(`button-modal-${pokemon.name}`).addEventListener("click", showEvolutions)
+    }
+  } 
 }
 
 showPokemons(arrayPokemon)
 
 let getSelectOrder = document.getElementById("ordination")
+
+let divModal = document.getElementById("myModal")
+
+function showEvolutions(event) {
+  let namePokemon = event.currentTarget.value
+  let divModalContent = document.getElementById("modal-value")
+  let evolutions = getNextEvolution(arrayPokemon, namePokemon)
+
+  if (evolutions.length === 0) {
+    divModalContent.innerHTML =`
+    <span class="close">&times;</span>
+    <div class="card-style">
+    <h1>Pokemon não possui evolução.</h1>
+    </div>
+  `
+  }
+  else {
+    divModalContent.innerHTML =`
+    <span class="close">&times;</span>
+    <div class="card-style">
+    <h1>${evolutions[0].name}</h1>
+    <img class="img-poke" src ="${evolutions[0].img}" alt ="imagem ${evolutions[0].name}"/>
+    </div>
+  `;
+  }
+  divModal.style.display = "block"
+  document.getElementsByClassName("close")[0].onclick = function () {
+    divModal.style.display = "none";
+  }
+}
+
+window.onclick = function (event) {
+  if (event.target == divModal) {
+    divModal.style.display = "none";
+  }
+}
+
 
 /**
  * Função para ordenar os dados e mostrar na tela.
