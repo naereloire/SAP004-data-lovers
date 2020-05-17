@@ -136,6 +136,14 @@ input::placeholder {
   text-align: center;
 }
 
+.div-seta{
+  display: flex;
+  align-items: center;
+}
+.seta-poke{
+  height:100px;
+  width:100px;
+}
 @media only screen and (max-width:359px) {
   .links-style{
     font-size: 0.70em;
