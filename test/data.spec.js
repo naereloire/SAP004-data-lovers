@@ -121,7 +121,7 @@ describe('ordenation', () => {
     expect(() => ordenation([])).toThrow(TypeError);
     expect(() => ordenation(arrayInput, 0, 0)).toThrow(TypeError);
     expect(() => ordenation(arrayInput, "", "")).toThrow(TypeError);
-    expect(() => selectInfosToShow({}, !"", !"")).toThrow(TypeError);
+    expect(() => ordenation({}, !"", !"")).toThrow(TypeError);
   })
 
   it('returns `ordered array`', () => {
@@ -207,7 +207,7 @@ describe('computeCp', () => {
     expect(() => computeCp([])).toThrow(TypeError);
     expect(() => computeCp(computeArrayInput, 0, 0)).toThrow(TypeError);
     expect(() => computeCp(computeArrayInput, "", 0)).toThrow(TypeError);
-    expect(() => selectInfosToShow({}, !"", 0)).toThrow(TypeError);
+    expect(() => computeCp({}, !"", 0)).toThrow(TypeError);
   })
 
   it('returns `pokemon min e max CP`', () => {
@@ -263,11 +263,22 @@ const pokEvolutionExpect = [{
 }
 ]
 
+describe('getNextEvolution', () => {
+  it('is a function', () => {
+    expect(typeof getNextEvolution).toBe('function');
+  });
 
-
+  it('should throw TypeError when invoked with wrong argument types', () => {
+    expect(() => getNextEvolution()).toThrow(TypeError);
+    expect(() => getNextEvolution([])).toThrow(TypeError);
+    expect(() => getNextEvolution(pokEvolutionInput,0)).toThrow(TypeError);
+    expect(() => getNextEvolution(pokEvolutionInput, "")).toThrow(TypeError);
+  })
 
 it('returns `pokemon next evolutions`', () => {
   expect(getNextEvolution(pokEvolutionInput,"Bulbasaur")).toStrictEqual(pokEvolutionExpect);
   expect(getNextEvolution(pokEvolutionInput,"Venusaur")).toStrictEqual([]);
   
 });
+
+})
