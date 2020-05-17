@@ -34,6 +34,7 @@
 .ul-link li a {
   color: #FFF;
   display: block;
+  font-size: 1.15em;
   padding: 10px 10px;
   text-align: center;
   text-decoration: none;
@@ -41,6 +42,7 @@
 
 .ul-link li a:hover {
   background-color: #65548D;
+  
 }
 
 .title-style {
@@ -80,7 +82,7 @@
 
 .options-style, 
 .search-style, 
-.input, .button {
+.input {
   background-color: #2b5edf;
   height: 40px;
   color: #fff;
@@ -206,7 +208,8 @@ input::placeholder {
 
 @media only screen and (max-width:359px) {
   .ul-link {
-    font-size: 0.800em;
+    display: flex;
+    font-size: 0.680em;
     width: 90%;
   }
   .title-img {
@@ -216,18 +219,34 @@ input::placeholder {
     flex-wrap: wrap;
   }
   .options-style {
-    width: 97%;
+    width: 70%;
   }
   .search-style {
     margin-left: 8px;
+    width: 70%;
   }
   .box-container {
-    height: 390px;
+    height: 310px;
     width: 250px;
+  }
+
+  .title-poke{
+    font-size: 0.75em;
+  }
+
+  .items-poke{
+    font-size: 0.80em;
   }
 }
 
 @media only screen and (min-width:360px) and (max-width:560px) {
+  
+  .ul-link{
+  display: flex;
+  font-size: 0.700em;
+  width: 90%;
+  }
+  
   .title-style {
     font-size: 1em;
   }
@@ -261,6 +280,19 @@ input::placeholder {
   }
   .button {
     width: 15%;
+  }
+
+  .box-container{
+    height: 310px;
+    width: 230px;
+  }
+
+  .title-poke{
+    font-size: 0.75em;
+  }
+
+  .items-poke{
+    font-size: 0.80em;
   }
 
 }
@@ -298,5 +330,10 @@ input::placeholder {
   }
   .links-style {
     font-size: 1.25em;
+  }
+
+  .box-container{
+    height:400px ;
+    width: 280px;
   }
 }
