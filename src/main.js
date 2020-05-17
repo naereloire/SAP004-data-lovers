@@ -1,9 +1,8 @@
 import data from './data/pokemon/pokemon.js';
-import { selectInfosToShow, ordenation, filterInfons } from './data.js'
+import { selectInfosToShow, ordenation, filterInfons,} from './data.js'
 
 const arrayPokemon = data.pokemon
 let arrayAuxiliar = arrayPokemon
-
 /**
  * Função para mostrar os dados na tela. 
  * @param {Array.<Object>} arrayPokemon array contendo lista de obejots(151 pokemons)

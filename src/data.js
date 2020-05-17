@@ -158,3 +158,19 @@ export function computeCp(data, currentCp, namePokemon) {
   }
   return computeResult
 }
+
+export function getNextEvolution (data, namePokemon) {
+let evolutionList=[]
+let pokemon = filterInfons(data,"name", namePokemon)[0]
+if(pokemon.next_evolution===undefined){
+  return evolutionList=[]
+}
+else {
+for (let evolution of pokemon.next_evolution){
+  let pokemonEvolution = filterInfons (data, "name", evolution.name)[0]
+  evolutionList.push(pokemonEvolution)
+}
+
+return evolutionList
+}
+}

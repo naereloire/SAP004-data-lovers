@@ -1,5 +1,5 @@
 import data from './data/pokemon/pokemon.js';
-import {ordenation, computeCp, filterInfons} from './data.js'
+import { ordenation, computeCp, filterInfons } from './data.js'
 
 const arrayPokemon = data.pokemon;
 let dataListSorted = ordenation(arrayPokemon, "name", "increasing");
@@ -22,6 +22,7 @@ function calculateAndShow(event) {
   let showPokemon = document.getElementById("cards");
   let inputName = document.getElementById("search-name").value;
   let inputCp = document.getElementById("search-cp").value;
+  if (inputCp === "") { inputCp = 0 }
   let result = (computeCp(arrayPokemon, inputCp, inputName));
   let pokemon = filterInfons(arrayPokemon, "name", inputName);
   let card = "";
