@@ -8,9 +8,13 @@ export function selectInfosToShow(data) {
   if (!Array.isArray(data) || data.length === 0) {
     throw new TypeError("parâmetro invalido")
   }
+  let verifiedCandy
   let listPokemon = data;
   let newListCard = [];
   for (let pokemon of listPokemon) {
+    if (verifiedCandy === undefined) {
+      verifiedCandy = "Não tem evolução"
+    }
     let infosCard = {
       number: pokemon.num,
       name: pokemon.name,
@@ -18,11 +22,11 @@ export function selectInfosToShow(data) {
       types: pokemon.type.join(", "),
       weaknesses: pokemon.weaknesses.join(", "),
       probability: pokemon.spawn_chance,
-      height:pokemon.height,
-      weight:pokemon.weight,
-      candy:pokemon.candy,
-      candy_count:pokemon.candy_count,
-      egg:pokemon.egg,
+      height: pokemon.height,
+      weight: pokemon.weight,
+      candy: pokemon.candy,
+      candy_count: pokemon.candy_count = verifiedCandy,
+      egg: pokemon.egg,
     }
     newListCard.push(infosCard)
   }
@@ -159,18 +163,18 @@ export function computeCp(data, currentCp, namePokemon) {
   return computeResult
 }
 
-export function getNextEvolution (data, namePokemon) {
-let evolutionList=[]
-let pokemon = filterInfons(data,"name", namePokemon)[0]
-if(pokemon.next_evolution===undefined){
-  return evolutionList=[]
-}
-else {
-for (let evolution of pokemon.next_evolution){
-  let pokemonEvolution = filterInfons (data, "name", evolution.name)[0]
-  evolutionList.push(pokemonEvolution)
-}
+export function getNextEvolution(data, namePokemon) {
+  let evolutionList = []
+  let pokemon = filterInfons(data, "name", namePokemon)[0]
+  if (pokemon.next_evolution === undefined) {
+    return evolutionList = []
+  }
+  else {
+    for (let evolution of pokemon.next_evolution) {
+      let pokemonEvolution = filterInfons(data, "name", evolution.name)[0]
+      evolutionList.push(pokemonEvolution)
+    }
 
-return evolutionList
-}
+    return evolutionList
+  }
 }
