@@ -41,7 +41,7 @@ function showPokemons(arrayPokemon) {
           <p class="items-poke" >${pokemon.candy_count}</p>
           <p class="subtitle-poke"><strong>Ovo:</strong></p>
           <p class="items-poke" >${pokemon.egg}</p>
-          <button id="button-modal-${pokemon.name}" value="${pokemon.name}"><strong>Evoluções</strong></button>
+          <button id="button-modal-${pokemon.name}" value="${pokemon.name}"class="search-style" ><strong>Evoluções</strong></button>
         </div>
       </div>
     </div>`;
@@ -52,7 +52,7 @@ function showPokemons(arrayPokemon) {
     for (let pokemon of arrayPokemon) {
       document.getElementById(`button-modal-${pokemon.name}`).addEventListener("click", showEvolutions)
     }
-  } 
+  }
 }
 
 showPokemons(arrayPokemon)
@@ -67,7 +67,7 @@ function showEvolutions(event) {
   let evolutions = getNextEvolution(arrayPokemon, namePokemon)
 
   if (evolutions.length === 0) {
-    divModalContent.innerHTML =`
+    divModalContent.innerHTML = `
     <span class="close">&times;</span>
     <div class="card-style">
     <h1>Pokemon não possui evolução.</h1>
@@ -75,9 +75,9 @@ function showEvolutions(event) {
   `
   }
   else {
-    divModalContent.innerHTML =`
+    divModalContent.innerHTML = `
     <span class="close">&times;</span>
-    <div class="card-style">
+    <div class="modal-style">
     <h1>${evolutions[0].name}</h1>
     <img class="img-poke" src ="${evolutions[0].img}" alt ="imagem ${evolutions[0].name}"/>
     </div>

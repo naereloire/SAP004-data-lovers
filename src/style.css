@@ -44,7 +44,6 @@
 
 .ul-link li a:hover {
   background-color: #65548D;
-  
 }
 
 .title-style {
@@ -78,10 +77,7 @@
   width: 15%;
 }
 
-.options-style, 
-.search-style, 
-.input,
-.button {
+.options-style, .search-style, .input, .button {
   color: #fff;
   font-family: 'FontAwesome', 'Font';
   font-weight: 300;
@@ -89,36 +85,28 @@
   height: 40px;
 }
 
-.options-style, 
-.search-style, 
-.input {
+.options-style, .search-style, .input {
   background-color: #2b5edf;
 }
 
-.options-style, 
-.search-style {
+.options-style, .search-style {
   border-radius: 6px;
   border: solid 1px #808080;
 }
 
-.input, 
-.button {
+.input, .button {
   border: none;
   float: left;
 }
 
-.search-style 
-input::placeholder {
+.search-style input::placeholder {
   color: #fff;
   font-family: 'Font';
   font-weight: 300;
   padding: 0.41%;
 }
 
-
-.button:hover, 
-.input:hover, 
-.options-style:hover {
+.button:hover, .input:hover, .options-style:hover {
   background-color: #1d45aa;
 }
 
@@ -214,190 +202,158 @@ input::placeholder {
 }
 
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  display: none;
+  position: fixed;
+  z-index: 1;
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 /* Modal Content/Box */
+
 .modal-content {
-  background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
+  display: flex;
+  margin: 15% auto;
   padding: 20px;
-  border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
+  text-align: center;
+  width: 20%;
 }
 
 /* The Close Button */
+
 .close {
-  color: #aaa;
+  color:red;
   float: right;
-  font-size: 28px;
+  font-size: 35px;
   font-weight: bold;
 }
 
-.close:hover,
-.close:focus {
+.close:hover, .close:focus {
   color: black;
   text-decoration: none;
   cursor: pointer;
 }
 
-
-
-
-
+.modal-style {
+  background-color: #C7DDE4;
+  border: 3px outset #113fb4;
+  box-shadow: 4px 4px #111111;
+  height: 400px;
+  width: 500px;
+}
 
 @media only screen and (max-width:359px) {
-  .links-style{
+  .links-style {
     font-size: 0.70em;
   }
-  
   .title-img {
     height: 21%;
     width: 90%;
   }
- 
   .filters-style {
     align-items: center;
     flex-direction: column;
     flex-wrap: wrap;
     margin: 15px;
   }
-
-  .search-style,
-  .options-style {
+  .search-style, .options-style {
     margin-bottom: 4px;
     width: 80%;
   }
-
   .options-style {
     text-align: center;
   }
-
   .search-style {
     display: flex;
     margin-left: 8px;
   }
-
-  .options-style,
-  .input,
-  .button {
+  .options-style, .input, .button {
     font-size: 0.7em;
   }
-
   .input {
     width: 85%;
   }
-
   .button {
     width: 15%;
   }
-
-  .box-container{
+  .box-container {
     height: 330px;
     width: 190px;
   }
-
-  .title-poke{
+  .title-poke {
     font-size: 1.1em;
   }
-
-  .subtitle-poke,
-  .items-poke {
+  .subtitle-poke, .items-poke {
     font-size: 0.8em;
   }
-
-  .items-poke{
+  .items-poke {
     margin: 0 0 3px 0;
     padding: 5px;
   }
-
   .footer-style h3 {
     font-size: 0.8em
   }
-
   .footer-style a {
     font-size: inherit;
-  } 
+  }
 }
 
 @media only screen and (min-width:360px) and (max-width:560px) {
-  .links-style{
+  .links-style {
     font-size: 0.75em;
   }
-
   .title-img {
     height: 21%;
     width: 75%;
   }
- 
   .filters-style {
     align-items: center;
     flex-direction: column;
     flex-wrap: wrap;
     margin: 30px;
   }
-
-  .search-style,
-  .options-style {
+  .search-style, .options-style {
     margin-bottom: 5px;
     width: 75%;
   }
-
   .options-style {
     text-align: center;
   }
-
   .search-style {
     display: flex;
     margin-left: 8px;
   }
-
-  .options-style,
-  .input,
-  .button {
+  .options-style, .input, .button {
     font-size: 0.8em;
   }
-
   .input {
     width: 85%;
   }
-
   .button {
     width: 15%;
   }
-
-  .box-container{
+  .box-container {
     height: 350px;
     width: 200px;
   }
-
-  .title-poke{
+  .title-poke {
     font-size: 1.2em;
   }
-
-  .subtitle-poke,
-  .items-poke {
+  .subtitle-poke, .items-poke {
     font-size: 1em;
   }
-
-  .items-poke{
+  .items-poke {
     margin: 0 0 4px 0;
     padding: 5px;
   }
-
   .footer-style h3 {
     font-size: 1em
   }
-
   .footer-style a {
     font-size: inherit;
   }
@@ -407,66 +363,49 @@ input::placeholder {
   .links-style {
     font-size: 1.3em;
   }
-
   .ul-link {
     padding: 3px;
   }
-
   .title-img {
     height: 21%;
     width: 75%;
   }
-
   .filters-style {
     align-items: center;
     flex-direction: column;
     flex-wrap: wrap;
     margin: 30px;
   }
-
-  .search-style,
-  .options-style {
+  .search-style, .options-style {
     margin-bottom: 5px;
     width: 70%;
   }
-
   .options-style {
     text-align: center;
   }
-
   .search-style {
     display: flex;
     margin-left: 8px;
   }
-
-  .options-style,
-  .input,
-  .button {
+  .options-style, .input, .button {
     font-size: 0.9em;
   }
-
   .input {
     width: 85%;
   }
-
   .button {
     width: 15%;
   }
-
   .box-container {
-    height:350px ;
+    height: 350px;
     width: 190px;
   }
-
   .title-poke {
     font-size: 1.3em;
   }
-
-  .subtitle-poke,
-  .items-poke {
+  .subtitle-poke, .items-poke {
     font-size: 0.9em;
   }
-
   .items-poke {
     margin: 0 0 5px 0;
     padding: 5px;

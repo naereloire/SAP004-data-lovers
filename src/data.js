@@ -12,8 +12,9 @@ export function selectInfosToShow(data) {
   let listPokemon = data;
   let newListCard = [];
   for (let pokemon of listPokemon) {
+    verifiedCandy = pokemon.candy_count
     if (verifiedCandy === undefined) {
-      verifiedCandy = "Não tem evolução"
+      verifiedCandy = "Não possui evolução"
     }
     let infosCard = {
       number: pokemon.num,
@@ -25,7 +26,7 @@ export function selectInfosToShow(data) {
       height: pokemon.height,
       weight: pokemon.weight,
       candy: pokemon.candy,
-      candy_count: pokemon.candy_count = verifiedCandy,
+      candy_count: verifiedCandy,
       egg: pokemon.egg,
     }
     newListCard.push(infosCard)

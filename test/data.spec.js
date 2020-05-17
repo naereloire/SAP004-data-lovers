@@ -48,6 +48,52 @@ const dataExpected = [{
   "egg": "2 km",
 }]
 
+const candyUndefinedInput = [{
+  "id": 3,
+  "num": "003",
+  "name": "Venusaur",
+  "img": "http://www.serebii.net/pokemongo/pokemon/003.png",
+  "type": [
+    "Grass",
+    "Poison"
+  ],
+  "height": "2.01 m",
+  "weight": "100.0 kg",
+  "egg": "Not in Eggs",
+  "spawn_chance": 0.017,
+  "avg_spawns": 1.7,
+  "spawn_time": "11:30",
+  "multipliers": null,
+  "weaknesses": [
+    "Fire",
+    "Ice",
+    "Flying",
+    "Psychic"
+  ],
+  "prev_evolution": [{
+    "num": "001",
+    "name": "Bulbasaur"
+  }, {
+    "num": "002",
+    "name": "Ivysaur"
+  }]
+}
+]
+
+const candyUndefinedExpected = [{
+  "number": "003",
+  "name": "Venusaur",
+  "image": "http://www.serebii.net/pokemongo/pokemon/003.png",
+  "types": "Grass, Poison",
+  "weaknesses": "Fire, Ice, Flying, Psychic",
+  "probability":0.017,
+  "height": "2.01 m",
+  "weight": "100.0 kg",
+  "candy": undefined,
+  "candy_count": "Não possui evolução",
+  "egg": "Not in Eggs",
+}]
+
 describe('selectInfosToShow', () => {
   it('is a function', () => {
     expect(typeof selectInfosToShow).toBe('function');
@@ -63,6 +109,7 @@ describe('selectInfosToShow', () => {
 
   it('returns `reduced object`', () => {
     expect(selectInfosToShow(dataInput)).toStrictEqual(dataExpected);
+    expect(selectInfosToShow(candyUndefinedInput)).toStrictEqual(candyUndefinedExpected);
   });
 });
 
@@ -271,14 +318,14 @@ describe('getNextEvolution', () => {
   it('should throw TypeError when invoked with wrong argument types', () => {
     expect(() => getNextEvolution()).toThrow(TypeError);
     expect(() => getNextEvolution([])).toThrow(TypeError);
-    expect(() => getNextEvolution(pokEvolutionInput,0)).toThrow(TypeError);
+    expect(() => getNextEvolution(pokEvolutionInput, 0)).toThrow(TypeError);
     expect(() => getNextEvolution(pokEvolutionInput, "")).toThrow(TypeError);
   })
 
-it('returns `pokemon next evolutions`', () => {
-  expect(getNextEvolution(pokEvolutionInput,"Bulbasaur")).toStrictEqual(pokEvolutionExpect);
-  expect(getNextEvolution(pokEvolutionInput,"Venusaur")).toStrictEqual([]);
-  
-});
+  it('returns `pokemon next evolutions`', () => {
+    expect(getNextEvolution(pokEvolutionInput, "Bulbasaur")).toStrictEqual(pokEvolutionExpect);
+    expect(getNextEvolution(pokEvolutionInput, "Venusaur")).toStrictEqual([]);
+
+  });
 
 })
