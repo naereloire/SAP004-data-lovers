@@ -288,7 +288,7 @@ input::placeholder {
 
 @media only screen and (min-width:360px) and (max-width:560px) {
   .links-style{
-    font-size: 1em;
+    font-size: 0.7em;
   }
 
   .ul-link{
@@ -296,6 +296,7 @@ input::placeholder {
   }
   
   .title-img {
+    height: 21%;
     width: 75%;
   }
  
@@ -341,12 +342,12 @@ input::placeholder {
   }
 
   .title-poke{
-    font-size: 1.1em;
+    font-size: 1.3em;
   }
 
   .subtitle-poke,
   .items-poke {
-    font-size: 0.8em;
+    font-size: 1.1em;
   }
 
   .items-poke{
