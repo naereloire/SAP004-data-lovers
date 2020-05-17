@@ -86,7 +86,7 @@ const candyUndefinedExpected = [{
   "image": "http://www.serebii.net/pokemongo/pokemon/003.png",
   "types": "Grass, Poison",
   "weaknesses": "Fire, Ice, Flying, Psychic",
-  "probability":0.017,
+  "probability": 0.017,
   "height": "2.01 m",
   "weight": "100.0 kg",
   "candy": undefined,
@@ -293,6 +293,16 @@ const pokEvolutionInput = [{
 ]
 
 const pokEvolutionExpect = [{
+  name: "Bulbasaur",
+  next_evolution: [{
+    "num": "002",
+    "name": "Ivysaur"
+  }, {
+    "num": "003",
+    "name": "Venusaur"
+  }]
+},
+{
   name: "Ivysaur",
   "img": "http://www.serebii.net/pokemongo/pokemon/002.png",
   "type": [

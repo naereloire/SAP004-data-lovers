@@ -56,8 +56,8 @@ function calculateAndShow(event) {
     </div>
 
     <div class="card-style">
-      <h1>${evolutions[0].name}</h1>
-      <img class="img-poke" src ="${evolutions[0].img}" alt ="imagem ${evolutions[0].name}"/>
+      <h1>${evolutions[1].name}</h1>
+      <img class="img-poke" src ="${evolutions[1].img}" alt ="imagem ${evolutions[1].name}"/>
     </div>
           
     <div class="card-style">

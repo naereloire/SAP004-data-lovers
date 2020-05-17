@@ -179,6 +179,7 @@ export function getNextEvolution(data, namePokemon) {
     return evolutionList = []
   }
   else {
+    evolutionList.push(pokemon)
     for (let evolution of pokemon.next_evolution) {
       let pokemonEvolution = filterInfons(data, "name", evolution.name)[0]
       evolutionList.push(pokemonEvolution)

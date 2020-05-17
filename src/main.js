@@ -37,8 +37,6 @@ function showPokemons(arrayPokemon) {
           <p class="items-poke" >${pokemon.weight}</p>
           <p class="subtitle-poke"><strong>Doce:</strong></p>
           <p class="items-poke" >${pokemon.candy}</p>
-          <p class="subtitle-poke"><strong>Doces para Evoluir:</strong></p>
-          <p class="items-poke" >${pokemon.candy_count}</p>
           <p class="subtitle-poke"><strong>Ovo:</strong></p>
           <p class="items-poke" >${pokemon.egg}</p>
           <button id="button-modal-${pokemon.name}" value="${pokemon.name}"class="search-style" ><strong>Evoluções</strong></button>
@@ -78,8 +76,10 @@ function showEvolutions(event) {
     divModalContent.innerHTML = `
     <span class="close">&times;</span>
     <div class="modal-style">
-    <h1>${evolutions[0].name}</h1>
-    <img class="img-poke" src ="${evolutions[0].img}" alt ="imagem ${evolutions[0].name}"/>
+    <h1>${evolutions[1].name}</h1>
+    <img class="img-poke" src ="${evolutions[1].img}" alt ="imagem ${evolutions[1].name}"/>
+    <p class="subtitle-poke"><strong>Doces para Evoluir:</strong></p>
+    <p class="items-poke" >${evolutions[0].candy_count}</p>
     </div>
   `;
   }
