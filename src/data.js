@@ -163,6 +163,14 @@ export function computeCp(data, currentCp, namePokemon) {
   return computeResult
 }
 
+/**
+ * Função que acessa o array e seleciona os objetos de interesse 
+ * (ex: a proxima evolução do pokemon filtrado).
+ * @param {Array.<Object>} data Array contendo lista de objetos(151 pokemons).
+ * @param {Object} namePokemon Intém(pokemon)da lista de pokemons, 
+ * que representa a proxima evolução do pokemon filtrado.  
+ * @returns Uma lista com um objeto.
+ */
 export function getNextEvolution(data, namePokemon) {
   let evolutionList = []
   let pokemon = filterInfons(data, "name", namePokemon)[0]

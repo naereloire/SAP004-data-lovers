@@ -3,10 +3,7 @@ import { selectInfosToShow, ordenation, filterInfons, getNextEvolution, } from '
 
 const arrayPokemon = data.pokemon
 let arrayAuxiliar = arrayPokemon
-/**
- * Função para mostrar os dados na tela. 
- * @param {Array.<Object>} arrayPokemon array contendo lista de obejots(151 pokemons)
- */
+
 function showPokemons(arrayPokemon) {
   let showPokemons = document.getElementById("local-cards");
   let card = "";
@@ -98,11 +95,6 @@ window.onclick = function (event) {
   }
 }
 
-
-/**
- * Função para ordenar os dados e mostrar na tela.
- * @param {EventListener} event de mudança no select que aplica a ordenção.
- */
 function sortPokemons(event) {
   let elementSelect = event.target
   let selectedOption = elementSelect.options[elementSelect.selectedIndex].value
@@ -122,10 +114,7 @@ getSelectOrder.addEventListener("change", sortPokemons)
 
 let getSelectFilterType = document.getElementById("filter-type")
 let getSelectWeaknessType = document.getElementById("filter-weakness")
-/**
- * Função para filtrar os dados e mostrar na tela.
- * @param {EventListener} event de mudança no select que aplica a filtragem utilizando.
- */
+
 function filterPokemons() {
   let list = []
   let valueFiltertype = getSelectFilterType.options[getSelectFilterType.selectedIndex].value
@@ -158,10 +147,7 @@ getSelectWeaknessType.addEventListener("change", filterPokemons)
 let getInputSearch = document.getElementById("search")
 let getButtonSearch = document.getElementById("button-search")
 
-/**
- * Função para buscar o Pokemon pelo nome e mostrar na tela (usando.
- * @param {EventListener} event evento de enter ou click.
- */
+
 function searchByName(event) {
   if (event.key === "Enter" || event.type === "click") {
     let searchResult = filterInfons(arrayPokemon, "name", getInputSearch.value)
