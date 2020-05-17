@@ -1,4 +1,4 @@
-import { selectInfosToShow, ordenation, filterInfons, computeCp, getNextEvolution } from '../src/data.js';
+import { selectInfosToShow, ordenation, filterInfons, computeCp, getNextEvolution, calcPorcent} from '../src/data.js';
 
 const dataInput = [{
   "id": 1,
@@ -339,3 +339,33 @@ describe('getNextEvolution', () => {
   });
 
 })
+
+const inputPorcent = [{
+  name: "Bulba",
+  number: "001",
+  tipo: ["venenoso", "planta"],
+},
+{
+  name: "Gloom",
+  number: "155",
+  tipo: ["planta", "raio"],
+},
+{
+  name: "Pikachu",
+  number: "030",
+  tipo: ["raio",],
+},
+{
+  name: "Pichu",
+  number: "044",
+  tipo: ["raio",],
+},
+]
+
+const arrayTypes = ["venenoso","planta","raio"]
+
+const porcentExpected = [((1/4)*100),((2/4)*100),((3/4)*100)]
+
+it('returns `pokemon percentage types of all`', () => {
+  expect(calcPorcent(inputPorcent, "tipo", arrayTypes)).toStrictEqual(porcentExpected);
+});

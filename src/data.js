@@ -106,7 +106,7 @@ function compareSearchedValue(objeto, option, searchedValue) {
  * Função aplica a seleção no array de acordo com o SearchedValue.
  * @param {Array.<Object>} data Array contendo lista de objetos(151 pokemons).
  * @param {string} option Uma propriedade(ex:num)do objeto reperesentada por uma string.
- * @param {string} searchedValue uma string representando qualquer valor da buscado no array.
+ * @param {string} searchedValue uma string representando qualquer valor da buscado no array (o valor da propriedade).
  * @returns Uma lista contendo os objetos filtrados.
  */
 export function filterInfons(data, option, searchedValue) {
@@ -187,4 +187,21 @@ export function getNextEvolution(data, namePokemon) {
 
     return evolutionList
   }
+}
+
+/**
+ * Função realiza calculo estatístico da porcentagem de pokemons por tipo.
+ * @param {Array.<Object>} data Array contendo lista de objetos(151 pokemons).
+ * @param {string} option  Uma propriedade(ex:tipo)do objeto reperesentada por uma string.
+ * @param {Array.<String>} arrayTypes Array contendo valores que serão filtrados para calculo.
+ */
+export function calcPorcent(data, option, arrayTypes) {
+  let allPokemons = data
+  let list = []
+  for (let valueType of arrayTypes) {
+    let typesPokemons = filterInfons(data, option, valueType)
+    let calcResult = (typesPokemons.length / allPokemons.length) * 100
+    list.push(calcResult)
+  }
+  return list
 }

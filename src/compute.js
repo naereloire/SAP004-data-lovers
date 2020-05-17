@@ -71,3 +71,23 @@ function calculateAndShow(event) {
     showPokemon.innerHTML = card;
   }
 }
+
+// const arrayTypes = [
+//   "Grass",
+//   "Poison",
+//   "Fire",
+//   "Flying",
+//   "Water",
+//   "Bug",
+//   "Electric",
+//   "Ground",
+//   "Fighting",
+//   "Psychic",
+//   "Rock",
+//   "Ice",
+//   "Ghost",
+//   "Dragon",
+//   "Fairy",
+//   "Dark",
+//   "Steel",
+// ]
