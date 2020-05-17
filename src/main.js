@@ -76,7 +76,8 @@ function showEvolutions(event) {
     divModalContent.innerHTML = `
     <span class="close">&times;</span>
     <div class="modal-style">
-    <h1>${evolutions[1].name}</h1>
+    <h1>Evolução</h1>
+    <h2>${evolutions[1].name}</h2>
     <img class="img-poke" src ="${evolutions[1].img}" alt ="imagem ${evolutions[1].name}"/>
     <p class="subtitle-poke"><strong>Doces para Evoluir:</strong></p>
     <p class="items-poke" >${evolutions[0].candy_count}</p>
