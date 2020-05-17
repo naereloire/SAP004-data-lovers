@@ -331,4 +331,9 @@ input::placeholder {
   .links-style {
     font-size: 1.25em;
   }
+
+  .box-container{
+    height:400px ;
+    width: 280px;
+  }
 }
