@@ -219,6 +219,7 @@ input::placeholder {
   }
   
   .title-img {
+    height: 21%;
     width: 90%;
   }
  
@@ -288,13 +289,9 @@ input::placeholder {
 
 @media only screen and (min-width:360px) and (max-width:560px) {
   .links-style{
-    font-size: 0.7em;
+    font-size: 0.75em;
   }
 
-  .ul-link{
-    padding: 5px;
-  }
-  
   .title-img {
     height: 21%;
     width: 75%;
@@ -310,7 +307,7 @@ input::placeholder {
   .search-style,
   .options-style {
     margin-bottom: 5px;
-    width: 70%;
+    width: 75%;
   }
 
   .options-style {
@@ -337,17 +334,17 @@ input::placeholder {
   }
 
   .box-container{
-    height: 320px;
-    width: 180px;
+    height: 350px;
+    width: 190px;
   }
 
   .title-poke{
-    font-size: 1.3em;
+    font-size: 1.2em;
   }
 
   .subtitle-poke,
   .items-poke {
-    font-size: 1.1em;
+    font-size: 1em;
   }
 
   .items-poke{
@@ -356,7 +353,7 @@ input::placeholder {
   }
 
   .footer-style h3 {
-    font-size: 0.9em
+    font-size: 1em
   }
 
   .footer-style a {
@@ -374,6 +371,7 @@ input::placeholder {
   }
 
   .title-img {
+    height: 21%;
     width: 75%;
   }
 
