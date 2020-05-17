@@ -12,8 +12,10 @@
   display: flex;
   flex-wrap: wrap;
   font-family: "Font";
-  font-size: 1.125em;
+  font-size: 1.25em;
+  font-weight: 300;
   justify-content: center;
+  letter-spacing: 0.05em;
   overflow: hidden;
 }
 
@@ -50,7 +52,7 @@
 }
 
 .title-img {
-  margin: 2,5%;
+  margin: 20px 0;
 }
 
 .filters-style {
@@ -68,8 +70,9 @@
   color: #fff;
   font-family: "Font";
   font-size: 0.90em;
+  font-weight: 300;
   height: 40px;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.05em;
   margin-right: 5px;
   padding: 0 0.5em;
 }
@@ -122,20 +125,28 @@ input::placeholder {
   width: auto;
 }
 
-.footer-style h3,
-a {
+.footer-style {
+  background-color: rgba(48, 7, 94, 0.521);
+  padding: 5px;
+  margin-top: 25px;
+}
+
+.footer-style h3, a {
   color: #D4BFE3;
   text-align: center;
 }
 
 @media only screen and (min-width:561px) and (max-width:768px) {
   .links-style {
-    font-size: 1.5em;
+    font-size: 1.3em;
+  }
+
+  .ul-link {
+    padding: 3px;
   }
 
   .title-img {
-    margin: 7px, 36%;
-    width: 85%;
+    width: 90%;
   }
 
   .filters-style {
@@ -143,7 +154,11 @@ a {
   }
 
   .options-style {
-    width: 30%;
+    width: 25%;
+  }
+
+  .reset {
+    margin-left: 10px;
   }
 
   .card-style {
@@ -152,14 +167,17 @@ a {
   }
 }
 
-@media only screen and (max-width: 560px) {
+@media only screen and (min-width:360px) and (max-width:560px) {
   .links-style {
-    font-size: 0.7em;
+    font-size: 1em;
+  }
+
+  .ul-link {
+    padding: 5px;
   }
 
   .title-img {
-    margin: 7px, 36%;
-    width: 85%;
+    width: 75%;
   }
 
   .filters-style {
@@ -171,7 +189,7 @@ a {
   .options-style {
     margin: 0.5%;
     text-align: center;
-    width: 70%;
+    width: 65%;
   }
 
   .buttons {
@@ -184,6 +202,88 @@ a {
 
   .card-style {
     height: auto;
+    width: 45%;
+  }
+
+  .img-poke {
+    height: 120px;
+  }
+
+  .card-style h1 {
+    font-size: 1.2em;
+  }
+
+  .card-style p {
+    font-size: 0.9em;
+  }
+
+  .footer-style h3 {
+    font-size: 0.9em
+  }
+
+  .footer-style a {
+    font-size: inherit;
+  } 
+}
+
+@media only screen and (max-width:359px) {
+  .links-style{
+    font-size: 0.70em;
+  }
+  
+  .title-img {
+    width: 90%;
+  }
+
+  .filters-style {
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .options-style {
+    margin: 0.5%;
+    text-align: center;
     width: 65%;
   }
+
+  .buttons {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 3px 2px 20px;
+  }
+
+  .options-style,
+  .buttons {
+    font-size: 0.8em;
+    height: 30px;
+  }
+
+  .card-style {
+    height: auto;
+    width: 45%;
+    padding: 0.5em;
+  }
+  
+  .img-poke {
+    height: 100px;
+  }
+
+  .card-style h1 {
+    font-size: 1em;
+  }
+
+  .card-style p {
+    font-size: 0.7em;
+  }
+
+  .footer-style h3 {
+    font-size: 0.8em
+  }
+
+  .footer-style a {
+    font-size: inherit;
+  } 
 }

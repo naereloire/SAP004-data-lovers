@@ -36,6 +36,7 @@
 .ul-link li a {
   color: #FFF;
   display: block;
+  font-size: 1.15em;
   padding: 10px 10px;
   text-align: center;
   text-decoration: none;
@@ -83,8 +84,8 @@
 .button {
   color: #fff;
   font-family: 'FontAwesome', 'Font';
-  letter-spacing: 0.05em;
   font-weight: 300;
+  letter-spacing: 0.05em;
   height: 40px;
 }
 
@@ -275,6 +276,14 @@ input::placeholder {
     margin: 0 0 3px 0;
     padding: 5px;
   }
+
+  .footer-style h3 {
+    font-size: 0.8em
+  }
+
+  .footer-style a {
+    font-size: inherit;
+  } 
 }
 
 @media only screen and (min-width:360px) and (max-width:560px) {
@@ -344,15 +353,23 @@ input::placeholder {
     margin: 0 0 5px 0;
     padding: 5px;
   }
+
+  .footer-style h3 {
+    font-size: 0.9em
+  }
+
+  .footer-style a {
+    font-size: inherit;
+  }
 }
 
 @media only screen and (min-width:561px) and (max-width:768px) {
-  .links-style{
-    font-size: 1.5em;
+  .links-style {
+    font-size: 1.3em;
   }
 
-  .ul-link{
-    padding: 5px;
+  .ul-link {
+    padding: 3px;
   }
 
   .title-img {
