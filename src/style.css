@@ -12,8 +12,10 @@
   display: flex;
   flex-wrap: wrap;
   font-family: 'Font';
-  font-size: 1.125em;
+  font-size: 1.25em;
+  font-weight: 300;
   justify-content: center;
+  letter-spacing: 0.05em;
   overflow: hidden;
 }
 
@@ -34,7 +36,6 @@
 .ul-link li a {
   color: #FFF;
   display: block;
-  font-size: 1.15em;
   padding: 10px 10px;
   text-align: center;
   text-decoration: none;
@@ -51,7 +52,7 @@
 }
 
 .title-img {
-  margin: 2, 5%;
+  margin: 20px 0;
 }
 
 .filters-style {
@@ -73,22 +74,24 @@
 .button {
   background-color: #153585;
   border-radius: 0 6px 6px 0;
-  color:#fff;
-  font-family: 'FontAwesome','Font';
-  font-weight: 900;
-  height: 40px;
   width: 15%;
+}
+
+.options-style, 
+.search-style, 
+.input,
+.button {
+  color: #fff;
+  font-family: 'FontAwesome', 'Font';
+  letter-spacing: 0.05em;
+  font-weight: 300;
+  height: 40px;
 }
 
 .options-style, 
 .search-style, 
 .input {
   background-color: #2b5edf;
-  height: 40px;
-  color: #fff;
-  font-family: 'FontAwesome', 'Font';
-  font-weight: 900;
- 
 }
 
 .options-style, 
@@ -107,7 +110,7 @@
 input::placeholder {
   color: #fff;
   font-family: 'Font';
-  font-weight: 900;
+  font-weight: 300;
   padding: 0.41%;
 }
 
@@ -116,16 +119,15 @@ input::placeholder {
 .input:hover, 
 .options-style:hover {
   background-color: #1d45aa;
-
 }
 
 .box-container {
   flex-direction: column;
-  height: 420px;
+  height: 400px;
   margin: 10px;
   padding: 0 1em;
   perspective: 1000px;
-  width: 300px;
+  width: 240px;
 }
 
 .box-cards {
@@ -141,12 +143,8 @@ input::placeholder {
   color: #fff;
   display: flex;
   flex-wrap: wrap;
-  font-size: 1.2em;
-  height: 100%;
-  justify-content: center;
-  margin: 10px;
-  padding: 1%;
-  width: 95%;
+  justify-content: space-around;
+  width: 100%;
 }
 
 .card-style, .card-back {
@@ -159,6 +157,7 @@ input::placeholder {
   display: flex;
   flex-direction: column;
   height: 100%;
+  justify-content: center;
   position: absolute;
   -webkit-backface-visibility: hidden;
   width: 100%;
@@ -174,7 +173,7 @@ input::placeholder {
 
 .title-poke {
   color: #000614;
-  font-size: 1, 5625em;
+  font-size: 1.5em;
   text-align: center;
 }
 
@@ -187,11 +186,11 @@ input::placeholder {
 }
 
 .div-poke {
-  margin: 15px;
+  margin: 15px 0;
 }
 
 .subtitle-poke, .items-poke {
-  font-size: 1, 0625em;
+  font-size: 1em;
   margin: 0;
   padding: 0;
   text-align: center;
@@ -199,6 +198,13 @@ input::placeholder {
 
 .items-poke {
   margin: 0 0 7px 0;
+  padding: 8px;
+}
+
+.footer-style {
+  background-color: rgba(48, 7, 94, 0.521);
+  padding: 5px;
+  margin-top: 25px;
 }
 
 .footer-style h3, a {
@@ -207,133 +213,204 @@ input::placeholder {
 }
 
 @media only screen and (max-width:359px) {
-  .ul-link {
-    display: flex;
-    font-size: 0.680em;
+  .links-style{
+    font-size: 0.70em;
+  }
+  
+  .title-img {
     width: 90%;
   }
-  .title-img {
-    width: 130%;
-  }
+ 
   .filters-style {
+    align-items: center;
+    flex-direction: column;
     flex-wrap: wrap;
+    margin: 15px;
   }
+
+  .search-style,
   .options-style {
-    width: 70%;
+    margin-bottom: 4px;
+    width: 80%;
   }
+
+  .options-style {
+    text-align: center;
+  }
+
   .search-style {
+    display: flex;
     margin-left: 8px;
-    width: 70%;
   }
-  .box-container {
-    height: 310px;
-    width: 250px;
+
+  .options-style,
+  .input,
+  .button {
+    font-size: 0.7em;
+  }
+
+  .input {
+    width: 85%;
+  }
+
+  .button {
+    width: 15%;
+  }
+
+  .box-container{
+    height: 320px;
+    width: 180px;
   }
 
   .title-poke{
-    font-size: 0.75em;
+    font-size: 1.1em;
+  }
+
+  .subtitle-poke,
+  .items-poke {
+    font-size: 0.8em;
   }
 
   .items-poke{
-    font-size: 0.80em;
+    margin: 0 0 3px 0;
+    padding: 5px;
   }
 }
 
 @media only screen and (min-width:360px) and (max-width:560px) {
-  
+  .links-style{
+    font-size: 1em;
+  }
+
   .ul-link{
-  display: flex;
-  font-size: 0.700em;
-  width: 90%;
+    padding: 5px;
   }
   
-  .title-style {
-    font-size: 1em;
-  }
   .title-img {
-    height: 21%;
-    margin: 5, 36%;
-    width: 85%;
+    width: 75%;
   }
-  .main-container {
-    font-size: 1em;
-    width: 100%;
-  }
+ 
   .filters-style {
     align-items: center;
     flex-direction: column;
     flex-wrap: wrap;
+    margin: 30px;
   }
+
+  .search-style,
   .options-style {
-    font-size: 0.700em;
-    text-align: center;
+    margin-bottom: 5px;
     width: 70%;
   }
+
+  .options-style {
+    text-align: center;
+  }
+
   .search-style {
     display: flex;
-    width: 70%;
     margin-left: 8px;
   }
+
+  .options-style,
+  .input,
+  .button {
+    font-size: 0.8em;
+  }
+
   .input {
-    font-size: 0.700em;
     width: 85%;
   }
+
   .button {
     width: 15%;
   }
 
   .box-container{
-    height: 310px;
-    width: 230px;
+    height: 320px;
+    width: 180px;
   }
 
   .title-poke{
-    font-size: 0.75em;
+    font-size: 1.1em;
+  }
+
+  .subtitle-poke,
+  .items-poke {
+    font-size: 0.8em;
   }
 
   .items-poke{
-    font-size: 0.80em;
+    margin: 0 0 5px 0;
+    padding: 5px;
   }
-
 }
 
 @media only screen and (min-width:561px) and (max-width:768px) {
-  .title-style {
-    font-size: 1em;
+  .links-style{
+    font-size: 1.5em;
   }
+
+  .ul-link{
+    padding: 5px;
+  }
+
   .title-img {
-    height: 21%;
-    margin: 5, 36%;
-    width: 70%;
+    width: 75%;
   }
 
   .filters-style {
     align-items: center;
-    display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    margin: 30px;
   }
+
+  .search-style,
   .options-style {
-    text-align: center;
+    margin-bottom: 5px;
     width: 70%;
   }
+
+  .options-style {
+    text-align: center;
+  }
+
   .search-style {
     display: flex;
     margin-left: 8px;
-    width: 70%;
   }
+
+  .options-style,
+  .input,
+  .button {
+    font-size: 0.9em;
+  }
+
   .input {
     width: 85%;
   }
+
   .button {
     width: 15%;
   }
-  .links-style {
-    font-size: 1.25em;
+
+  .box-container {
+    height:350px ;
+    width: 190px;
   }
 
-  .box-container{
-    height:400px ;
-    width: 280px;
+  .title-poke {
+    font-size: 1.3em;
+  }
+
+  .subtitle-poke,
+  .items-poke {
+    font-size: 0.9em;
+  }
+
+  .items-poke {
+    margin: 0 0 5px 0;
+    padding: 5px;
   }
 }

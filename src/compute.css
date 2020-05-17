@@ -66,29 +66,32 @@
   border: 1px solid #808080;
   border-radius: 6px;
   color: #fff;
-  font-size: 0.80em;
-  font-weight: 900;
+  font-family: "Font";
+  font-size: 0.90em;
   height: 40px;
+  letter-spacing: 0.03em;
   margin-right: 5px;
   padding: 0 0.5em;
 }
 
 .reset {
-  color: #111;
+  height: 30px;
+  margin-left: 25px;
+}
+
+.input {
   background-color: #f3d033;
-  font-family: "Font";
-  margin-left: 10px;
+  color: #09001f;
 }
 
 .reset:hover {
-  background-color: #f3a033;
+  background-color: #110331;
 }
 
 .options-style:hover {
   background-color: #184ed8;
 }
 
-.input,
 .options-style,
 input::placeholder {
   color: #fff;
@@ -151,7 +154,7 @@ a {
 
 @media only screen and (max-width: 560px) {
   .links-style {
-    font-size: 0.9em;
+    font-size: 0.7em;
   }
 
   .title-img {
@@ -172,6 +175,7 @@ a {
   }
 
   .buttons {
+    align-items: center;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
