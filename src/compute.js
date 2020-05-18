@@ -1,6 +1,7 @@
+/* global Chart*/
+
 import data from './data/pokemon/pokemon.js';
 import { ordenation, computeCp, filterInfons, getNextEvolution, calcPorcent } from './data.js'
-import {Chart} from 'chart.js'
 
 const arrayPokemon = data.pokemon;
 let dataListSorted = ordenation(arrayPokemon, "name", "increasing");

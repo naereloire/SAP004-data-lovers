@@ -23,5 +23,9 @@
     "jest": "^24.9.0",
     "opener": "^1.5.1",
     "serve": "^11.0.0"
+  },
+  "devDependencies": {
+    "@types/chart.js": "^2.9.20",
+    "eslint-config-chartjs": "^0.2.0"
   }
 }
