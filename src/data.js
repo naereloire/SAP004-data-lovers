@@ -202,7 +202,7 @@ export function calcPorcent(data, option, arrayTypes) {
   for (let valueType of arrayTypes) {
     let typesPokemons = filterInfons(data, option, valueType)
     let calcResult = (typesPokemons.length / allPokemons.length) * 100
-    list.push(calcResult)
+    list.push(calcResult.toFixed(0))
   }
   return list
 }

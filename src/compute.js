@@ -1,5 +1,5 @@
 import data from './data/pokemon/pokemon.js';
-import { ordenation, computeCp, filterInfons, getNextEvolution } from './data.js'
+import { ordenation, computeCp, filterInfons, getNextEvolution, calcPorcent } from './data.js'
 
 const arrayPokemon = data.pokemon;
 let dataListSorted = ordenation(arrayPokemon, "name", "increasing");
@@ -45,7 +45,7 @@ function calculateAndShow(event) {
   }
   else {
     if (inputName !== "" && inputCp !== "") {
-    card += `
+      card += `
     <div class="card-style">
      <h1>${pokemon.name}</h1>
      <img class="img-poke" src ="${pokemon.img}" alt ="imagem ${pokemon.name}"/>
@@ -72,22 +72,87 @@ function calculateAndShow(event) {
   }
 }
 
-// const arrayTypes = [
-//   "Grass",
-//   "Poison",
-//   "Fire",
-//   "Flying",
-//   "Water",
-//   "Bug",
-//   "Electric",
-//   "Ground",
-//   "Fighting",
-//   "Psychic",
-//   "Rock",
-//   "Ice",
-//   "Ghost",
-//   "Dragon",
-//   "Fairy",
-//   "Dark",
-//   "Steel",
-// ]
+const arrayTypes = [
+  "Grass",
+  "Poison",
+  "Fire",
+  "Flying",
+  "Water",
+  "Bug",
+  "Electric",
+  "Ground",
+  "Fighting",
+  "Psychic",
+  "Rock",
+  "Ice",
+  "Ghost",
+  "Dragon",
+  "Fairy",
+  "Dark",
+  "Steel",
+]
+let porcentResult = calcPorcent(arrayPokemon, "type", arrayTypes)
+
+let canva = document.getElementById("graphic-types").getContext("2d")
+let colorList = [
+  'rgb(129,182,110)',
+  'rgb(238,130,238)',
+  'rgb(233,169,41)',
+  'rgb(128,128,128)',
+  'rgb(102,102,255)',
+  'rgb(0,102,0)',
+  'rgb(233,220,41)',
+  'rgb(102,51,0)',
+  'rgb(255,51,51)',
+  'rgb(255,102,178)',
+  'rgb(32,32,32)',
+  'rgb(102,255,255)',
+  'rgb(102,0,102)',
+  'rgb(255,145,0)',
+  'rgb(255,204,229)',
+  'rgb(0,25,51)',
+  'rgb(64,64,64)',
+]
+
+let graphicTypes = new Chart(canva, {
+  type: "doughnut",
+  data: {
+    labels: arrayTypes,
+    datasets: [{
+      label: "Porcentual de pokemons",
+      data: porcentResult,
+      backgroundColor: colorList
+    }]},
+    options: {
+      plugins:{
+        labels:{
+       fontColor:'rgb(0,0,0)', 
+       orverlap: false, 
+       position:'outside',
+       arc:true,
+       textMargin:1,
+       fontSize:10,
+       render:function(value){return value.value + '%'},
+       showActualPercentages:false,
+      }
+      },
+      responsive: true,
+      legend: {
+        fontColor:'rgb(0,0,0)',
+        fontSize: '14',
+        position: "right"
+      },
+      title: {
+        display: true,
+        fontColor:'rgb(0,0,0)',
+        fontSize: '18',
+        text: "Pokemons por tipo"
+      },
+      animation: {
+        animateScale: true,
+        animateRotate: true
+      }
+
+    }
+});
+
