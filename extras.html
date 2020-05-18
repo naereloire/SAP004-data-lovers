@@ -6,7 +6,7 @@
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" type="image/x-icon" href="./img/favicon.ico">
-  <link rel="stylesheet" href="compute.css">
+  <link rel="stylesheet" href="extras.css">
   <title>Pokelovers</title>
 </head>
 
@@ -15,8 +15,8 @@
     <nav class="links-style">
       <ul class="ul-link">
         <li><a href="index.html">Home</a></li>
-        <li><a href="dicas.html">Dicas</a></li>
-        <li><a aria-current="page" href="compute.html">Calcule o CP</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a aria-current="page" href="extras.html">Extras</a></li>
       </ul>
     </nav>
 
@@ -45,6 +45,11 @@
 
     <div id="cards" class="cards"></div>
 
+  <div class="cards">
+    <div id="graphic" class="graphic-style"> 
+      <canvas id="graphic-types"></canvas>
+    </div>
+  </div>
   </main>
 
   <footer class="footer-style">
@@ -53,7 +58,10 @@
     </h3>
   </footer>
 
-  <script src="compute.js" type="module"></script>
+  <script src="extras.js" type="module"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/emn178/chartjs-plugin-labels/src/chartjs-plugin-labels.js"></script>
+  
 </body>
 
 </html>
