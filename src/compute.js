@@ -51,7 +51,7 @@ function calculateAndShow(event) {
     </div>
           
     <div class="div-seta">
-      <img class="seta-poke" src ="https://lh3.googleusercontent.com/proxy/txb6TxVeHpioJKExAgQNM5uzO5mZDhG0nlD3NccPbHnyHYUmdqrYbZvxANGWLlhtrMaZ4LQU5DRsLAjizS5qi1_vokYn7-aNlrXKJKBk8hX6efozJCr_" alt ="imagem seta"/>
+      <img class="seta-poke" src ="" alt ="imagem seta"/>
     </div>
 
     <div class="card-style">
@@ -86,9 +86,6 @@ const arrayTypes = [
   "Ice",
   "Ghost",
   "Dragon",
-  "Fairy",
-  "Dark",
-  "Steel",
 ]
 let porcentResult = calcPorcent(arrayPokemon, "type", arrayTypes)
 
