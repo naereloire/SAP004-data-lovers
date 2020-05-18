@@ -1,37 +1,37 @@
-import {selectInfosToShow, ordenation, filterInfons, computeCp} from '../src/data.js';
+import { selectInfosToShow, ordenation, filterInfons, computeCp, getNextEvolution } from '../src/data.js';
 
 const dataInput = [{
-    "id": 1,
-    "num": "001",
-    "name": "Bulbasaur",
-    "img": "http://www.serebii.net/pokemongo/pokemon/001.png",
-    "type": [
-      "Grass",
-      "Poison"
-    ],
-    "height": "0.71 m",
-    "weight": "6.9 kg",
-    "candy": "Bulbasaur Candy",
-    "candy_count": 25,
-    "egg": "2 km",
-    "spawn_chance": 0.69,
-    "avg_spawns": 69,
-    "spawn_time": "20:00",
-    "multipliers": [1.58],
-    "weaknesses": [
-      "Fire",
-      "Ice",
-      "Flying",
-      "Psychic"
-    ],
-    "next_evolution": [{
-      "num": "002",
-      "name": "Ivysaur"
-    }, {
-      "num": "003",
-      "name": "Venusaur"
-    }]
-  }
+  "id": 1,
+  "num": "001",
+  "name": "Bulbasaur",
+  "img": "http://www.serebii.net/pokemongo/pokemon/001.png",
+  "type": [
+    "Grass",
+    "Poison"
+  ],
+  "height": "0.71 m",
+  "weight": "6.9 kg",
+  "candy": "Bulbasaur Candy",
+  "candy_count": 25,
+  "egg": "2 km",
+  "spawn_chance": 0.69,
+  "avg_spawns": 69,
+  "spawn_time": "20:00",
+  "multipliers": [1.58],
+  "weaknesses": [
+    "Fire",
+    "Ice",
+    "Flying",
+    "Psychic"
+  ],
+  "next_evolution": [{
+    "num": "002",
+    "name": "Ivysaur"
+  }, {
+    "num": "003",
+    "name": "Venusaur"
+  }]
+}
 ]
 
 const dataExpected = [{
@@ -46,6 +46,52 @@ const dataExpected = [{
   "candy": "Bulbasaur Candy",
   "candy_count": 25,
   "egg": "2 km",
+}]
+
+const candyUndefinedInput = [{
+  "id": 3,
+  "num": "003",
+  "name": "Venusaur",
+  "img": "http://www.serebii.net/pokemongo/pokemon/003.png",
+  "type": [
+    "Grass",
+    "Poison"
+  ],
+  "height": "2.01 m",
+  "weight": "100.0 kg",
+  "egg": "Not in Eggs",
+  "spawn_chance": 0.017,
+  "avg_spawns": 1.7,
+  "spawn_time": "11:30",
+  "multipliers": null,
+  "weaknesses": [
+    "Fire",
+    "Ice",
+    "Flying",
+    "Psychic"
+  ],
+  "prev_evolution": [{
+    "num": "001",
+    "name": "Bulbasaur"
+  }, {
+    "num": "002",
+    "name": "Ivysaur"
+  }]
+}
+]
+
+const candyUndefinedExpected = [{
+  "number": "003",
+  "name": "Venusaur",
+  "image": "http://www.serebii.net/pokemongo/pokemon/003.png",
+  "types": "Grass, Poison",
+  "weaknesses": "Fire, Ice, Flying, Psychic",
+  "probability": 0.017,
+  "height": "2.01 m",
+  "weight": "100.0 kg",
+  "candy": undefined,
+  "candy_count": "Não possui evolução",
+  "egg": "Not in Eggs",
 }]
 
 describe('selectInfosToShow', () => {
@@ -63,52 +109,53 @@ describe('selectInfosToShow', () => {
 
   it('returns `reduced object`', () => {
     expect(selectInfosToShow(dataInput)).toStrictEqual(dataExpected);
+    expect(selectInfosToShow(candyUndefinedInput)).toStrictEqual(candyUndefinedExpected);
   });
 });
 
 
 const arrayInput = [{
-    name: "Arnold",
-    number: "001",
-    caracteristica: ["alto", "pardo"],
-  },
-  {
-    name: "Zoe",
-    number: "155",
-    caracteristica: ["baixo", "caucasiano"],
-  },
-  {
-    name: "George",
-    number: "030",
-    caracteristica: ["alto", ],
-  },
-  {
-    name: "George",
-    number: "044",
-    caracteristica: ["baixo", "negro"],
-  },
+  name: "Arnold",
+  number: "001",
+  caracteristica: ["alto", "pardo"],
+},
+{
+  name: "Zoe",
+  number: "155",
+  caracteristica: ["baixo", "caucasiano"],
+},
+{
+  name: "George",
+  number: "030",
+  caracteristica: ["alto",],
+},
+{
+  name: "George",
+  number: "044",
+  caracteristica: ["baixo", "negro"],
+},
 ]
 
 const arrayExpected = [{
-    name: "Arnold",
-    number: "001",
-    caracteristica: ["alto", "pardo"],
-  },
-  {
-    name: "George",
-    number: "030",
-    caracteristica: ["alto", ],
-  },
-  {
-    name: "George",
-    number: "044",
-    caracteristica: ["baixo", "negro"],
-  },
-  {
-    name: "Zoe",
-    number: "155",
-    caracteristica: ["baixo", "caucasiano"],
-  },
+  name: "Arnold",
+  number: "001",
+  caracteristica: ["alto", "pardo"],
+},
+{
+  name: "George",
+  number: "030",
+  caracteristica: ["alto",],
+},
+{
+  name: "George",
+  number: "044",
+  caracteristica: ["baixo", "negro"],
+},
+{
+  name: "Zoe",
+  number: "155",
+  caracteristica: ["baixo", "caucasiano"],
+},
 ]
 
 describe('ordenation', () => {
@@ -121,7 +168,7 @@ describe('ordenation', () => {
     expect(() => ordenation([])).toThrow(TypeError);
     expect(() => ordenation(arrayInput, 0, 0)).toThrow(TypeError);
     expect(() => ordenation(arrayInput, "", "")).toThrow(TypeError);
-    expect(() => selectInfosToShow({}, !"", !"")).toThrow(TypeError);
+    expect(() => ordenation({}, !"", !"")).toThrow(TypeError);
   })
 
   it('returns `ordered array`', () => {
@@ -164,17 +211,17 @@ describe('filterInfos', () => {
 
 
 const computeArrayInput = [{
-    name: "Bulbasaur",
-    multipliers: [2],
-  },
-  {
-    name: "Eevee",
-    multipliers: [3, 4]
-  },
-  {
-    name: "Butterfree",
-    multipliers: null
-  }
+  name: "Bulbasaur",
+  multipliers: [2],
+},
+{
+  name: "Eevee",
+  multipliers: [3, 4]
+},
+{
+  name: "Butterfree",
+  multipliers: null
+}
 ]
 
 const atualCp = 100
@@ -207,7 +254,7 @@ describe('computeCp', () => {
     expect(() => computeCp([])).toThrow(TypeError);
     expect(() => computeCp(computeArrayInput, 0, 0)).toThrow(TypeError);
     expect(() => computeCp(computeArrayInput, "", 0)).toThrow(TypeError);
-    expect(() => selectInfosToShow({}, !"", 0)).toThrow(TypeError);
+    expect(() => computeCp({}, !"", 0)).toThrow(TypeError);
   })
 
   it('returns `pokemon min e max CP`', () => {
@@ -215,4 +262,80 @@ describe('computeCp', () => {
     expect(computeCp(computeArrayInput, atualCp, "Eevee")).toStrictEqual(computeEevetExpec);
     expect(computeCp(computeArrayInput, atualCp, "Butterfree")).toStrictEqual(computeButterExpec);
   });
+})
+
+const pokEvolutionInput = [{
+  name: "Bulbasaur",
+  next_evolution: [{
+    "num": "002",
+    "name": "Ivysaur"
+  }, {
+    "num": "003",
+    "name": "Venusaur"
+  }]
+},
+{
+  name: "Ivysaur",
+  "img": "http://www.serebii.net/pokemongo/pokemon/002.png",
+  "type": [
+    "Grass",
+    "Poison"
+  ],
+},
+{
+  name: "Venusaur",
+  "img": "http://www.serebii.net/pokemongo/pokemon/003.png",
+  "type": [
+    "Grass",
+    "Poison"
+  ],
+}
+]
+
+const pokEvolutionExpect = [{
+  name: "Bulbasaur",
+  next_evolution: [{
+    "num": "002",
+    "name": "Ivysaur"
+  }, {
+    "num": "003",
+    "name": "Venusaur"
+  }]
+},
+{
+  name: "Ivysaur",
+  "img": "http://www.serebii.net/pokemongo/pokemon/002.png",
+  "type": [
+    "Grass",
+    "Poison"
+  ],
+},
+{
+  name: "Venusaur",
+  "img": "http://www.serebii.net/pokemongo/pokemon/003.png",
+  "type": [
+    "Grass",
+    "Poison"
+  ],
+}
+]
+
+describe('getNextEvolution', () => {
+  it('is a function', () => {
+    expect(typeof getNextEvolution).toBe('function');
+  });
+
+  it('should throw TypeError when invoked with wrong argument types', () => {
+    expect(() => getNextEvolution()).toThrow(TypeError);
+    expect(() => getNextEvolution([])).toThrow(TypeError);
+    expect(() => getNextEvolution(pokEvolutionInput, 0)).toThrow(TypeError);
+    expect(() => getNextEvolution(pokEvolutionInput, "")).toThrow(TypeError);
+  })
+
+  it('returns `pokemon next evolutions`', () => {
+    expect(getNextEvolution(pokEvolutionInput, "Bulbasaur")).toStrictEqual(pokEvolutionExpect);
+    expect(getNextEvolution(pokEvolutionInput, "Venusaur")).toStrictEqual([]);
+
+  });
+
 })

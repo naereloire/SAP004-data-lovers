@@ -8,9 +8,14 @@ export function selectInfosToShow(data) {
   if (!Array.isArray(data) || data.length === 0) {
     throw new TypeError("parâmetro invalido")
   }
+  let verifiedCandy
   let listPokemon = data;
   let newListCard = [];
   for (let pokemon of listPokemon) {
+    verifiedCandy = pokemon.candy_count
+    if (verifiedCandy === undefined) {
+      verifiedCandy = "Não possui evolução"
+    }
     let infosCard = {
       number: pokemon.num,
       name: pokemon.name,
@@ -18,11 +23,11 @@ export function selectInfosToShow(data) {
       types: pokemon.type.join(", "),
       weaknesses: pokemon.weaknesses.join(", "),
       probability: pokemon.spawn_chance,
-      height:pokemon.height,
-      weight:pokemon.weight,
-      candy:pokemon.candy,
-      candy_count:pokemon.candy_count,
-      egg:pokemon.egg,
+      height: pokemon.height,
+      weight: pokemon.weight,
+      candy: pokemon.candy,
+      candy_count: verifiedCandy,
+      egg: pokemon.egg,
     }
     newListCard.push(infosCard)
   }
@@ -157,4 +162,29 @@ export function computeCp(data, currentCp, namePokemon) {
     }
   }
   return computeResult
+}
+
+/**
+ * Função que acessa o array e seleciona os objetos de interesse 
+ * (ex: a proxima evolução do pokemon filtrado).
+ * @param {Array.<Object>} data Array contendo lista de objetos(151 pokemons).
+ * @param {Object} namePokemon Intém(pokemon)da lista de pokemons, 
+ * que representa a proxima evolução do pokemon filtrado.  
+ * @returns Uma lista com um objeto.
+ */
+export function getNextEvolution(data, namePokemon) {
+  let evolutionList = []
+  let pokemon = filterInfons(data, "name", namePokemon)[0]
+  if (pokemon.next_evolution === undefined) {
+    return evolutionList = []
+  }
+  else {
+    evolutionList.push(pokemon)
+    for (let evolution of pokemon.next_evolution) {
+      let pokemonEvolution = filterInfons(data, "name", evolution.name)[0]
+      evolutionList.push(pokemonEvolution)
+    }
+
+    return evolutionList
+  }
 }
