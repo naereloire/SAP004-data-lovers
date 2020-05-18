@@ -364,7 +364,7 @@ const inputPorcent = [{
 
 const arrayTypes = ["venenoso","planta","raio"]
 
-const porcentExpected = [((1/4)*100),((2/4)*100),((3/4)*100)]
+const porcentExpected = [((1/4)*100).toFixed(0),((2/4)*100).toFixed(0),((3/4)*100).toFixed(0)]
 
 describe('calcPorcent', () => {
   it('is a function', () => {
