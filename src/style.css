@@ -214,8 +214,6 @@
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-/* Modal Content/Box */
-
 .modal-content {
   display: flex;
   margin: 15% auto;
@@ -223,8 +221,6 @@
   text-align: center;
   width: 25%;
 }
-
-/* The Close Button */
 
 .close {
   color: red;
@@ -244,7 +240,7 @@
   border: 3px outset #113fb4;
   box-shadow: 4px 4px #111111;
   height: 400px;
-  width: 500px;
+  width: 390px;
 }
 
 @media only screen and (max-width:359px) {

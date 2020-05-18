@@ -1,4 +1,4 @@
-import { selectInfosToShow, ordenation, filterInfons, computeCp, getNextEvolution } from '../src/data.js';
+import { selectInfosToShow, ordenation, filterInfons, computeCp, getNextEvolution, calcPorcent} from '../src/data.js';
 
 const dataInput = [{
   "id": 1,
@@ -338,4 +338,50 @@ describe('getNextEvolution', () => {
 
   });
 
+})
+
+const inputPorcent = [{
+  name: "Bulba",
+  number: "001",
+  tipo: ["venenoso", "planta"],
+},
+{
+  name: "Gloom",
+  number: "155",
+  tipo: ["planta", "raio"],
+},
+{
+  name: "Pikachu",
+  number: "030",
+  tipo: ["raio",],
+},
+{
+  name: "Pichu",
+  number: "044",
+  tipo: ["raio",],
+},
+]
+
+const arrayTypes = ["venenoso","planta","raio"]
+
+const porcentExpected = [((1/4)*100).toFixed(0),((2/4)*100).toFixed(0),((3/4)*100).toFixed(0)]
+
+describe('calcPorcent', () => {
+  it('is a function', () => {
+    expect(typeof calcPorcent).toBe('function');
+  });
+
+
+it('should throw TypeError when invoked with wrong argument types', () => {
+  expect(() => calcPorcent()).toThrow(TypeError);
+  expect(() => calcPorcent([])).toThrow(TypeError);
+  expect(() => calcPorcent(inputPorcent,0,0)).toThrow(TypeError);
+  expect(() => calcPorcent(inputPorcent,"",arrayTypes)).toThrow(TypeError);
+  expect(() => calcPorcent(inputPorcent,"",[])).toThrow(TypeError);
+  expect(() => calcPorcent({},"text",{})).toThrow(TypeError);
+})
+
+it('returns `pokemon percentage types of all`', () => {
+  expect(calcPorcent(inputPorcent, "tipo", arrayTypes)).toStrictEqual(porcentExpected);
+});
 })
