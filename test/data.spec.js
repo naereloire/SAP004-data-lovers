@@ -366,6 +366,22 @@ const arrayTypes = ["venenoso","planta","raio"]
 
 const porcentExpected = [((1/4)*100),((2/4)*100),((3/4)*100)]
 
+describe('calcPorcent', () => {
+  it('is a function', () => {
+    expect(typeof calcPorcent).toBe('function');
+  });
+
+
+it('should throw TypeError when invoked with wrong argument types', () => {
+  expect(() => calcPorcent()).toThrow(TypeError);
+  expect(() => calcPorcent([])).toThrow(TypeError);
+  expect(() => calcPorcent(inputPorcent,0,0)).toThrow(TypeError);
+  expect(() => calcPorcent(inputPorcent,"",arrayTypes)).toThrow(TypeError);
+  expect(() => calcPorcent(inputPorcent,"",[])).toThrow(TypeError);
+  expect(() => calcPorcent({},"text",{})).toThrow(TypeError);
+})
+
 it('returns `pokemon percentage types of all`', () => {
   expect(calcPorcent(inputPorcent, "tipo", arrayTypes)).toStrictEqual(porcentExpected);
 });
+})

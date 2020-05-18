@@ -196,6 +196,7 @@ export function getNextEvolution(data, namePokemon) {
  * @param {Array.<String>} arrayTypes Array contendo valores que serão filtrados para calculo.
  */
 export function calcPorcent(data, option, arrayTypes) {
+  if(arrayTypes.length === 0) {throw TypeError("parâmetro invalido")}
   let allPokemons = data
   let list = []
   for (let valueType of arrayTypes) {
