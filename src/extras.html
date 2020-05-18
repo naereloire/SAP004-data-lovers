@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html >
 
 <head>
   <meta charset="utf-8">
@@ -25,7 +25,7 @@
     </figure>
   </header>
 
-  <main>
+  <main class="main-style">
     <div>
       <section>
         <div id="div-data-list">
@@ -37,23 +37,44 @@
               <button id="button-search" class="input">Enviar</button>
               <button type="reset" class="reset">Limpar</button>
             </div>
-            
+
           </form>
         </div>
       </section>
     </div>
 
+    <div id="div-text" class="text-container">
+      <section class="text-style">
+        <h2>Poder de Combate:</h2>
+        <p>Cada Pokémon possui Poder de Combate (PC).<br><br> 
+          Cada Pokémon individual possui um PC ao ser pego, que indica o quão bem este Pokémon específico se sairá em
+          batalha.Nem todos os Pokémon possuem o mesmo PC - por exemplo, se você pegou dois Pikachu, eles não terão
+          necessariamente o mesmo PC.Quando o pokemon evolui, seu PC pode aumentar.</p>
+        <p>Utilize nossa calculadora, para verificar o provavel CP do seu pokemon após a evolução.
+          <a href="https://niantic.helpshift.com/a/pokemon-go/?s=gyms-and-battle&f=what-are-combat-power-cp-and-hit-points-hp&l=pt&p=web"
+            target="_blank"><strong>Fonte</strong></a></p>
+        <h3><mark>Instruções:</mark></h3>
+        <ol>
+          <li>Esolha o pokemon.</li>
+          <li>Insira o CP atual do pokemon escolhido.</li>
+          <li>Clique em enviar e veja o resultado.</li>
+        </ol>
+      </section>
+    </div>
+
     <div id="cards" class="cards"></div>
 
-  <div class="cards">
-    <div id="graphic" class="graphic-style"> 
-      <canvas id="graphic-types"></canvas>
+    <div class="div-canvas">
+      <div id="graphic" class="graphic-style">
+        <canvas id="graphic-types"></canvas>
+      </div>
     </div>
-  </div>
+
   </main>
 
   <footer class="footer-style">
-    <h3>Desenvolvimento <a href="https://github.com/camilagerarde" title="Camila Cunha" target="_blank">Camila Cunha</a> e
+    <h3>Desenvolvimento <a href="https://github.com/camilagerarde" title="Camila Cunha" target="_blank">Camila Cunha</a>
+      e
       <a href="https://github.com/naereloire" title="Naere Loire" target="_blank">Naere Loire</a>
     </h3>
   </footer>
@@ -61,7 +82,7 @@
   <script src="extras.js" type="module"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/emn178/chartjs-plugin-labels/src/chartjs-plugin-labels.js"></script>
-  
+
 </body>
 
 </html>

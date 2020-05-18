@@ -297,6 +297,12 @@
   .footer-style a {
     font-size: inherit;
   }
+
+  .modal-style{
+    height: auto;
+    width:auto;
+  }
+  
 }
 
 @media only screen and (min-width:360px) and (max-width:560px) {
