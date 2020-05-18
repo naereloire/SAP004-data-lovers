@@ -1,5 +1,6 @@
 import data from './data/pokemon/pokemon.js';
 import { ordenation, computeCp, filterInfons, getNextEvolution, calcPorcent } from './data.js'
+import {Chart} from 'chart.js'
 
 const arrayPokemon = data.pokemon;
 let dataListSorted = ordenation(arrayPokemon, "name", "increasing");
@@ -12,10 +13,7 @@ for (let pokemon of dataListSorted) {
 }
 
 document.getElementById("button-search").addEventListener("click", calculateAndShow);
-/**
- * Função para calcular os dados inseridos nos inputs e mostrar na tela.
- * @param {Event} event para a prevenção de reinicio automático da função.
- */
+
 function calculateAndShow(event) {
   event.preventDefault();
 
@@ -113,8 +111,8 @@ let colorList = [
   'rgb(0,25,51)',
   'rgb(64,64,64)',
 ]
-
-let graphicTypes = new Chart(canva, {
+let _graphicTypes;
+_graphicTypes = new Chart(canva, {
   type: "doughnut",
   data: {
     labels: arrayTypes,
