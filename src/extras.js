@@ -110,8 +110,8 @@ let colorList = [
   'rgb(0,25,51)',
   'rgb(64,64,64)',
 ]
-let _graphicTypes;
-_graphicTypes = new Chart(canva, {
+
+let _graphicTypes = new Chart(canva, {
   type: "doughnut",
   data: {
     labels: arrayTypes,
@@ -119,46 +119,61 @@ _graphicTypes = new Chart(canva, {
       label: "Porcentual de pokemons",
       data: porcentResult,
       backgroundColor: colorList
-    }]},
-    options: {
-      plugins:{
-        labels:{
-       fontColor:'rgb(0,0,0)', 
-       orverlap: false, 
-       position:'outside',
-       arc:true,
-       textMargin:1,
-       fontSize:8,
-       render:function(value){return value.value + '%'},
-       showActualPercentages:false,
+    }]
+  },
+  options: {
+    plugins: {
+      labels: {
+        fontColor: 'rgb(0,0,0)',
+        orverlap: false,
+        position: 'outside',
+        arc: true,
+        textMargin: 1,
+        fontSize: 8,
+        render: function (value) { return value.value + '%' },
+        showActualPercentages: false,
       }
-      },
-      responsive: true,
-      legend: {
-        fontColor:'rgb(0,0,0)',
-        fontSize: '14',
-        position: "right"
-      },
-      title: {
-        display: true,
-        fontColor:'rgb(0,0,0)',
-        fontSize: '18',
-        text: "Pokemons por tipo"
-      },
-      animation: {
-        animateScale: true,
-        animateRotate: true
-      },
-      layout:{
-        padding:{
+    },
+    responsive: true,
+    onResize:function(chart,size){
+      removeLegends(chart,size)
+      chart.update()
+    },
+    legend: {
+      fontColor: 'rgb(0,0,0)',
+      fontSize: '14',
+      position: "right"
+    },
+    title: {
+      display: true,
+      fontColor: 'rgb(0,0,0)',
+      fontSize: '18',
+      text: "Pokemons por tipo"
+    },
+    animation: {
+      animateScale: true,
+      animateRotate: true
+    },
+    layout: {
+      padding: {
         left: 50,
-        right:50,
+        right: 50,
         top: 0,
-        bottom:0,
-        }
-
+        bottom: 0,
       }
 
     }
+
+  }
 });
 
+function removeLegends (chart,size){
+if(size.width<750){
+  chart.options.legend.display = false
+}
+else{
+  chart.options.legend.display = true
+}
+}
+removeLegends(_graphicTypes,_graphicTypes)
+_graphicTypes.update()
