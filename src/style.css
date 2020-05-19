@@ -219,7 +219,7 @@
   margin: 15% 33%;
   padding: 20px;
   text-align: center;
-  width:50%;
+  width: 50%;
 }
 
 .close {
@@ -297,15 +297,14 @@
   .footer-style a {
     font-size: inherit;
   }
-  .modal-content{
+  .modal-content {
     padding: 0;
-    margin:40% 7%;
+    margin: 40% 7%;
     width: 80%;
   }
-  .modal-style{
+  .modal-style {
     height: 35%;
   }
-
 }
 
 @media only screen and (min-width:360px) and (max-width:560px) {
@@ -362,13 +361,12 @@
   .footer-style a {
     font-size: inherit;
   }
-
-  .modal-content{
+  .modal-content {
     padding: 0;
-    margin:60% 7%;
+    margin: 60% 7%;
     width: 80%;
   }
-  .modal-style{
+  .modal-style {
     height: 35%;
   }
 }
@@ -424,13 +422,12 @@
     margin: 0 0 5px 0;
     padding: 5px;
   }
-
-  .modal-content{
+  .modal-content {
     padding: 0;
-    margin:40% 24%;
+    margin: 40% 24%;
     width: 50%;
   }
-  .modal-style{
+  .modal-style {
     height: 35%;
   }
 }
