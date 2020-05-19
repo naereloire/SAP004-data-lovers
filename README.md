@@ -97,6 +97,8 @@ Se tem Windows 10 ou superior pode usar o [Windows Subsystem for Linux](https://
 ****
 
 * [Clone](https://help.github.com/articles/cloning-a-repository/) o projeto na sua máquina executando o seguinte comando no seu terminal:
+
+
 -https
 ```sh
 git clone https://github.com/naereloire/SAP004-data-lovers
