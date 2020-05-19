@@ -25,9 +25,9 @@ export function selectInfosToShow(data) {
       probability: pokemon.spawn_chance,
       height: pokemon.height,
       weight: pokemon.weight,
-      candy: pokemon.candy,
+      candy: "Doce de " + pokemon.candy.replace("Candy", ""),
       candy_count: verifiedCandy,
-      egg: pokemon.egg,
+      egg: pokemon.egg.replace("Not in Eggs", "Não Nasce em Ovos"),
     }
     newListCard.push(infosCard)
   }
