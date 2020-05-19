@@ -17,6 +17,7 @@ document.getElementById("button-search").addEventListener("click", calculateAndS
 
 function calculateAndShow(event) {
   event.preventDefault();
+  document.getElementById("div-text").style.display = "none"
 
   let showPokemon = document.getElementById("cards");
   let inputName = document.getElementById("search-name").value;
@@ -51,7 +52,7 @@ function calculateAndShow(event) {
     </div>
           
     <div class="div-seta">
-      <img class="seta-poke" src ="" alt ="imagem seta"/>
+      <img class="seta-poke" src ="./img/seta-roxa.png" alt ="imagem seta"/>
     </div>
 
     <div class="card-style">
@@ -127,7 +128,7 @@ _graphicTypes = new Chart(canva, {
        position:'outside',
        arc:true,
        textMargin:1,
-       fontSize:10,
+       fontSize:8,
        render:function(value){return value.value + '%'},
        showActualPercentages:false,
       }
@@ -147,6 +148,15 @@ _graphicTypes = new Chart(canva, {
       animation: {
         animateScale: true,
         animateRotate: true
+      },
+      layout:{
+        padding:{
+        left: 50,
+        right:50,
+        top: 0,
+        bottom:0,
+        }
+
       }
 
     }
