@@ -3,7 +3,7 @@
 Para acessar a página [clique aqui](https://naereloire.github.io/SAP004-data-lovers/). :computer:
 
 ## Projeto
-O projeto **Pokelovers**, se trata de uma página WEB com visualização de um conjunto de dados, que se adeque a necessidade do usuário. 
+O projeto **Pokelovers**, se trata de uma página WEB com visualização de um conjunto de dados, que se adequa a necessidade do usuário. 
 Nela é possível ao usuário, pesquisar dados, filtrá-los, ordená-los e fazer algum calculo agregado.
 
 > Cálculo agregado se refere aos diversos cálculos que podem ser feitos com os dados para mostrar a informação mais relevante para os usuários (médias, valores máximos e mínimos, etc).
@@ -23,7 +23,7 @@ Como início da nossa definição de usuário criamos personas, que representam 
 <img src="./src/img/persona.png"/>
 </p>
 
-Também fizemos uma pesquisa de preferências pelo Google Forms, para a definição dos dados e informações disponíveis ao usuário de acordo com suas reais necessidades.
+Também fizemos uma pesquisa de preferências pelo [Google Forms](https://www.google.com/forms/about/), para a definição dos dados e informações disponíveis ao usuário de acordo com suas reais necessidades.
 
 #### 1.2 Identificação de Histórias de Usuário:
 
@@ -45,7 +45,7 @@ Eu como usuário, quero filtrar os Pokémons por tipos e fraquezas.
 Eu como usuário, quero realizar algum cálculo e visualizar alguma estatística referente aos Pokémons.
 
 #### 1.3 Protótipo de baixa fidelidade:
-Define-se wireframe como um esqueleto, um protótipo ou uma versão bastante primitiva do visual de um projeto.
+Define-se wireframe como um esqueleto, um protótipo ou uma versão bastante primitiva do visual de um projeto.  
 Nesse projeto o Wireframe foi definido, pensando na experiência do usuário conforme esboço abaixo, realizado na ferramenta [Figma](https://www.figma.com/).
 
 **Protótipo 01 - página HOME**
@@ -59,7 +59,7 @@ Nesse projeto o Wireframe foi definido, pensando na experiência do usuário con
 </p>
 
 #### 1.4 Teste de usabilidade:
-Foi realizado uma pesquisa com a ferramenta Google Forms para identificação de problemas de usabilidade, e verificamos a necessidade de correções e melhorias dos itens abaixo:
+Realizamos uma pesquisa com a ferramenta [Google Forms](https://www.google.com/forms/about/) para identificação de problemas de usabilidade, e verificamos a necessidade de correções e melhorias dos itens abaixo:
 * Tamanho das fontes.
 * Tamanho do card.
 * Tamanho do menu.
@@ -68,8 +68,8 @@ Foi realizado uma pesquisa com a ferramenta Google Forms para identificação de
 ### 2.Desenvolvimento do projeto
 #### 2.1 Sobre a página.
 O nome **Pokelover** vem da junção de _Pokémon_ e o nome do projeto _Data Lovers_, a fonte do título na página é inspirado no logo do anime e usa as mesmas cores, levamos em consideração a harmonia com o título para a escolha da paleta de cores geral, usando tons de azul e roxo e deixando o amarelo pontual como ponto de atenção.
-A apresentação dos cards com as informações e imagem dos Pokémons, faz referência aos cards vendidos dos personagens. 
-Incluímos também as páginas **sobre e extras** com mais informações para os usuários, como a história do anime, importante para os usuários que desejam conhecer este universo, ou até mesmo saber um pouco mais, curiosidades sobre o universo e dicas para que os jogadores de _PokémonGO_ aproveitem ainda mais a experiência, e na página **Extras** podemos calcular o Poder de Combate e obter o provável CP do Pokémon após a evolução e também consultar a porcentagem de Pokémons por tipo.
+A apresentação dos cards com as informações e imagem dos Pokémons, faz referência aos cards vendidos dos personagens.   
+Incluímos também as páginas **Sobre e Extras** com mais informações para os usuários, como a história do anime, importante para os usuários que desejam conhecer este universo, ou até mesmo saber um pouco mais, curiosidades sobre o universo e dicas para que os jogadores de _PokémonGO_ aproveitem ainda mais a experiência, e na página **Extras** podemos calcular o Poder de Combate e obter o provável CP do Pokémon após a evolução e também consultar a porcentagem de Pokémons por tipo.
 
 #### 2.2 Scripts e recursos utilizados.
 O _HTML_ foi usado para estruturação do conteúdo da página, levando em consideração a utilização de tags semânticas para acessibilidade e inclusão de inputs e filtros.
