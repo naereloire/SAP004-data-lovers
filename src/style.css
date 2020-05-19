@@ -216,10 +216,10 @@
 
 .modal-content {
   display: flex;
-  margin: 15% auto;
+  margin: 15% 33%;
   padding: 20px;
   text-align: center;
-  width: 25%;
+  width:50%;
 }
 
 .close {
@@ -297,12 +297,15 @@
   .footer-style a {
     font-size: inherit;
   }
-
-  .modal-style{
-    height: auto;
-    width:auto;
+  .modal-content{
+    padding: 0;
+    margin:40% 7%;
+    width: 80%;
   }
-  
+  .modal-style{
+    height: 35%;
+  }
+
 }
 
 @media only screen and (min-width:360px) and (max-width:560px) {
@@ -359,6 +362,15 @@
   .footer-style a {
     font-size: inherit;
   }
+
+  .modal-content{
+    padding: 0;
+    margin:60% 7%;
+    width: 80%;
+  }
+  .modal-style{
+    height: 35%;
+  }
 }
 
 @media only screen and (min-width:561px) and (max-width:768px) {
@@ -411,5 +423,14 @@
   .items-poke {
     margin: 0 0 5px 0;
     padding: 5px;
+  }
+
+  .modal-content{
+    padding: 0;
+    margin:40% 24%;
+    width: 50%;
+  }
+  .modal-style{
+    height: 35%;
   }
 }
