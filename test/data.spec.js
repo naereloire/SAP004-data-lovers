@@ -1,4 +1,4 @@
-import { selectInfosToShow, ordenation, filterInfons, computeCp, getNextEvolution, calcPorcent} from '../src/data.js';
+import { selectInfosToShow, ordenation, filterInfons, computeCp, getNextEvolution, calcPorcent } from '../src/data.js';
 
 const dataInput = [{
   "id": 1,
@@ -38,12 +38,12 @@ const dataExpected = [{
   "number": "001",
   "name": "Bulbasaur",
   "image": "http://www.serebii.net/pokemongo/pokemon/001.png",
-  "types": "Grass, Poison",
-  "weaknesses": "Fire, Ice, Flying, Psychic",
+  "types": "Planta, Venenoso",
+  "weaknesses": "Fogo, Gelo, Voador, Psíquico",
   "probability": 0.69,
   "height": "0.71 m",
   "weight": "6.9 kg",
-  "candy": "Bulbasaur Candy",
+  "candy": "Doce de Bulbasaur ",
   "candy_count": 25,
   "egg": "2 km",
 }]
@@ -59,6 +59,7 @@ const candyUndefinedInput = [{
   ],
   "height": "2.01 m",
   "weight": "100.0 kg",
+  "candy": "Bulbasaur Candy",
   "egg": "Not in Eggs",
   "spawn_chance": 0.017,
   "avg_spawns": 1.7,
@@ -84,14 +85,14 @@ const candyUndefinedExpected = [{
   "number": "003",
   "name": "Venusaur",
   "image": "http://www.serebii.net/pokemongo/pokemon/003.png",
-  "types": "Grass, Poison",
-  "weaknesses": "Fire, Ice, Flying, Psychic",
+  "types": "Planta, Venenoso",
+  "weaknesses": "Fogo, Gelo, Voador, Psíquico",
   "probability": 0.017,
   "height": "2.01 m",
   "weight": "100.0 kg",
-  "candy": undefined,
+  "candy": "Doce de Bulbasaur ",
   "candy_count": "Não possui evolução",
-  "egg": "Not in Eggs",
+  "egg": "Não Nasce em Ovos",
 }]
 
 describe('selectInfosToShow', () => {
@@ -362,9 +363,9 @@ const inputPorcent = [{
 },
 ]
 
-const arrayTypes = ["venenoso","planta","raio"]
+const arrayTypes = ["venenoso", "planta", "raio"]
 
-const porcentExpected = [((1/4)*100).toFixed(0),((2/4)*100).toFixed(0),((3/4)*100).toFixed(0)]
+const porcentExpected = [((1 / 4) * 100).toFixed(0), ((2 / 4) * 100).toFixed(0), ((3 / 4) * 100).toFixed(0)]
 
 describe('calcPorcent', () => {
   it('is a function', () => {
@@ -372,16 +373,16 @@ describe('calcPorcent', () => {
   });
 
 
-it('should throw TypeError when invoked with wrong argument types', () => {
-  expect(() => calcPorcent()).toThrow(TypeError);
-  expect(() => calcPorcent([])).toThrow(TypeError);
-  expect(() => calcPorcent(inputPorcent,0,0)).toThrow(TypeError);
-  expect(() => calcPorcent(inputPorcent,"",arrayTypes)).toThrow(TypeError);
-  expect(() => calcPorcent(inputPorcent,"",[])).toThrow(TypeError);
-  expect(() => calcPorcent({},"text",{})).toThrow(TypeError);
-})
+  it('should throw TypeError when invoked with wrong argument types', () => {
+    expect(() => calcPorcent()).toThrow(TypeError);
+    expect(() => calcPorcent([])).toThrow(TypeError);
+    expect(() => calcPorcent(inputPorcent, 0, 0)).toThrow(TypeError);
+    expect(() => calcPorcent(inputPorcent, "", arrayTypes)).toThrow(TypeError);
+    expect(() => calcPorcent(inputPorcent, "", [])).toThrow(TypeError);
+    expect(() => calcPorcent({}, "text", {})).toThrow(TypeError);
+  })
 
-it('returns `pokemon percentage types of all`', () => {
-  expect(calcPorcent(inputPorcent, "tipo", arrayTypes)).toStrictEqual(porcentExpected);
-});
+  it('returns `pokemon percentage types of all`', () => {
+    expect(calcPorcent(inputPorcent, "tipo", arrayTypes)).toStrictEqual(porcentExpected);
+  });
 })

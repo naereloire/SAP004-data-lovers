@@ -1,3 +1,29 @@
+let dictionary = {
+  "Grass": "Planta",
+  "Poison": "Venenoso",
+  "Fire": "Fogo",
+  "Flying": "Voador",
+  "Water": "Água",
+  "Bug": "Inseto",
+  "Electric": "Elétrico",
+  "Ground": "Terra",
+  "Fighting": "Lutador",
+  "Psychic": "Psíquico",
+  "Rock": "Pedra",
+  "Ice": "Gelo",
+  "Ghost": "Fantasma",
+  "Dragon": "Dragão",
+  "Fairy": "Fada",
+  "Dark": "Sombras",
+  "Steel": "Metal",
+  "Normal": "Normal"
+}
+
+function translate(element) {
+  return dictionary[element]
+}
+
+
 /**
  * Função para selecionar informações doa array pokemon que serão mostradas.
  * @param {Array.<Object>} data Array contendo lista de objetos(151 pokemons).
@@ -16,12 +42,18 @@ export function selectInfosToShow(data) {
     if (verifiedCandy === undefined) {
       verifiedCandy = "Não possui evolução"
     }
+
+    let tipos = pokemon.type.map(translate)
+    let fraquezas = pokemon.weaknesses.map(translate)
+
+
+
     let infosCard = {
       number: pokemon.num,
       name: pokemon.name,
       image: pokemon.img,
-      types: pokemon.type.join(", "),
-      weaknesses: pokemon.weaknesses.join(", "),
+      types: tipos.join(", "),
+      weaknesses: fraquezas.join(", "),
       probability: pokemon.spawn_chance,
       height: pokemon.height,
       weight: pokemon.weight,
