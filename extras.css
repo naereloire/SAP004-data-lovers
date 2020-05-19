@@ -146,17 +146,24 @@
   width: 100px;
 }
 
+.canvas-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
 .div-canvas {
   display: flex;
-  width: 50%;
-  height: 50%;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
 
 .graphic-style {
   background-color: #ced7f0;
-  display: flex;
-  justify-content: center;
-  width: 100%;
+  width: 50%;
   height: 100%;
 }
 
@@ -176,8 +183,26 @@
   padding: 1em;
   width: 40%;
 }
-.text-style a{
+
+.text-style a {
   color: black;
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+}
+
+.about-style {
+  background-color: rgba(48, 7, 94, 0.521);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  text-align:left;
+  width: 80%;
+}
+.about-style section{
+  padding: 1em;
 }
 
 @media only screen and (max-width:359px) {
@@ -239,6 +264,17 @@
     height: 50%;
     object-fit: contain;
   }
+  .text-container {
+    width: 100%;
+    height: 100%;
+  }
+  .text-style {
+    font-size: 0.600em;
+    width: 90%;
+  }
+  .graphic-style {
+    width: 100%;
+  }
 }
 
 @media only screen and (min-width:360px) and (max-width:560px) {
@@ -295,6 +331,17 @@
     height: 50%;
     object-fit: contain;
   }
+  .text-container {
+    width: 100%;
+    height: 100%;
+  }
+  .text-style {
+    font-size: 0.600em;
+    width: 90%;
+  }
+  .graphic-style {
+    width: 100%;
+  }
 }
 
 @media only screen and (min-width:561px) and (max-width:768px) {
@@ -331,5 +378,16 @@
     width: 50%;
     height: 50%;
     object-fit: contain;
+  }
+  .text-container {
+    width: 100%;
+    height: 80%;
+  }
+  .text-style {
+    font-size: 1em;
+    width: 50%;
+  }
+  .graphic-style {
+    width: 100%;
   }
 }
