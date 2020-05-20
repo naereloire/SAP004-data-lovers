@@ -1,5 +1,5 @@
-import data from './data/pokemon/pokemon.js';
-import { selectInfosToShow, ordenation, filterInfons, getNextEvolution, } from './data.js'
+import data from "./data/pokemon/pokemon.js";
+import { selectInfosToShow, ordenation, filterInfons, getNextEvolution, } from "./data.js"
 
 const arrayPokemon = data.pokemon
 let arrayAuxiliar = arrayPokemon
@@ -46,7 +46,7 @@ function showPokemons(arrayPokemon) {
     }
   }
   showPokemons.innerHTML = card;
-  if (arrayPokemon.length != 0) {
+  if (arrayPokemon.length !== 0) {
     for (let pokemon of arrayPokemon) {
       document.getElementById(`button-modal-${pokemon.name}`).addEventListener("click", showEvolutions)
     }
@@ -91,7 +91,7 @@ function showEvolutions(event) {
 }
 
 window.onclick = function (event) {
-  if (event.target == divModal) {
+  if (event.target === divModal) {
     divModal.style.display = "none";
   }
 }
@@ -137,8 +137,8 @@ function filterPokemons() {
   });
 
   arrayAuxiliar = list
-  let newEvent = document.createEvent('Event');
-  newEvent.initEvent('change', true, true);
+  let newEvent = document.createEvent("Event");
+  newEvent.initEvent("change", true, true);
   getSelectOrder.dispatchEvent(newEvent);
 }
 
