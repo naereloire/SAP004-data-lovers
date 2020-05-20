@@ -100,7 +100,7 @@ Se tem Windows 10 ou superior pode usar o [Windows Subsystem for Linux](https://
 
 -https
 ```sh
-git clone https://github.com/camilagerarde/SAP004-data-lovers
+git clone https://github.com/camilagerarde/SAP004-data-lovers 
 
 * Instale as dependências do projeto com o comando:
 ```sh
