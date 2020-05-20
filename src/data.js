@@ -42,12 +42,8 @@ export function selectInfosToShow(data) {
     if (verifiedCandy === undefined) {
       verifiedCandy = "Não possui evolução"
     }
-
     let tipos = pokemon.type.map(translate)
     let fraquezas = pokemon.weaknesses.map(translate)
-
-
-
     let infosCard = {
       number: pokemon.num,
       name: pokemon.name,
