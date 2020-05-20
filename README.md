@@ -96,9 +96,8 @@ Se tem Windows 10 ou superior pode usar o [Windows Subsystem for Linux](https://
 >Será necessária também a instalação do [Node.js](https://nodejs.org/) que contém o [npm](https://docs.npmjs.com/)
 ****
 
-* [Clone](https://help.github.com/articles/cloning-a-repository/) o projeto na sua máquina executando o seguinte comando no seu terminal:<br>
+* [Clone](https://help.github.com/articles/cloning-a-repository/) o projeto na sua máquina executando o seguinte comando no seu terminal:
 
--https
 ```sh
 git clone https://github.com/camilagerarde/SAP004-data-lovers
 ```
