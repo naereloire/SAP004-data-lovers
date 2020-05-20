@@ -1,7 +1,7 @@
 /* global Chart*/
 
-import data from './data/pokemon/pokemon.js';
-import { ordenation, computeCp, filterInfons, getNextEvolution, calcPorcent } from './data.js'
+import data from "./data/pokemon/pokemon.js";
+import { ordenation, computeCp, filterInfons, getNextEvolution, calcPorcent } from "./data.js"
 
 const arrayPokemon = data.pokemon;
 let dataListSorted = ordenation(arrayPokemon, "name", "increasing");
@@ -17,16 +17,14 @@ document.getElementById("button-search").addEventListener("click", calculateAndS
 
 function calculateAndShow(event) {
   event.preventDefault();
-  document.getElementById("div-text").style.display = "none"
+  document.getElementById("div-text").style.display = "none";
 
   let showPokemon = document.getElementById("cards");
   let inputName = document.getElementById("search-name").value;
   let inputCp = document.getElementById("search-cp").value;
-  if (inputCp === "") { inputCp = 0 }
   let result = (computeCp(arrayPokemon, inputCp, inputName));
   let pokemon = filterInfons(arrayPokemon, "name", inputName);
-  let evolutions = getNextEvolution(arrayPokemon, inputName)
-
+  let evolutions = getNextEvolution(arrayPokemon, inputName);
   let card = "";
   showPokemon.innerHTML = "";
   pokemon = pokemon[0];
@@ -37,14 +35,14 @@ function calculateAndShow(event) {
    <h1>${pokemon.name}</h1>
     <img class="img-poke" src ="${pokemon.img}" alt ="imagem ${pokemon.name}"/>
   </div>
-  
+
   <div class="card-style">
    <strong>Este pokemon não possui evolução.</strong>
   </div>`;
+
     showPokemon.innerHTML = card;
-  }
-  else {
-    if (inputName !== "" && inputCp !== "") {
+  } else {
+    if (inputName !== "") {
       card += `
     <div class="card-style">
      <h1>${pokemon.name}</h1>
@@ -92,23 +90,23 @@ let porcentResult = calcPorcent(arrayPokemon, "type", arrayTypes)
 
 let canva = document.getElementById("graphic-types").getContext("2d")
 let colorList = [
-  'rgb(129,182,110)',
-  'rgb(238,130,238)',
-  'rgb(233,169,41)',
-  'rgb(128,128,128)',
-  'rgb(102,102,255)',
-  'rgb(0,102,0)',
-  'rgb(233,220,41)',
-  'rgb(102,51,0)',
-  'rgb(255,51,51)',
-  'rgb(255,102,178)',
-  'rgb(32,32,32)',
-  'rgb(102,255,255)',
-  'rgb(102,0,102)',
-  'rgb(255,145,0)',
-  'rgb(255,204,229)',
-  'rgb(0,25,51)',
-  'rgb(64,64,64)',
+  "#81B66E",
+  "#EE82EE",
+  "#E9B629",
+  "#808080",
+  "#6666FF",
+  "#006600",
+  "#E9DC29",
+  "#663300",
+  "#FF3333",
+  "#FF66B2",
+  "#202020",
+  "#66FFFF",
+  "#660066",
+  "#FF9100",
+  "#FFCCE5",
+  "#001933",
+  "#404040",
 ]
 
 let _graphicTypes = new Chart(canva, {
@@ -124,31 +122,33 @@ let _graphicTypes = new Chart(canva, {
   options: {
     plugins: {
       labels: {
-        fontColor: 'rgb(0,0,0)',
+        fontColor: "#000000",
         orverlap: false,
-        position: 'outside',
+        position: "outside",
         arc: true,
         textMargin: 1,
         fontSize: 8,
-        render: function (value) { return value.value + '%' },
+        render: function (value) {
+          return value.value + "%"
+        },
         showActualPercentages: false,
       }
     },
     responsive: true,
-    onResize:function(chart,size){
-      removeLegends(chart,size)
+    onResize: function (chart, size) {
+      removeLegends(chart, size)
       chart.update()
     },
     legend: {
-      fontColor: 'rgb(0,0,0)',
-      fontSize: '14',
+      fontColor: "#000000",
+      fontSize: "14",
       position: "right"
     },
     title: {
       display: true,
-      fontColor: 'rgb(0,0,0)',
-      fontSize: '18',
-      text: "Pokemons por tipo"
+      fontColor: "#000000",
+      fontSize: "18",
+      text: "Pokémons por tipo"
     },
     animation: {
       animateScale: true,
@@ -161,19 +161,16 @@ let _graphicTypes = new Chart(canva, {
         top: 0,
         bottom: 0,
       }
-
     }
-
   }
 });
 
-function removeLegends (chart,size){
-if(size.width<750){
-  chart.options.legend.display = false
+function removeLegends(chart, size) {
+  if (size.width < 750) {
+    chart.options.legend.display = false
+  } else {
+    chart.options.legend.display = true
+  }
 }
-else{
-  chart.options.legend.display = true
-}
-}
-removeLegends(_graphicTypes,_graphicTypes)
+removeLegends(_graphicTypes, _graphicTypes)
 _graphicTypes.update()
