@@ -29,31 +29,31 @@ Também fizemos uma pesquisa de preferências pelo [Google Forms](https://www.go
 
 Com estes dados então definimos nossas Histórias de usuário e o protótipo para o nosso projeto:
 
-**História de usuário 01**
-Eu como usuário, quero acessar a aplicação "POKELOVERS" e visualizar todos os pokemons de Kanto e suas informações básicas coletadas na pesquisa de preferências.
+**História de usuário 01**  
+> Eu como usuário, quero acessar a aplicação "POKELOVERS" e visualizar todos os pokemons de Kanto e suas informações básicas coletadas na pesquisa de preferências.
 
-**História de usuário 02**
-Eu como usuário, quero buscar um Pokémon específico por nome e visualizar somente ele.
+**História de usuário 02**  
+> Eu como usuário, quero buscar um Pokémon específico por nome e visualizar somente ele.
 
-**História de usuário 03**
-Eu como usuário, quero ordenar os Pokémons por ordem alfabética, número de ID e chance de aparecer.
+**História de usuário 03**  
+> Eu como usuário, quero ordenar os Pokémons por ordem alfabética, número de ID e chance de aparecer.
 
-**História de usuário 04**
-Eu como usuário, quero filtrar os Pokémons por tipos e fraquezas.
+**História de usuário 04**  
+> Eu como usuário, quero filtrar os Pokémons por tipos e fraquezas.
 
-**História de usuário 05**
-Eu como usuário, quero realizar algum cálculo e visualizar alguma estatística referente aos Pokémons.
+**História de usuário 05**  
+> Eu como usuário, quero realizar algum cálculo e visualizar alguma estatística referente aos Pokémons.
 
 #### 1.3 Protótipo de baixa fidelidade:
 Define-se wireframe como um esqueleto, um protótipo ou uma versão bastante primitiva do visual de um projeto.  
 Nesse projeto o Wireframe foi definido, pensando na experiência do usuário conforme esboço abaixo, realizado na ferramenta [Figma](https://www.figma.com/).
 
-**Protótipo 01 - página HOME**
+**Protótipo 01 - Página HOME**
 <p align="center">
 <img src="./src/img/prototipo.png" width="600"/>
 </p>
 
-**Protótipo 02 - página EXTRAS**
+**Protótipo 02 - Página EXTRAS**
 <p align="center">
 <img src="./src/img/prototipo2.png" width="600"/>
 </p>
@@ -67,7 +67,7 @@ Realizamos uma pesquisa com a ferramenta [Google Forms](https://www.google.com/f
 
 ### 2.Desenvolvimento do projeto
 #### 2.1 Sobre a página.
-O nome **Pokelover** vem da junção de _Pokémon_ e o nome do projeto _Data Lovers_, a fonte do título na página é inspirado no logo do anime e usa as mesmas cores, levamos em consideração a harmonia com o título para a escolha da paleta de cores geral, usando tons de azul e roxo e deixando o amarelo pontual como ponto de atenção.
+O nome **Pokelover** vem da junção de _Pokémon_ e o nome do projeto _Data Lovers_, a fonte do título na página é inspirado no logo do anime e usa as mesmas cores, levamos em consideração a harmonia com o título para a escolha da paleta de cores geral, usando tons de azul e roxo e deixando o amarelo pontual como ponto de atenção.  
 A apresentação dos cards com as informações e imagem dos Pokémons, faz referência aos cards vendidos dos personagens.   
 Incluímos também as páginas **Sobre e Extras** com mais informações para os usuários, como a história do anime, importante para os usuários que desejam conhecer este universo, ou até mesmo saber um pouco mais, curiosidades sobre o universo e dicas para que os jogadores de _PokémonGO_ aproveitem ainda mais a experiência, e na página **Extras** podemos calcular o Poder de Combate e obter o provável CP do Pokémon após a evolução e também consultar a porcentagem de Pokémons por tipo.
 
@@ -96,9 +96,11 @@ Se tem Windows 10 ou superior pode usar o [Windows Subsystem for Linux](https://
 >Será necessária também a instalação do [Node.js](https://nodejs.org/) que contém o [npm](https://docs.npmjs.com/)
 ****
 
-* [Clone](https://help.github.com/articles/cloning-a-repository/) o projeto na sua máquina executando o seguinte comando no seu terminal:
+* [Clone](https://help.github.com/articles/cloning-a-repository/) o projeto na sua máquina executando o seguinte comando no seu terminal:<br>
+
+-https
 ```sh
-git clone https...
+git clone https://github.com/naereloire/SAP004-data-lovers
 ```
 
 * Instale as dependências do projeto com o comando:
