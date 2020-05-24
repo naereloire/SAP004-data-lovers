@@ -37,7 +37,7 @@ function calculateAndShow(event) {
   </div>
 
   <div class="card-style">
-   <p><strong>Este pokemon não possui evolução.</strong></p>
+   <p><strong>Este Pokémon não possui evolução.</strong></p>
   </div>`;
 
     showPokemon.innerHTML = card;
