@@ -37,7 +37,34 @@ function calculateAndShow(event) {
   </div>
 
   <div class="card-style">
-   <strong>Este pokemon não possui evolução.</strong>
+   <p><strong>Este Pokémon não possui evolução.</strong></p>
+  </div>`;
+
+    showPokemon.innerHTML = card;
+  } if (inputName.toLowerCase() === "eevee") {
+    card += `
+  <div class="card-style">
+   <h1>${pokemon.name}</h1>
+    <img class="img-poke" src ="${pokemon.img}" alt ="imagem ${pokemon.name}"/>
+  </div>
+
+  <div class="div-seta">
+    <img class="seta-poke" src ="./img/seta-roxa.png" alt ="imagem seta"/>
+  </div>
+
+  <div class="card-style">
+    <p>O <strong>Eevee</strong> pode evoluir para o 
+    <br><strong>Jolteon, o Vaporeon ou o Flareon</strong>,
+    <br>essa evolução é feita de forma aleatória.</p>
+    <img class="seta-poke" src ="./img/interrogacao.png" alt ="imagem seta"/>
+  </div>
+
+  <div class="card-style">
+    <p><strong>Média CP:</strong> ${result.mediaCp}<br>
+    <strong>Min CP:</strong> ${result.minCp}<br>
+    <strong>Max CP:</strong> ${result.maxCp}</p>
+    <p><strong>Doce:</strong> ${pokemon.candy}<br>
+    <strong>Quant. de doces:</strong> ${pokemon.candy_count}</p>
   </div>`;
 
     showPokemon.innerHTML = card;

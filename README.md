@@ -1,6 +1,6 @@
 # Pokelovers
 
-Para acessar a página [clique aqui](https://naereloire.github.io/SAP004-data-lovers/). :computer:
+Para acessar a página [clique aqui](https://camilagerarde.github.io/SAP004-data-lovers/). :computer:
 
 ## Projeto
 O projeto **Pokelovers**, se trata de uma página WEB com visualização de um conjunto de dados, que se adequa a necessidade do usuário. 
@@ -96,13 +96,11 @@ Se tem Windows 10 ou superior pode usar o [Windows Subsystem for Linux](https://
 >Será necessária também a instalação do [Node.js](https://nodejs.org/) que contém o [npm](https://docs.npmjs.com/)
 ****
 
-* [Clone](https://help.github.com/articles/cloning-a-repository/) o projeto na sua máquina executando o seguinte comando no seu terminal:<br>
+* [Clone](https://help.github.com/articles/cloning-a-repository/) o projeto na sua máquina executando o seguinte comando no seu terminal:
 
--https
 ```sh
-git clone https://github.com/naereloire/SAP004-data-lovers
+git clone https://github.com/camilagerarde/SAP004-data-lovers
 ```
-
 * Instale as dependências do projeto com o comando:
 ```sh
 npm install
