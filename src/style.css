@@ -232,6 +232,14 @@
   width: 390px;
 }
 
+.eevee-style{
+  background-color: #C7DDE4;
+  border: 3px outset #113fb4;
+  box-shadow: 4px 4px #111111;
+  height: 700px;
+  width: 390px;
+}
+
 .footer-style {
   background-color: #30075E85;
   margin-top: 25px;

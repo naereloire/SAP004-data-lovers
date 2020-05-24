@@ -73,7 +73,25 @@ function showEvolutions(event) {
   `
   }
   else {
-    divModalContent.innerHTML = `
+
+    if (evolutions[0].name === "Eevee") {
+      divModalContent.innerHTML = `
+    <span class="close">&times;</span>
+    <div class="eevee-style" >
+    <h1>Evoluções</h1>
+    <h2>${evolutions[1].name}</h2>
+    <img class="img-poke" src ="${evolutions[1].img}" alt ="imagem ${evolutions[1].name}"/>
+    
+    <h2>${evolutions[2].name}</h2>
+    <img class="img-poke" src ="${evolutions[2].img}" alt ="imagem ${evolutions[1].name}"/>
+    
+    <h2>${evolutions[3].name}</h2>
+    <img class="img-poke" src ="${evolutions[3].img}" alt ="imagem ${evolutions[1].name}"/>
+    <p class="subtitle-poke"><strong>Doces para Evoluir:</strong></p>
+    <p class="items-poke" >${evolutions[0].candy_count}</p>
+  `;
+    } else {
+      divModalContent.innerHTML = `
     <span class="close">&times;</span>
     <div class="modal-style">
     <h1>Evolução</h1>
@@ -83,6 +101,7 @@ function showEvolutions(event) {
     <p class="items-poke" >${evolutions[0].candy_count}</p>
     </div>
   `;
+    }
   }
   divModal.style.display = "block"
   document.getElementsByClassName("close")[0].onclick = function () {
