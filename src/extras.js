@@ -53,9 +53,9 @@ function calculateAndShow(event) {
   </div>
 
   <div class="card-style">
-    <p>O <strong>Eevee</strong> pode evoluir para o 
-    <br><strong>Jolteon, o Vaporeon ou o Flareon</strong>,
-    <br>essa evolução é feita de forma aleatória.</p>
+    <p>O Pokémon <strong>Eevee</strong> pode evoluir para 
+    <br><strong>Vaporeon, Flareon ou Jolteon</strong>.
+    <br>Essa evolução acontence de maneira aleatória.</p>
     <img class="seta-poke" src ="./img/interrogacao.png" alt ="imagem seta"/>
   </div>
 
