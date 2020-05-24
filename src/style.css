@@ -225,12 +225,18 @@
 }
 
 .eevee-style,
+.modal-style-not,
 .modal-style {
   background-color: #C7DDE4;
   border: 3px outset #113fb4;
   box-shadow: 4px 4px #111111;
   height: 500px;
   width: 390px;
+}
+
+.modal-style-not{
+  display: flex;
+  align-items: center;
 }
 
 .eevee-style{
@@ -277,6 +283,7 @@
 
   .search-style {
     display: flex;
+    justify-content: center;
     margin-left: 8px;
   }
 
@@ -359,6 +366,7 @@
 
   .search-style {
     display: flex;
+    justify-content: center;
     margin-left: 8px;
   }
 
@@ -448,6 +456,7 @@
 
   .search-style {
     display: flex;
+    justify-content: center;
     margin-left: 8px;
   }
 
