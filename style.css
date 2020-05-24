@@ -224,12 +224,23 @@
   text-decoration: none;
 }
 
+.eevee-style,
+.modal-style-not,
 .modal-style {
   background-color: #C7DDE4;
   border: 3px outset #113fb4;
   box-shadow: 4px 4px #111111;
-  height: 400px;
+  height: 500px;
   width: 390px;
+}
+
+.modal-style-not{
+  display: flex;
+  align-items: center;
+}
+
+.eevee-style{
+  height: 700px;
 }
 
 .footer-style {
@@ -272,6 +283,7 @@
 
   .search-style {
     display: flex;
+    justify-content: center;
     margin-left: 8px;
   }
 
@@ -308,9 +320,10 @@
     padding: 5px;
   }
 
-  .modal-style {
-    height: auto;
-    width: auto;
+  .modal-content{
+    margin: 48% 8%;
+    padding: 0;
+    width: 80%;
   }
 
   .footer-style h3 {
@@ -353,6 +366,7 @@
 
   .search-style {
     display: flex;
+    justify-content: center;
     margin-left: 8px;
   }
 
@@ -389,6 +403,16 @@
     padding: 5px;
   }
 
+  .modal-content {
+    margin: 60% 7%;
+    padding: 0;
+    width: 80%;
+  }
+
+  .modal-style {
+    height: 35%;
+  }
+
   .footer-style h3 {
     font-size: 1em
   }
@@ -396,14 +420,7 @@
   .footer-style a {
     font-size: inherit;
   }
-  .modal-content {
-    padding: 0;
-    margin: 60% 7%;
-    width: 80%;
-  }
-  .modal-style {
-    height: 35%;
-  }
+ 
 }
 
 @media only screen and (min-width:561px) and (max-width:768px) {
@@ -439,6 +456,7 @@
 
   .search-style {
     display: flex;
+    justify-content: center;
     margin-left: 8px;
   }
 
@@ -474,11 +492,13 @@
     margin: 0 0 5px 0;
     padding: 5px;
   }
+
   .modal-content {
-    padding: 0;
     margin: 40% 24%;
+    padding: 0;
     width: 50%;
   }
+
   .modal-style {
     height: 35%;
   }
