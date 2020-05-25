@@ -333,8 +333,6 @@
   .footer-style a {
     font-size: inherit;
   }
-
-
 }
 
 @media only screen and (min-width:360px) and (max-width:560px) {
@@ -404,7 +402,7 @@
   }
 
   .modal-content {
-    margin: 60% 7%;
+    margin: 60% 15%;
     padding: 0;
     width: 80%;
   }
@@ -420,7 +418,7 @@
   .footer-style a {
     font-size: inherit;
   }
- 
+
 }
 
 @media only screen and (min-width:561px) and (max-width:768px) {
