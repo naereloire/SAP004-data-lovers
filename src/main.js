@@ -68,7 +68,7 @@ function showEvolutions(event) {
     divModalContent.innerHTML = `
     <span class="close">&times;</span>
     <div class="modal-style-not">
-    <h1>Pokemon não possui evolução.</h1>
+    <h1>Pokémon não possui evolução.</h1>
     </div>
   `
   }
