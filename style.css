@@ -230,8 +230,8 @@
   background-color: #C7DDE4;
   border: 3px outset #113fb4;
   box-shadow: 4px 4px #111111;
-  height: 500px;
-  width: 390px;
+  height: 350px;
+  width: 300px;
 }
 
 .modal-style-not{
@@ -333,8 +333,6 @@
   .footer-style a {
     font-size: inherit;
   }
-
-
 }
 
 @media only screen and (min-width:360px) and (max-width:560px) {
@@ -404,7 +402,7 @@
   }
 
   .modal-content {
-    margin: 60% 7%;
+    margin: 60% 15%;
     padding: 0;
     width: 80%;
   }
@@ -420,7 +418,7 @@
   .footer-style a {
     font-size: inherit;
   }
- 
+
 }
 
 @media only screen and (min-width:561px) and (max-width:768px) {
