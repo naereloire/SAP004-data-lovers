@@ -1,6 +1,6 @@
 # Pokelovers
 
-Para acessar a página [clique aqui](https://camilagerarde.github.io/SAP004-data-lovers/). :computer:
+Para acessar a página [clique aqui](https://naereloire.github.io/SAP004-data-lovers/). :computer:
 
 ## Projeto
 O projeto **Pokelovers**, se trata de uma página WEB com visualização de um conjunto de dados, que se adequa a necessidade do usuário. 
