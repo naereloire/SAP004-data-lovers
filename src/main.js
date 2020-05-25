@@ -39,7 +39,7 @@ function showPokemons(arrayPokemon) {
           <p class="items-poke" >${pokemon.candy}</p>
           <p class="subtitle-poke"><strong>Ovo:</strong></p>
           <p class="items-poke" >${pokemon.egg}</p>
-          <button id="button-modal-${pokemon.name}" value="${pokemon.name}"class="search-style" ><strong>Evoluções</strong></button>
+          <button id="button-modal-${pokemon.name}" value="${pokemon.name}"class="search-style" ><strong>Evolução</strong></button>
         </div>
       </div>
     </div>`;
@@ -68,51 +68,38 @@ function showEvolutions(event) {
     divModalContent.innerHTML = `
     <span class="close">&times;</span>
     <div class="modal-style-not">
-    <h1>Pokémon não possui evolução.</h1>
+    <h1>Pokemon não possui evolução.</h1>
     </div>
   `
-  } else {
+  }
+  else {
     if (evolutions[0].name === "Eevee") {
       divModalContent.innerHTML = `
-        <span class="close">&times;</span>
-        <div class="eevee-style" >
-        <h1>Evoluções</h1>
-        <h2>${evolutions[1].name}</h2>
-        <img class="img-poke" src ="${evolutions[1].img}" alt ="imagem ${evolutions[1].name}"/>
-        
-        <h2>${evolutions[2].name}</h2>
-        <img class="img-poke" src ="${evolutions[2].img}" alt ="imagem ${evolutions[2].name}"/>
-        
-        <h2>${evolutions[3].name}</h2>
-        <img class="img-poke" src ="${evolutions[3].img}" alt ="imagem ${evolutions[3].name}"/>
-        <p class="subtitle-poke"><strong>Doces para Evoluir:</strong></p>
-        <p class="items-poke" >${evolutions[0].candy_count}</p>
-        `;
-    } else if (evolutions[2] !== "") {
-      divModalContent.innerHTML = `
-        <span class="close">&times;</span>
-        <div class="modal-style">
-        <h1>Evolução</h1>
-        <h2>${evolutions[1].name}</h2>
-        <img class="img-poke" src ="${evolutions[1].img}" alt ="imagem ${evolutions[1].name}"/>
-
-        <h2>${evolutions[2].name}</h2>
-        <img class="img-poke" src ="${evolutions[2].img}" alt ="imagem ${evolutions[2].name}"/>
-        <p class="subtitle-poke"><strong>Doces para Evoluir:</strong></p>
-        <p class="items-poke" >${evolutions[0].candy_count}</p>
-        </div>
-      `;
+    <span class="close">&times;</span>
+    <div class="eevee-style" >
+    <h1>Evoluções</h1>
+    <h2>${evolutions[1].name}</h2>
+    <img class="img-poke" src ="${evolutions[1].img}" alt ="imagem ${evolutions[1].name}"/>
+    
+    <h2>${evolutions[2].name}</h2>
+    <img class="img-poke" src ="${evolutions[2].img}" alt ="imagem ${evolutions[1].name}"/>
+    
+    <h2>${evolutions[3].name}</h2>
+    <img class="img-poke" src ="${evolutions[3].img}" alt ="imagem ${evolutions[1].name}"/>
+    <p class="subtitle-poke"><strong>Doces para Evoluir:</strong></p>
+    <p class="items-poke" >${evolutions[0].candy_count}</p>
+  `;
     } else {
       divModalContent.innerHTML = `
-        <span class="close">&times;</span>
-        <div class="modal-style">
-        <h1>Evolução</h1>
-        <h2>${evolutions[1].name}</h2>
-        <img class="img-poke" src ="${evolutions[1].img}" alt ="imagem ${evolutions[1].name}"/>
-        <p class="subtitle-poke"><strong>Doces para Evoluir:</strong></p>
-        <p class="items-poke" >${evolutions[0].candy_count}</p>
-        </div>
-      `;
+    <span class="close">&times;</span>
+    <div class="modal-style">
+    <h1>Evolução</h1>
+    <h2>${evolutions[1].name}</h2>
+    <img class="img-poke" src ="${evolutions[1].img}" alt ="imagem ${evolutions[1].name}"/>
+    <p class="subtitle-poke"><strong>Doces para Evoluir:</strong></p>
+    <p class="items-poke" >${evolutions[0].candy_count}</p>
+    </div>
+  `;
     }
   }
   divModal.style.display = "block"
